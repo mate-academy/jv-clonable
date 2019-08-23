@@ -1,23 +1,22 @@
 package core.basesyntax;
 
-import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Car implements Cloneable, Serializable {
+public class Car implements Cloneable {
     private Engine engine;
     private String number;
     private ArrayList<String> documentation;
     private HashMap<String, Integer> map;
-    private final int MAX_SPEED;
+    private final int max_speed;
 
     private int getSpeed() {
-        return this.MAX_SPEED;
+        return this.max_speed;
     }
 
     public Car(int maxSpeed, ArrayList<String> documentation,
                String number, Engine engine, HashMap<String, Integer> map) {
-        this.MAX_SPEED = maxSpeed;
+        this.max_speed = maxSpeed;
         this.documentation = documentation;
         this.number = number;
         this.engine = engine;
@@ -38,7 +37,4 @@ public class Car implements Cloneable, Serializable {
         return clone;
     }
 
-    public String getNumber() {
-        return number;
-    }
 }
