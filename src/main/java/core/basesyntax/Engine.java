@@ -1,12 +1,8 @@
 package core.basesyntax;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
-public class Engine implements Cloneable {
+public class Engine implements Cloneable, Serializable {
     private String manufacturer;
     private String supply;
     private int power;
@@ -17,11 +13,11 @@ public class Engine implements Cloneable {
     public Engine clone() {
         Engine copyEngine = new Engine();
         try (ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream("file.bin"));
-             ObjectInputStream input = new ObjectInputStream(new FileInputStream("file.bin"))) {
+                ObjectInputStream input = new ObjectInputStream(new FileInputStream("file.bin"))) {
             output.writeObject(this);
             copyEngine = (Engine)input.readObject();
         } catch (IOException | ClassNotFoundException exception) {
-            exception.printStackTrace();
+            System.out.println("The object of the class Engine has not been cloned.");;
         }
         return copyEngine;
     }
