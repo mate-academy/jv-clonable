@@ -7,12 +7,12 @@ public class Engine implements Cloneable {
     private String produce;
     private String arrangement;
 
-    public Engine(int rev, int cyl, int srok, String prod, String arrang) {
-        revs = rev;
-        cylinders = cyl;
-        sroke = srok;
-        produce = prod;
-        arrangement = arrang;
+    public Engine(int revs, int cylinders, int sroke, String produce, String arrangement) {
+        this.revs = revs;
+        this.cylinders = cylinders;
+        this.sroke = sroke;
+        this.produce = produce;
+        this.arrangement = arrangement;
     }
 
     @Override

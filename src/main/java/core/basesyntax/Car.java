@@ -8,13 +8,13 @@ public class Car implements Cloneable {
     private String form;
     private Engine engin;
 
-    public Car(int sp, int rac, int mil, String col, String foR, Engine eng) {
-        speed = sp;
-        racing = rac;
-        mileage = mil;
-        colour = col;
-        form = foR;
-        engin = eng;
+    public Car(int speed, int racing, int mileage, String colour, String form, Engine engin) {
+        this.speed = speed;
+        this.racing = racing;
+        this.mileage = mileage;
+        this.colour = colour;
+        this.form = form;
+        this.engin = engin;
     }
 
     @Override
