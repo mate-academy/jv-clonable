@@ -9,12 +9,12 @@ public class Engine implements Cloneable {
 
     @Override
     public Engine clone() {
-         Engine engine = new Engine();
-         engine.manufacturer = manufacturer;
-         engine.supply = supply;
-         engine.power = power;
-         engine.type = type;
-         engine.condition = condition;
-         return engine;
+        Engine engine = new Engine();
+        engine.manufacturer = manufacturer;
+        engine.supply = supply;
+        engine.power = power;
+        engine.type = type;
+        engine.condition = condition;
+        return engine;
     }
 }
