@@ -28,7 +28,7 @@ public class Car implements Cloneable {
         Car clone = null;
         try {
             clone = (Car) super.clone();
-            clone.engine = new Engine(this.engine);
+            clone.engine = this.engine.clone();
             clone.documentation = new ArrayList<>(this.documentation);
             clone.map = new HashMap<>(this.map);
         } catch (CloneNotSupportedException e) {
