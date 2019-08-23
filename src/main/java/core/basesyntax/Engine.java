@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import java.io.*;
+
 public class Engine implements Cloneable {
     private String manufacturer;
     private String supply;
@@ -9,12 +11,14 @@ public class Engine implements Cloneable {
 
     @Override
     public Engine clone() {
-        Engine engine = new Engine();
-        engine.manufacturer = manufacturer;
-        engine.supply = supply;
-        engine.power = power;
-        engine.type = type;
-        engine.condition = condition;
-        return engine;
+        Engine copyEngine = new Engine();
+        try (ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream("file.bin"));
+            ObjectInputStream input = new ObjectInputStream(new FileInputStream("file.bin"))) {
+            output.writeObject(this);
+            copyEngine = (Engine)input.readObject();
+        } catch (IOException | ClassNotFoundException exception) {
+           exception.printStackTrace();
+        }
+        return copyEngine;
     }
 }
