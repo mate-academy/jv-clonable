@@ -7,14 +7,16 @@ public class Car implements Cloneable {
     private int speed;
     private Engine engine;
 
+    public Car(String type, String manufacturer, int productionYear, int speed, Engine engine) {
+        this.type = type;
+        this.manufacturer = manufacturer;
+        this.productionYear = productionYear;
+        this.speed = speed;
+        this.engine = engine;
+    }
+
     @Override
     public Car clone() {
-        Car car = new Car();
-        car.type = type;
-        car.manufacturer = manufacturer;
-        car.productionYear = productionYear;
-        car.speed = speed;
-        car.engine = engine;
-        return car;
+        return new Car(type, manufacturer, productionYear, speed, engine);
     }
 }
