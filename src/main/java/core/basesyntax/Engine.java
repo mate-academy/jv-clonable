@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Engine {
+public class Engine implements Cloneable{
     private String fuelType;
     private double volume;
     private double fuelCons;
@@ -23,4 +23,10 @@ public class Engine {
     protected void installEngine() {
         System.out.println("Engine is installed");
     }
+
+    @Override
+    protected Engine clone() throws CloneNotSupportedException {
+        return new Engine(this.fuelType, this.volume, this.fuelCons, this.numberOfCyl, this.maxTorque);
+    }
+
 }
