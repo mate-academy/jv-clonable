@@ -8,15 +8,15 @@ public class Car implements Cloneable {
     private String number;
     private ArrayList<String> documentation;
     private HashMap<String, Integer> map;
-    private final int max_speed;
+    private final int maxSpeed;
 
     private int getSpeed() {
-        return this.max_speed;
+        return this.maxSpeed;
     }
 
     public Car(int maxSpeed, ArrayList<String> documentation,
                String number, Engine engine, HashMap<String, Integer> map) {
-        this.max_speed = maxSpeed;
+        this.maxSpeed = maxSpeed;
         this.documentation = documentation;
         this.number = number;
         this.engine = engine;
