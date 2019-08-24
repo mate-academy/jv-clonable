@@ -1,5 +1,57 @@
 package core.basesyntax;
 
-public class Engine {
+public class Engine implements Cloneable {
+    private double volume = 1.0;
+    private double mileage = 0;
+    private boolean started;
+    private double usingFuel;
+    private int maxSpeed;
 
+    public Engine(double mileage, double volume) {
+        this.mileage = mileage;
+        this.volume = volume;
+        usingFuel = volume * 5;
+    }
+
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
+
+
+    public double getVolume() {
+        return volume;
+    }
+
+    public double getMileage() {
+        return mileage;
+    }
+
+    public boolean isStarted() {
+        return started;
+    }
+
+    public double getUsingFuel() {
+        return usingFuel;
+    }
+
+    public void addMileage(double mileage) {
+        if (started) {
+            this.mileage += mileage;
+        }
+    }
+
+    public void turnOn() {
+        started = true;
+
+    }
+
+    public void turnOff() {
+        started = false;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 }
+

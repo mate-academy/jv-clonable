@@ -1,5 +1,75 @@
 package core.basesyntax;
 
-public class Car {
+public class Car implements Cloneable {
 
+    private String name;
+    private Engine engine;
+    private double fuel;
+    private double usedFuel;
+    private String color;
+
+    public Car(String name, double volumeEngine, double fuel, String color) {
+        this.name = name;
+        engine = new Engine(0, volumeEngine);
+        this.fuel = fuel;
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getFuel() {
+        return fuel;
+    }
+
+    public double getUsedFuel() {
+        return usedFuel;
+    }
+
+    public double getVolumeEngine() {
+        return engine.getVolume();
+    }
+
+    public double getMileage() {
+        return engine.getMileage();
+    }
+
+    public double getUsingFuel() {
+        return engine.getUsingFuel();
+    }
+
+    public double leftFuel() {
+        return (fuel - usedFuel);
+    }
+
+    public void turnOn() {
+        engine.turnOn();
+    }
+
+    public void turnOff() {
+        engine.turnOff();
+    }
+
+    public void start(int speed, double hours) {
+        if (!engine.isStarted() || getFuel() == 0 || speed > engine.getMaxSpeed()) {
+            return;
+        }
+        double distance = speed * hours;
+        engine.addMileage(distance);
+        usedFuel += distance / 100 * engine.getUsingFuel();
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 }
