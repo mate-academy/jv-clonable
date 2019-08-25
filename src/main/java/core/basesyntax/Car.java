@@ -60,8 +60,8 @@ public class Car implements Cloneable {
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        Car cloneCar = ((Car) super.clone());
-        cloneCar.setEngine((Engine)engine.clone());
+        Car cloneCar = ((Car) super.clone()); // // 'cause every field, except Engine, is primitive or immutable
+        cloneCar.setEngine((Engine)engine.clone()); 
         return cloneCar;
     }
 }
