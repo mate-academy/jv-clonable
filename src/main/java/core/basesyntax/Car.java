@@ -59,7 +59,7 @@ public class Car implements Cloneable {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
         Car cloneCar = ((Car) super.clone());
         // 'cause every field, except Engine,
         // is primitive or immutable
