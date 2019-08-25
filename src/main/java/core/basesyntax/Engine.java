@@ -53,8 +53,8 @@ public class Engine implements Cloneable {
     public long getIssue() {
         return this.dateIssue;
     }
-    
-    public void setIssue(long dateIssue){
+
+    public void setIssue(long dateIssue) {
         this.dateIssue = dateIssue;
     }
 
