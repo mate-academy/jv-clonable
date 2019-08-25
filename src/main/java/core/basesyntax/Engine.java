@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-import java.util.Date;
 
 public class Engine implements Cloneable {
 
@@ -8,15 +7,15 @@ public class Engine implements Cloneable {
     private int maxRpM;
     private String brand;
     private String model;
-    private final Date issue;
+    private long dateIssue;
 
     public Engine(final EngineType engineType, final int maxRpM,
-                  final String brand, final String model, final Date issue) {
+                  final String brand, final String model, final long dateIssue) {
         this.engineType = engineType;
         this.maxRpM = maxRpM;
         this.brand = brand;
         this.model = model;
-        this.issue = issue;
+        this.dateIssue = dateIssue;
     }
 
     public EngineType getEngineType() {
@@ -51,8 +50,12 @@ public class Engine implements Cloneable {
         this.model = model;
     }
 
-    public Date getIssue() {
-        return this.issue;
+    public long getIssue() {
+        return this.dateIssue;
+    }
+    
+    public void setIssue(long dateIssue){
+        this.dateIssue = dateIssue;
     }
 
     @Override
