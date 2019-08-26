@@ -20,6 +20,12 @@ public class Car implements Cloneable {
         this.engine = engine;
     }
 
+    @Override
+    public Car clone() throws CloneNotSupportedException {
+        return new Car(this.age, this.maxSpeed, this.modelName, this.color,
+                this.manufacturer, this.engine.clone());
+    }
+
     public int getAge() {
         return age;
     }
@@ -102,12 +108,5 @@ public class Car implements Cloneable {
     public int hashCode() {
         return Objects.hash(super.hashCode(), getAge(), getMaxSpeed(), getModelName(),
                 getColor(), getManufacturer(), getEngine());
-    }
-
-    @Override
-    public Car clone() throws CloneNotSupportedException {
-        Engine engine = new Engine(1215, 300, 2, "Honda", "petrol");
-        Car car = new Car(3, 220, "Civic", "white", "Honda", engine);
-        return car;
     }
 }

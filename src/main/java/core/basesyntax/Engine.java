@@ -15,6 +15,12 @@ public class Engine implements Cloneable {
         this.type = type;
     }
 
+    @Override
+    public Engine clone() throws CloneNotSupportedException {
+        super.clone();
+        return new Engine(this.number, this.horsePower, this.volume, this.manufacturer, this.type);
+    }
+
     public int getNumber() {
         return number;
     }
@@ -64,12 +70,5 @@ public class Engine implements Cloneable {
                 + ", manufacturer='" + manufacturer + '\''
                 + ", type='" + type + '\''
                 + '}';
-    }
-
-    @Override
-    public Engine clone() throws CloneNotSupportedException {
-        super.clone();
-        Engine engine = new Engine(1215, 300, 2, "Honda", "petrol");
-        return engine;
     }
 }
