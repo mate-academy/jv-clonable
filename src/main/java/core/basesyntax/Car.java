@@ -1,5 +1,87 @@
 package core.basesyntax;
 
-public class Car {
+public class Car implements Cloneable {
+    private Engine engine;
+    private String brand;
+    private String type;
+    private double weight;
+    private int yearBuilt;
+    private final String vehicleIdNumber;
 
+    public Car(Engine engine, String brand, String type,
+               double weight, int yearBuilt, String vehicleIdNumber) {
+        this.engine = engine;
+        this.brand = brand;
+        this.type = type;
+        this.weight = weight;
+        this.yearBuilt = yearBuilt;
+        this.vehicleIdNumber = vehicleIdNumber;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public int getYearBuilt() {
+        return yearBuilt;
+    }
+
+    public void setYearBuilt(int yearBuilt) {
+        this.yearBuilt = yearBuilt;
+    }
+
+    public String getVehicleIdNumber() {
+        return vehicleIdNumber;
+    }
+
+    private void startEngine() {
+        System.out.println("Engine started");
+    }
+
+    private void stopEngine() {
+        System.out.println("Engine stopped");
+    }
+
+    @Override
+    public Car clone() {
+        Car object;
+        try {
+            object = (Car) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new Error();
+        }
+
+        object.engine = new Engine(this.engine.getType(), this.engine.getHorsepower(),
+                this.engine.getVolume(), this.engine.getTorque(),
+                new Transmission(this.engine.getTransmission().getType()));
+        return object;
+    }
 }
