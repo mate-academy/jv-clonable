@@ -17,6 +17,7 @@ public class Engine implements Cloneable {
         this.maxSpeed = maxSpeed;
         this.dispersal = dispersal;
         this.isThereColdSys = isThereColdSys;
+
     }
 
     public void setMaxSpeed(int maxSpeed) {
@@ -40,7 +41,7 @@ public class Engine implements Cloneable {
     }
 
     @Override
-    protected Engine clone() throws CloneNotSupportedException {
+    public Engine clone() throws CloneNotSupportedException {
         Engine clone = new Engine();
         clone.isThereColdSys = this.isThereColdSys;
         clone.dispersal = this.dispersal;
@@ -48,5 +49,6 @@ public class Engine implements Cloneable {
         clone.setType(this.type);
         clone.maxSpeed = maxSpeed;
         return clone;
+
     }
 }

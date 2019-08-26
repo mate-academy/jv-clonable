@@ -16,6 +16,7 @@ public class Car implements Cloneable {
         this.width = width;
         this.length = length;
         this.engine = engine;
+
     }
 
     public Car() {
@@ -51,7 +52,7 @@ public class Car implements Cloneable {
     }
 
     @Override
-    protected Car clone() throws CloneNotSupportedException {
+    public Car clone() throws CloneNotSupportedException {
         Car clone = new Car();
         clone.length = this.length;
         clone.width = this.width;
