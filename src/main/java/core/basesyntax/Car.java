@@ -106,7 +106,7 @@ public class Car implements Cloneable {
     }
 
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getAge(), getMaxSpeed(), getModelName(),
-                getColor(), getManufacturer(), getEngine());
+        return Objects.hash(super.hashCode(), getAge(), getMaxSpeed(),
+                getModelName(), getColor(), getManufacturer(), getEngine());
     }
 }
