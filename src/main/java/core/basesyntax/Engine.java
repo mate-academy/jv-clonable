@@ -16,6 +16,6 @@ public class Engine implements Cloneable {
     }
 
     public Engine clone() {
-        return new Engine(type, horsePower, mileage, weight, age);
+        return new Engine(new String(type), horsePower, mileage, weight, age);
     }
 }
