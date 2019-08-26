@@ -5,10 +5,10 @@ public class Engine implements Cloneable {
     private int horsepower;
     private double volume;
     private int torque;
-    private Transmission transmission;
+    private String transmission;
 
     public Engine(String type, int horsepower, double volume, int torque,
-                  Transmission transmission) {
+                  String transmission) {
         this.type = type;
         this.horsepower = horsepower;
         this.volume = volume;
@@ -48,11 +48,11 @@ public class Engine implements Cloneable {
         this.torque = torque;
     }
 
-    public Transmission getTransmission() {
+    public String getTransmission() {
         return transmission;
     }
 
-    public void setTransmission(Transmission transmission) {
+    public void setTransmission(String transmission) {
         this.transmission = transmission;
     }
 
@@ -63,15 +63,7 @@ public class Engine implements Cloneable {
     }
 
     @Override
-    public Engine clone() {
-        Engine object;
-        try {
-            object = (Engine) super.clone();
-        } catch (CloneNotSupportedException e) {
-            throw new Error();
-        }
-
-        object.transmission = new Transmission(this.transmission.getType());
-        return object;
+    public Engine clone() throws CloneNotSupportedException {
+        return new Engine(this.type, this.horsepower, this.volume, this.torque, this.transmission);
     }
 }
