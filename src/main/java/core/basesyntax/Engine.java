@@ -17,6 +17,6 @@ public class Engine implements Cloneable {
 
     @Override
     public  Engine clone() throws CloneNotSupportedException {
-        return new Engine(revs, cylinders, sroke, produce, arrangement);
+        return new Engine(revs, cylinders, sroke, new String(produce), new String(arrangement));
     }
 }
