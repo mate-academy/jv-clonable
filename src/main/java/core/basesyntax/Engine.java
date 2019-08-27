@@ -16,7 +16,7 @@ public class Engine implements Cloneable {
     }
 
     @Override
-    public Engine clone() {
+    public Engine clone() throws CloneNotSupportedException {
         return new Engine(this.maxRpm, this.horsePower,
                 this.weight, this.model, this.manufactureYear);
     }
