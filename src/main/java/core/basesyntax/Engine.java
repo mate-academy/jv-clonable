@@ -7,6 +7,14 @@ public class Engine implements Cloneable {
     private double usingFuel;
     private int maxSpeed;
 
+    public Engine(double volume, double mileage, boolean started, double usingFuel, int maxSpeed) {
+        this.volume = volume;
+        this.mileage = mileage;
+        this.started = started;
+        this.usingFuel = usingFuel;
+        this.maxSpeed = maxSpeed;
+    }
+
     public Engine(double mileage, double volume) {
         this.mileage = mileage;
         this.volume = volume;
@@ -51,7 +59,6 @@ public class Engine implements Cloneable {
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+        return (Engine) super.clone();
     }
 }
-

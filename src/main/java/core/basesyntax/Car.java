@@ -8,11 +8,12 @@ public class Car implements Cloneable {
     private double usedFuel;
     private String color;
 
-    public Car(String name, double volumeEngine, double fuel, String color) {
+    public Car(String name, double usedFuel, double fuel, String color, Engine engine) {
         this.name = name;
-        engine = new Engine(0, volumeEngine);
+        this.engine = engine;
         this.fuel = fuel;
         this.color = color;
+        this.usedFuel = usedFuel;
     }
 
     public String getColor() {
@@ -70,6 +71,6 @@ public class Car implements Cloneable {
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+        return new Car(name, usedFuel, fuel, color, (Engine) engine);
     }
 }
