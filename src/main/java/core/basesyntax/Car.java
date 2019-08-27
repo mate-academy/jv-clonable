@@ -7,13 +7,6 @@ public class Car implements Cloneable {
     private int price;
     private Engine engine;
 
-    @Override
-    public Car clone() throws CloneNotSupportedException {
-        Car clone = (Car) super.clone();
-        clone.engine = this.engine.clone();
-        return clone;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -52,5 +45,12 @@ public class Car implements Cloneable {
 
     public Engine getEngine() {
         return engine;
+    }
+
+    @Override
+    public Car clone() throws CloneNotSupportedException {
+        Car clone = (Car) super.clone();
+        clone.engine = this.engine.clone();
+        return clone;
     }
 }

@@ -7,11 +7,6 @@ public class Engine implements Cloneable {
     private double oil;
     private int idNumber;
 
-    @Override
-    public Engine clone() throws CloneNotSupportedException {
-        return (Engine) super.clone();
-    }
-
     public void setPower(double power) {
         this.power = power;
     }
@@ -50,5 +45,10 @@ public class Engine implements Cloneable {
 
     public int getIdNumber() {
         return idNumber;
+    }
+
+    @Override
+    public Engine clone() throws CloneNotSupportedException {
+        return (Engine) super.clone();
     }
 }
