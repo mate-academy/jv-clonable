@@ -5,7 +5,7 @@ public class Engine implements Cloneable {
     private double capacity;
     private double fuel;
     private double oil;
-    private int IdNumber ;
+    private int idNumber;
 
     @Override
     public Engine clone() throws CloneNotSupportedException {
@@ -29,7 +29,7 @@ public class Engine implements Cloneable {
     }
 
     public void setIdNumber(int idNumber) {
-        IdNumber = idNumber;
+        idNumber = idNumber;
     }
 
     public double getPower() {
@@ -49,6 +49,6 @@ public class Engine implements Cloneable {
     }
 
     public int getIdNumber() {
-        return IdNumber;
+        return idNumber;
     }
 }
