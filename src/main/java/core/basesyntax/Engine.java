@@ -15,6 +15,12 @@ public class Engine implements Cloneable {
         this.manufactureYear = manufactureYear;
     }
 
+    @Override
+    public Engine clone() {
+        return new Engine(this.maxRpm, this.horsePower,
+                this.weight, this.model, this.manufactureYear);
+    }
+
     public int getMaxRpm() {
         return maxRpm;
     }
@@ -53,10 +59,5 @@ public class Engine implements Cloneable {
 
     public void setManufactureYear(int manufactureYear) {
         this.manufactureYear = manufactureYear;
-    }
-
-    @Override
-    public Engine clone() throws CloneNotSupportedException {
-        return (Engine) super.clone();
     }
 }
