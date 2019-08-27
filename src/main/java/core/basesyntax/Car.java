@@ -49,5 +49,9 @@ public class Car implements Cloneable {
         this.engine = engine;
     }
 
-
+    @Override
+    public Car clone() throws CloneNotSupportedException {
+        return new Car(this.carLabel, this.carType, this.height,
+            this.width, this.length, this.engine);
+    }
 }
