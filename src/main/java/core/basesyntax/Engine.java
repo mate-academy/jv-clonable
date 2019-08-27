@@ -41,12 +41,8 @@ public class Engine implements Cloneable {
 
     @Override
     public Engine clone() throws CloneNotSupportedException {
-        Engine clone = new Engine();
-        clone.isThereColdSys = this.isThereColdSys;
-        clone.dispersal = this.dispersal;
-        clone.amount = this.amount;
-        clone.setType(this.type);
-        clone.maxSpeed = maxSpeed;
+        Engine clone = new Engine(this.amount, this.type, this.maxSpeed,
+                this.dispersal, this.isThereColdSys);
         return clone;
 
     }

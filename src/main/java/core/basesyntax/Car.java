@@ -52,13 +52,8 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        Car clone = new Car();
-        clone.length = this.length;
-        clone.width = this.width;
-        clone.height = this.height;
-        clone.setCarLabel(this.carLabel);
-        clone.setCarType(this.carType);
-        clone.setEngine(this.engine);
+        Car clone = new Car(this.carLabel, this.carType, this.height,
+                this.width, this.length, this.engine);
         return clone;
 
     }
