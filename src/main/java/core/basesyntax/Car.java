@@ -39,7 +39,7 @@ public class Car implements Cloneable {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return new Car(name, model, weight, maxSpeed, price, engine);
+    protected Car clone() throws CloneNotSupportedException {
+        return new Car(name, model, weight, maxSpeed, price, engine.clone());
     }
 }
