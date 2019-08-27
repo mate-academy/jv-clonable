@@ -7,16 +7,17 @@ public class Engine implements Cloneable {
     private String type;
     private Integer numberOfCylinders;
 
-    public Engine() {
-        this.name = "hybrid";
-        this.id = 10;
-        this.volume = 2500;
-        this.type = "electric/gas";
-        this.numberOfCylinders = 6;
+    public Engine(String name, Integer id, Integer volume, String type,
+                  Integer numberOfCylinders) {
+        this.name = name;
+        this.id = id;
+        this.volume = volume;
+        this.type = type;
+        this.numberOfCylinders = numberOfCylinders;
     }
 
     @Override
     protected Engine clone() throws CloneNotSupportedException {
-        return (Engine)super.clone();
+        return (Engine) super.clone();
     }
 }
