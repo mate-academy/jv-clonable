@@ -60,7 +60,7 @@ public class Engine implements Cloneable {
 
     @Override
     public Object clone() throws CloneNotSupportedException {
-        return super.clone(); // 'cause every field is primitive or immutable
+        return super.clone();
     }
 
     static enum EngineType { HeatEngine, ElectricEngine, AirEngine }
