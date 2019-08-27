@@ -8,13 +8,13 @@ public class Car implements Cloneable {
     private int mileage;
     private Engine engine;
 
-    Car(Engine engine) {
+    public Car(Engine engine) {
         this.engine = engine;
     }
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        Car car = new Car(engine);
+        Car car = new Car(engine.clone());
         car.name = this.name;
         car.color = this.color;
         car.type = this.type;
