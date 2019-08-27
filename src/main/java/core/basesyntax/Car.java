@@ -17,6 +17,6 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() {
-        return new Car(this.type, this.manufacturer, productionYear, speed, engine);
+        return new Car(this.type, this.manufacturer, this.productionYear, this.speed, this.engine);
     }
 }
