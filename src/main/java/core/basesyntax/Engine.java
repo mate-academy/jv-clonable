@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class Engine implements Cloneable {
+
     private String modelName;
     private String type;
     private int volume;
