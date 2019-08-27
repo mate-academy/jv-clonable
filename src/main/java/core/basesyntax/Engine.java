@@ -6,7 +6,6 @@ public class Engine {
     private double volume;
     private int torque;
     private String transmission;
-
     public Engine(String type, int horsepower, double volume, int torque,
                   String transmission) {
         this.type = type;
