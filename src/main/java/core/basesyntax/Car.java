@@ -19,7 +19,6 @@ public class Car implements Cloneable {
     }
 
     public Car() {
-
     }
 
     public void setCarLabel(String carLabel) {
@@ -52,9 +51,7 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        Car clone = new Car(this.carLabel, this.carType, this.height,
-                this.width, this.length, this.engine);
-        return clone;
-
+        return new Car(this.carLabel, this.carType, this.height,
+            this.width, this.length, this.engine);
     }
 }
