@@ -1,30 +1,22 @@
 package core.basesyntax;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
-
-
-public class Engine implements Cloneable, Serializable {
+public class Engine implements Cloneable {
     private String manufacturer;
     private String supply;
     private int power;
     private char type;
     private boolean condition;
 
+    public Engine(String manufacturer, String supply, int power, char type, boolean condition) {
+        this.manufacturer = manufacturer;
+        this.supply = supply;
+        this.power = power;
+        this.type = type;
+        this.condition = condition;
+    }
+
     @Override
     public Engine clone() {
-        Engine copyEngine = new Engine();
-        try (ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream("file.bin"));
-                ObjectInputStream input = new ObjectInputStream(new FileInputStream("file.bin"))) {
-            output.writeObject(this);
-            copyEngine = (Engine)input.readObject();
-        } catch (IOException | ClassNotFoundException exception) {
-            System.out.println("The object of the class Engine has not been cloned.");;
-        }
-        return copyEngine;
+        return new Engine(this.manufacturer, this.supply, power, type, condition);
     }
 }
