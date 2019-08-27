@@ -18,6 +18,6 @@ public class Engine implements Cloneable {
 
     @Override
     protected Engine clone() throws CloneNotSupportedException {
-        return (Engine) super.clone();
+        return new Engine(this.name, this.id, this.volume, this.type, this.numberOfCylinders);
     }
 }
