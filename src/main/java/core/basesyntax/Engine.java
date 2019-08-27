@@ -56,12 +56,6 @@ public class Engine implements Cloneable {
         this.transmission = transmission;
     }
 
-    public void start() {
-    }
-
-    public void stop() {
-    }
-
     @Override
     public Engine clone() throws CloneNotSupportedException {
         return new Engine(this.type, this.horsepower, this.volume, this.torque, this.transmission);
