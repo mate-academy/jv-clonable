@@ -8,17 +8,17 @@ public class Car implements Cloneable {
     private boolean insurance;
     private Engine engine;
 
-    public Car(String brand, String model,
-               String color, int warranty, boolean insurance) {
+    public Car(String brand, String model, String color,
+               int warranty, boolean insurance, Engine engine) {
         this.brand = brand;
         this.model = model;
         this.color = color;
         this.warranty = warranty;
         this.insurance = insurance;
+        this.engine = engine;
     }
 
     public Car() {
-        System.out.println("Hi to the new car!");
     }
 
     public String getBrand() {
@@ -71,7 +71,7 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        return new Car(this.getBrand(), this.getModel(),
-                this.getColor(), this.getWarranty(), this.isInsurance());
+        return new Car(this.getBrand(), this.getModel(), this.getColor(),
+                this.getWarranty(), this.isInsurance(), this.getEngine());
     }
 }
