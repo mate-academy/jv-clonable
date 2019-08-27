@@ -16,7 +16,6 @@ public class Car implements Cloneable {
         this.width = width;
         this.length = length;
         this.engine = engine;
-
     }
 
     public Car() {

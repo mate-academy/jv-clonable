@@ -17,7 +17,6 @@ public class Engine implements Cloneable {
         this.maxSpeed = maxSpeed;
         this.dispersal = dispersal;
         this.isThereColdSys = isThereColdSys;
-
     }
 
     public void setMaxSpeed(int maxSpeed) {
