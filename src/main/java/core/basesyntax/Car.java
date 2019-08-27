@@ -70,8 +70,7 @@ public class Car implements Cloneable {
     public Car clone() {
         Car clonedCar =  new Car(this.getModel(), this.getColor(),
                 this.getNumberOfSeats(), this.getWeightCapacity(),
-                this.isSpareTire(), this.getEngine());
-        clonedCar.engine = (Engine) this.engine.clone();
+                this.isSpareTire(), this.getEngine().clone());
         return clonedCar;
     }
 }
