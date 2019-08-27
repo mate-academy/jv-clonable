@@ -8,15 +8,23 @@ public class Car implements Cloneable {
     private int mileage;
     private Engine engine;
 
+    Car(Engine engine) {
+        this.engine = engine;
+    }
+
     @Override
     public Car clone() throws CloneNotSupportedException {
-        Car car = new Car();
+        Car car = new Car(engine);
         car.name = this.name;
         car.color = this.color;
         car.type = this.type;
         car.topSpeed = this.topSpeed;
         car.mileage = this.mileage;
         return car;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
     }
 
     public String getColor() {
