@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Engine implements Cloneable {
-    private double volume = 1.0;
-    private double mileage = 0;
+    private double volume;
+    private double mileage;
     private boolean started;
     private double usingFuel;
     private int maxSpeed;
@@ -61,5 +61,4 @@ public class Engine implements Cloneable {
     protected Object clone() throws CloneNotSupportedException {
         return (Engine) super.clone();
     }
-
 }
