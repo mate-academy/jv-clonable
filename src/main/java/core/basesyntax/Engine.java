@@ -78,6 +78,8 @@ public class Engine implements Cloneable {
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+        return new Engine(this.getType(), this.getCylinders(), this.getFuelType(),
+                this.getYearOfConstruction(), this.getWeight(), this.getWidth(),
+                this.getHeights());
     }
 }
