@@ -19,7 +19,7 @@ public class Car implements Cloneable {
     protected Object clone() throws CloneNotSupportedException {
         Car cloned = (Car) super.clone();
         cloned.setEngine((Engine) cloned.getEngine().clone());
-        return super.clone();
+        return cloned;
     }
 
     public String getMarkName() {
