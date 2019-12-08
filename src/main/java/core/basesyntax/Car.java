@@ -1,5 +1,71 @@
 package core.basesyntax;
 
-public class Car {
+/**
+ * Дано класс Car и класс Engine. Определите метод клон так чтобы клонирование было глубоким.
+ * Добавьте минимум 5 полей в каждый класс (Car and Engine).
+ * Не забудьте использовать двигатель в автомобиле.
+ */
+public class Car implements Cloneable {
+    private String nameCar;
+    private String modelCar;
+    private int maxSpedCar;
+    private int ageCar;
+    private int weightCar;
+    private Engine engine;
 
+    public Car(String nameCar, String modelCar, int maxSpedCar, int ageCar,
+               int weightCar, Engine engine) {
+        this.nameCar = nameCar;
+        this.modelCar = modelCar;
+        this.maxSpedCar = maxSpedCar;
+        this.ageCar = ageCar;
+        this.weightCar = weightCar;
+        this.engine = engine;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    public Car(Car clone) {
+        this(clone.getNameCar(), clone.getModelCar(), clone.getMaxSpedCar(), clone.getAgeCar(),
+                clone.getWeightCar(), clone.getEngine());
+    }
+
+    public String getNameCar() {
+        return nameCar;
+    }
+
+    public String getModelCar() {
+        return modelCar;
+    }
+
+    public int getMaxSpedCar() {
+        return maxSpedCar;
+    }
+
+    public int getAgeCar() {
+        return ageCar;
+    }
+
+    public int getWeightCar() {
+        return weightCar;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{"
+                + "nameCar='" + nameCar + '\''
+                + ", modelCar='" + modelCar + '\''
+                + ", maxSpedCar=" + maxSpedCar
+                + ", ageCar=" + ageCar
+                + ", weightCar=" + weightCar
+                + ", engine=" + engine
+                + '}';
+    }
 }
