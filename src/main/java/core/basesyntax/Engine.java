@@ -23,8 +23,8 @@ public class Engine implements Cloneable {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    public Engine clone() {
+        return new Engine(nameEngine, modelEngine, volumeEngine, ageEngine, weightEngine);
     }
 
     public String getNameEngine() {

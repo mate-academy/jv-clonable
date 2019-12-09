@@ -23,14 +23,8 @@ public class Car implements Cloneable {
         this.engine = engine;
     }
 
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
-
-    public Car(Car clone) {
-        this(clone.getNameCar(), clone.getModelCar(), clone.getMaxSpedCar(), clone.getAgeCar(),
-                clone.getWeightCar(), clone.getEngine());
+    public Car clone() {
+        return new Car(nameCar, modelCar, maxSpedCar, ageCar, weightCar, engine);
     }
 
     public String getNameCar() {
