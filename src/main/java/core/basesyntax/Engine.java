@@ -59,11 +59,11 @@ public class Engine implements Cloneable {
 
     @Override
     public Engine clone() throws CloneNotSupportedException {
-        return new Engine(this.getTypeOfEngine(),
-                this.getCountOfCylinders(),
-                this.getCountOfValves(),
-                this.getCompressionRatio(),
-                this.getTypeOfFuel());
+        return new Engine(typeOfEngine,
+                countOfCylinders,
+                countOfValves,
+                compressionRatio,
+                typeOfFuel);
     }
 
     @Override
