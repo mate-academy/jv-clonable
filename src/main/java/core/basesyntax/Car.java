@@ -21,7 +21,6 @@ public class Car implements Cloneable {
     }
 
     public Car clone() throws CloneNotSupportedException {
-        Car clonedCar = (Car)super.clone();
-        return clonedCar;
+        return new Car(model, color, maxSpeed, year, engine);
     }
 }
