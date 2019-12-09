@@ -54,7 +54,7 @@ public class Car implements Cloneable {
         car.model = this.model;
         car.maxSpeed = this.maxSpeed;
         car.isFaster = this.isFaster;
-        car.engine = this.engine;
+        car.engine = this.engine.clone();
         return car;
     }
 }
