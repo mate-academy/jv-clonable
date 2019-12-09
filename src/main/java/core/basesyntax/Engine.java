@@ -16,11 +16,8 @@ public class Engine implements Cloneable {
         this.tradeMark = tradeMark;
     }
 
-    public Engine() {
-    }
-
     @Override
     public Object clone() throws CloneNotSupportedException {
-        return super.clone();
+        return new Engine(serialNumber, cylinderNumber, roundsPerMinute, model, tradeMark);
     }
 }
