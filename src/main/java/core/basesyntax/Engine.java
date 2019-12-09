@@ -7,11 +7,15 @@ public class Engine implements Cloneable {
     private int power;
     private boolean isElectric;
 
+    public Engine() {
+
+    }
+
     public String getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public  void  setType(String type) {
         this.type = type;
     }
 
@@ -56,7 +60,13 @@ public class Engine implements Cloneable {
         this.isElectric = isElectric;
     }
 
+    @Override
     public Engine clone() throws CloneNotSupportedException {
-        return (Engine) super.clone();
+        Engine engine = new Engine();
+        engine.type = this.type;
+        engine.countOfCylinder = this.countOfCylinder;
+        engine.countOfValve = this.countOfValve;
+        engine.isElectric = this.isElectric;
+        return engine;
     }
 }
