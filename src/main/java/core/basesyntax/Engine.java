@@ -40,15 +40,12 @@ public class Engine implements Cloneable {
     }
 
     @Override
-    public Object clone() {
-        try {
-            return Engine.super.clone();
-        } catch (CloneNotSupportedException e) {
-            return new Engine(this.numberOfCilinders,
-                    this.numberOfValves,
-                    this.model,
-                    this.isWork,
-                    this.mileage);
-        }
+    public Engine clone() {
+
+        return new Engine(numberOfCilinders,
+                numberOfValves,
+                model,
+                isWork,
+                mileage);
     }
 }
