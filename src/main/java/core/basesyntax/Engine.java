@@ -57,6 +57,8 @@ public class Engine implements Cloneable {
     }
 
     public Engine clone() throws CloneNotSupportedException {
-        return (Engine) super.clone();
+        Engine newEngine = new Engine(this.engineVolume, this.enginePower, this.numberOfCylinders,
+                this.fuelType, this.cooling);
+        return newEngine;
     }
 }
