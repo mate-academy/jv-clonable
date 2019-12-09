@@ -54,8 +54,9 @@ public class Car implements Cloneable {
 
     protected Car clone()
             throws CloneNotSupportedException {
-        Car car = (Car) super.clone();
-        car.engine = engine.clone();
+        Car car = new Car(body,color);
+        car.engine.clone();
         return car;
     }
 }
+
