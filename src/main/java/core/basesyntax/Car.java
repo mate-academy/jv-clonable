@@ -7,13 +7,7 @@ public class Car implements Cloneable {
     private int doors;
     private Engine engine;
 
-    public Car(
-            String model,
-            String colour,
-            int seats,
-            int doors,
-            Engine engine
-    ) {
+    public Car(String model, String colour, int seats, int doors, Engine engine) {
         this.model = model;
         this.colour = colour;
         this.seats = seats;
@@ -63,10 +57,10 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        Car car = (Car) super.clone();
+        Car newCar = new Car(model, colour, seats, doors, engine);
         Engine engine = this.getEngine().clone();
-        car.setEngine(engine);
-        return car;
+        newCar.setEngine(engine);
+        return newCar;
     }
 }
 

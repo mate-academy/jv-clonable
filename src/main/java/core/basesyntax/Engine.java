@@ -7,13 +7,7 @@ public class Engine implements Cloneable {
     private int cylinders;
     private String cylindersPosition;
 
-    public Engine(
-            int power,
-            int torque,
-            int weight,
-            int cylinders,
-            String cylindersPosition
-    ) {
+    public Engine(int power, int torque, int weight, int cylinders, String cylindersPosition) {
         this.power = power;
         this.torque = torque;
         this.weight = weight;
@@ -63,6 +57,6 @@ public class Engine implements Cloneable {
 
     @Override
     public Engine clone() throws CloneNotSupportedException {
-        return (Engine) super.clone();
+        return new Engine(power, torque, weight, cylinders, cylindersPosition);
     }
 }
