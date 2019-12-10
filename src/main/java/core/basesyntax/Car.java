@@ -7,9 +7,10 @@ public class Car implements Cloneable {
     private String model;
     private Engine engine;
 
-    public Car(String body, String color) {
+    public Car(String body, String color, Engine engine) {
         this.body = body;
         this.color = color;
+        this.engine = engine;
     }
 
     public String getBody() {
@@ -52,11 +53,10 @@ public class Car implements Cloneable {
         this.engine = engine;
     }
 
+    @Override
     protected Car clone()
             throws CloneNotSupportedException {
-        Car car = new Car(body, color);
-        car.setEngine(engine.clone());
-        return new Car(body, color);
+        return new Car(body, color, engine.clone());
     }
 }
 
