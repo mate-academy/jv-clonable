@@ -24,7 +24,7 @@ public class Car implements Cloneable {
     }
 
     public Car clone() {
-        return new Car(nameCar, modelCar, maxSpedCar, ageCar, weightCar, engine);
+        return new Car(nameCar, modelCar, maxSpedCar, ageCar, weightCar, engine.clone());
     }
 
     public String getNameCar() {
