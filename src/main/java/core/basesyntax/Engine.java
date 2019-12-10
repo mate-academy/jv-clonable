@@ -58,8 +58,8 @@ public class Engine implements Cloneable {
 
     @Override
     public Engine clone() throws CloneNotSupportedException {
-        Engine newEngine = new Engine(this.engineVolume, this.enginePower, this.numberOfCylinders,
-                this.fuelType, this.cooling);
+        Engine newEngine = new Engine(engineVolume, enginePower, numberOfCylinders,
+                fuelType, cooling);
         return newEngine;
     }
 }
