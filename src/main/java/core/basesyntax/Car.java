@@ -22,7 +22,8 @@ public class Car implements Cloneable {
         this.weightCar = weightCar;
         this.engine = engine;
     }
-
+    
+    @Override
     public Car clone() {
         return new Car(nameCar, modelCar, maxSpedCar, ageCar, weightCar, engine.clone());
     }
