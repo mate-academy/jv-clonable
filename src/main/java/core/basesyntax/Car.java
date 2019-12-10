@@ -7,6 +7,9 @@ public class Car implements Cloneable {
     private boolean isFaster;
     private Engine engine;
 
+    public Car() {
+    }
+
     public String getType() {
         return type;
     }
@@ -49,12 +52,12 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        Car car = new Car();
-        car.type = this.type;
-        car.model = this.model;
-        car.maxSpeed = this.maxSpeed;
-        car.isFaster = this.isFaster;
-        car.engine = this.engine.clone();
-        return car;
+        Car clone = (Car) super.clone();
+        clone.type = this.type;
+        clone.model = this.model;
+        clone.maxSpeed = this.maxSpeed;
+        clone.isFaster = this.isFaster;
+        clone.engine = this.engine.clone();
+        return clone;
     }
 }
