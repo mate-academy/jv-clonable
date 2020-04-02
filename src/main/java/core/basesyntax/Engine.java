@@ -7,8 +7,16 @@ public class Engine implements Cloneable {
     private double crankDiameter;
     private double capacity;
 
-    public Object clone() throws CloneNotSupportedException {
-        Engine engine = (Engine)super.clone();
-        return engine;
+    public Engine(double cylinderDiameter, double pistonStroke, double volume,
+                  double crankDiameter, double capacity) {
+        this.cylinderDiameter = cylinderDiameter;
+        this.pistonStroke = pistonStroke;
+        this.volume = volume;
+        this.crankDiameter = crankDiameter;
+        this.capacity = capacity;
+    }
+
+    public Engine clone() throws CloneNotSupportedException {
+        return new Engine(cylinderDiameter, pistonStroke, volume, crankDiameter, capacity);
     }
 }

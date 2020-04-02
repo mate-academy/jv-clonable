@@ -7,15 +7,17 @@ public class Car implements Cloneable {
     private String fuelType;
     private String bodyType;
 
-    public Engine getEngine() {
-        return engine;
+    public Car(Engine engine, String color, String carBrand, String fuelType,
+               String bodyType) {
+        this.engine = engine;
+        this.color = color;
+        this.carBrand = carBrand;
+        this.fuelType = fuelType;
+        this.bodyType = bodyType;
     }
 
-    public Object clone() throws CloneNotSupportedException {
-        Car car = (Car)super.clone();
-        engine = car.getEngine();
-        engine = new Engine();
-        return car;
+    public Car clone() throws CloneNotSupportedException {
+        return new Car(engine.clone(), color, carBrand, fuelType, bodyType);
     }
 }
 
