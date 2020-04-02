@@ -17,6 +17,7 @@ public class Engine implements Cloneable {
     }
 
     public Engine clone() throws CloneNotSupportedException {
-        return new Engine(fuelType, fuelConsumption, maxPower, maxRpm, numeralOfCylinder);
+        return new Engine(fuelType, fuelConsumption, maxPower,
+                maxRpm, numeralOfCylinder);
     }
 }
