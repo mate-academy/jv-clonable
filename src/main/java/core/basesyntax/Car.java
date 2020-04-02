@@ -7,11 +7,16 @@ public class Car implements Cloneable {
     private String color;
     private int age;
 
-    public Car clone() {
-        Car newCar = this.clone();
-        newCar.engine = this.engine;
-        newCar.color = this.color;
-        newCar.name = this.name;
-        return newCar;
+    public Car(Engine engine, String name, int price, String color, int age) {
+        this.engine = engine;
+        this.name = name;
+        this.price = price;
+        this.color = color;
+        this.age = age;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return new Car(engine.clone(), name, price, color, age);
     }
 }

@@ -7,10 +7,15 @@ public class Engine implements Cloneable {
     private String name;
     private int power;
 
+    public Engine(String type, double weigth, double size, String name, int power) {
+        this.type = type;
+        this.weigth = weigth;
+        this.size = size;
+        this.name = name;
+        this.power = power;
+    }
+
     public Engine clone() {
-        Engine newEngine = this.clone();
-        newEngine.name = this.name;
-        newEngine.type = this.type;
-        return newEngine;
+        return new Engine(type, weigth, size, name, power);
     }
 }
