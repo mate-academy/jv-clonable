@@ -36,7 +36,9 @@ public class Car implements Cloneable {
     }
 
     @Override
-    public Car clone() throws CloneNotSupportedException {
-        return new Car(brand, color, speed, doorsNum, carEngine);
+    public Car clone() {
+        return new Car(brand, color, speed, doorsNum, carEngine.clone());
     }
 }
+
+
