@@ -13,7 +13,7 @@ public class Car implements Cloneable {
 
     public Object clone() throws CloneNotSupportedException {
         Car car = (Car)super.clone();
-        engine = car.getEngine() ;
+        engine = car.getEngine();
         engine = new Engine();
         return car;
     }
