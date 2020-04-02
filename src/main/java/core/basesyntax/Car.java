@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class Car implements Cloneable {
+
     private Engine engine;
     private int wight;
     private int height;
@@ -16,7 +17,7 @@ public class Car implements Cloneable {
     }
 
     @Override
-    public Object clone() {
-        return new Car(engine.clone(), wight, height, length, weight);
+    public Car clone() {
+        return new Car(engine.clone(),wight,height, length, weight);
     }
 }
