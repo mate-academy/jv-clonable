@@ -7,8 +7,16 @@ public class Engine implements Cloneable {
     private int horsePowers;
     private int weight;
 
+    public Engine(String nm, String te, double ec, int hp, int wt) {
+        name = nm;
+        typeEngine = te;
+        engineCapacity = ec;
+        horsePowers = hp;
+        weight = wt;
+    }
+
     @Override
     public Engine clone() throws CloneNotSupportedException {
-        return new Engine();
+        return new Engine(name, typeEngine, engineCapacity, horsePowers, weight);
     }
 }
