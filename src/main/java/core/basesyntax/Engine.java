@@ -7,14 +7,18 @@ public class Engine implements Cloneable {
     private double cylinderBore;
     private double torque;
 
+    public Engine(int capacity, String typeFuel, boolean turbine,
+                  double cylinderBore, double torque) {
+        this.capacity = capacity;
+        this.typeFuel = typeFuel;
+        this.turbine = turbine;
+        this.cylinderBore = cylinderBore;
+        this.torque = torque;
+
+    }
+
     @Override
     public Engine clone() {
-        Engine clonedEngine = new Engine();
-        clonedEngine.capacity = this.capacity;
-        clonedEngine.typeFuel = this.typeFuel;
-        clonedEngine.turbine = this.turbine;
-        clonedEngine.cylinderBore = this.cylinderBore;
-        clonedEngine.torque = this.torque;
-        return clonedEngine;
+        return new Engine(capacity, typeFuel, turbine, cylinderBore, torque);
     }
 }
