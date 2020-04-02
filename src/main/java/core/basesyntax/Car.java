@@ -20,7 +20,7 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() {
-        return new Car(year, make, model, color, doorsQuantity, (Engine) engine.clone());
+        return new Car(year, make, model, color, doorsQuantity, engine.clone());
     }
 
 }
