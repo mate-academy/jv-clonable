@@ -19,6 +19,5 @@ public class Engine implements Cloneable {
     protected Engine clone() {
         return new Engine(capacity, mark, power, type, isRun);
     }
-
 }
 
