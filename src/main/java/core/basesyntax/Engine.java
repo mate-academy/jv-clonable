@@ -45,7 +45,8 @@ public class Engine implements Cloneable {
 
     @Override
     public Engine clone() {
-        return new Engine(power, torque, diameter, model, serialNumber);
+        return new Engine(this.getPower(), this.getTorque(), this.getDiameter(),
+                this.getModel(), this.serialNumber);
     }
 }
 
