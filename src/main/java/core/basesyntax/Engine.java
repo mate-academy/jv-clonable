@@ -7,12 +7,16 @@ public class Engine implements Cloneable {
     private int amountHP;
     private String fuelType;
 
-    public Engine() {
-
+    public Engine(String engineType, int engineVolume, int weight, int amountHP, String fuelType) {
+        this.engineType = engineType;
+        this.engineVolume = engineVolume;
+        this.weight = weight;
+        this.amountHP = amountHP;
+        this.fuelType = fuelType;
     }
 
     @Override
-    public Object clone() throws CloneNotSupportedException {
-        return new Engine();
+    public Engine clone() throws CloneNotSupportedException {
+        return new Engine(engineType, engineVolume, weight, amountHP, fuelType);
     }
 }
