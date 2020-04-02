@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Engine implements Cloneable{
+public class Engine implements Cloneable {
     private int power;
     private int torque;
     private int diameter;
@@ -44,7 +44,7 @@ public class Engine implements Cloneable{
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    public Engine clone() throws CloneNotSupportedException {
+        return new Engine(power, torque, diameter, model, serialNumber);
     }
 }

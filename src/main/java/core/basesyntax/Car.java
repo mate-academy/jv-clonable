@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Car implements Cloneable{
+public class Car implements Cloneable {
     private String brand;
     private String color;
     private int speed;
@@ -36,9 +36,7 @@ public class Car implements Cloneable{
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        Engine engine= (Engine) super.clone();
-        engine = (Engine) this.carEngine.clone();
-        return engine;
+    public Car clone() throws CloneNotSupportedException {
+        return new Car(brand, color, speed, doorsNum, carEngine);
     }
 }
