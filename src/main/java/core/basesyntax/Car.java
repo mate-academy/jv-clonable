@@ -16,12 +16,7 @@ public class Car implements Cloneable {
         this.type = type;
     }
 
-    public Car(String name, String type) {
-        this.name = name;
-        this.type = type;
-    }
-
-    public Car(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -35,11 +30,8 @@ public class Car implements Cloneable {
     }
 
     @Override
-    public Car clone() throws CloneNotSupportedException {
-        Car newCar = (Car) super.clone();
-        newCar.engine = newCar.engine.clone();
-        newCar.wheels = newCar.wheels.clone();
-        newCar.color = newCar.color.clone();
+    public Car clone() {
+        Car newCar = new Car(name, type, wheels.clone(), engine.clone(), color.clone());
         return newCar;
     }
 }

@@ -22,7 +22,7 @@ public class Engine implements Cloneable {
     }
 
     @Override
-    public Engine clone() throws CloneNotSupportedException {
-        return (Engine) super.clone();
+    public Engine clone() {
+        return new Engine(series, model, type, status, cost);
     }
 }

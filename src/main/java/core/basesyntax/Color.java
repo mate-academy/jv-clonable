@@ -13,7 +13,7 @@ public class Color implements Cloneable {
     }
 
     @Override
-    public Color clone() throws CloneNotSupportedException {
-        return (Color) super.clone();
+    public Color clone() {
+        return new Color(color);
     }
 }
