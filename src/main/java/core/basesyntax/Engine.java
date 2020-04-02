@@ -15,8 +15,7 @@ public class Engine implements Cloneable {
         this.isNew = isNew;
     }
 
-    public Engine clone(Engine other) throws CloneNotSupportedException {
-        return new Engine(other.typeOfFuel,
-                other.power, other.volume, other.price, other.isNew);
+    public Engine clone() {
+        return new Engine(typeOfFuel, power, volume, price, isNew);
     }
 }

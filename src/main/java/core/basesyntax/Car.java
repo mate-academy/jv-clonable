@@ -15,7 +15,7 @@ public class Car implements Cloneable {
         this.isNew = isNew;
     }
 
-    public Car clone(Car other) throws CloneNotSupportedException {
-        return new Car(other.engine, other.color, other.maxSpeed, other.doors, other.isNew);
+    public Car clone() {
+        return new Car(engine, color, maxSpeed, doors, isNew);
     }
 }
