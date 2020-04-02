@@ -17,7 +17,8 @@ public class Car implements Cloneable {
     }
 
     public Car clone() throws CloneNotSupportedException {
-        return new Car(seatingCapacity, typeWheelDrive, transmissionType,bodyType,engine.clone());
+        return new Car(seatingCapacity, typeWheelDrive, transmissionType,
+                bodyType,engine.clone());
     }
 }
 
