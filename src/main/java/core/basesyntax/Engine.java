@@ -9,7 +9,7 @@ public class Engine implements Cloneable {
     private String typeOfCooling;
 
     @Override
-    public Engine clone() throws CloneNotSupportedException {
-        return (Engine) super.clone();
+    public Engine clone() {
+        return new Engine();
     }
 }
