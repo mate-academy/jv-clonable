@@ -17,6 +17,6 @@ public class Car implements Cloneable {
     }
 
     public Car clone() {
-        return new Car(producer, model, color, productionYear, engine);
+        return new Car(producer, model, color, productionYear, engine.clone());
     }
 }
