@@ -10,8 +10,8 @@ public class Car implements Cloneable {
     private boolean airBag;
     private Engine engine;
 
-    public Car(String carMake, String modelOfCar, Color colorCar,int yearOfIssue,boolean airBag,
-                Engine engine) {
+    public Car(String carMake, String modelOfCar, Color colorCar, int yearOfIssue, boolean airBag,
+               Engine engine) {
         this.carMake = carMake;
         this.modelOfCar = modelOfCar;
         this.colorCar = colorCar;
@@ -21,9 +21,8 @@ public class Car implements Cloneable {
     }
 
     @Override
-    public Car clone() {
-        Car cloned = clone();
-        cloned.engine.clone();
+    public Car clone() throws CloneNotSupportedException {
+        Car cloned = new Car(carMake, modelOfCar, colorCar, yearOfIssue, airBag, engine.clone());
         return cloned;
     }
 }

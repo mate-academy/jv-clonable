@@ -16,7 +16,7 @@ public class Engine implements Cloneable {
     }
 
     @Override
-    public Engine clone() {
-        return clone();
+    public Engine clone() throws CloneNotSupportedException {
+        return new Engine(name, volume, power, accelerationTime, torque);
     }
 }
