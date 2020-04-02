@@ -15,48 +15,8 @@ public class Engine implements Cloneable {
         this.torque = torque;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-
-    public void setPower(int power) {
-        this.power = power;
-    }
-
-    public void setAccelerationTime(int accelerationTime) {
-        this.accelerationTime = accelerationTime;
-    }
-
-    public void setTorque(int torque) {
-        this.torque = torque;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getVolume() {
-        return volume;
-    }
-
-    public int getPower() {
-        return power;
-    }
-
-    public int getAccelerationTime() {
-        return accelerationTime;
-    }
-
-    public int getTorque() {
-        return torque;
-    }
-
     @Override
-    public Engine clone() throws CloneNotSupportedException {
-        return (Engine) super.clone();
+    public Engine clone() {
+        return clone();
     }
 }

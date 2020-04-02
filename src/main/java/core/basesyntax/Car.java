@@ -20,58 +20,10 @@ public class Car implements Cloneable {
         this.engine = engine;
     }
 
-    public void setCarMake(String carMake) {
-        this.carMake = carMake;
-    }
-
-    public void setModelOfCar(String modelOfCar) {
-        this.modelOfCar = modelOfCar;
-    }
-
-    public void setColorCar(Color colorCar) {
-        this.colorCar = colorCar;
-    }
-
-    public void setYearOfIssue(int yearOfIssue) {
-        this.yearOfIssue = yearOfIssue;
-    }
-
-    public void setAirBag(boolean airBag) {
-        this.airBag = airBag;
-    }
-
-    public void setEngine(Engine engine) {
-        this.engine = engine;
-    }
-
-    public String getCarMake() {
-        return carMake;
-    }
-
-    public String getModelOfCar() {
-        return modelOfCar;
-    }
-
-    public Color getColorCar() {
-        return colorCar;
-    }
-
-    public int getYearOfIssue() {
-        return yearOfIssue;
-    }
-
-    public boolean getAirBag() {
-        return airBag;
-    }
-
-    public Engine getEngine() {
-        return engine;
-    }
-
     @Override
-    public Car clone() throws CloneNotSupportedException {
-        Car cloned = (Car) super.clone();
-        cloned.setEngine(cloned.getEngine().clone());
+    public Car clone() {
+        Car cloned = clone();
+        cloned.engine.clone();
         return cloned;
     }
 }
