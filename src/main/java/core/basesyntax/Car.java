@@ -11,6 +11,7 @@ public class Car implements Cloneable {
         Car newCar = this.clone();
         newCar.engine = this.engine;
         newCar.color = this.color;
+        newCar.name = this.name;
         return newCar;
     }
 }
