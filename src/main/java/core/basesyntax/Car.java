@@ -1,15 +1,23 @@
 package core.basesyntax;
 
 public class Car implements Cloneable {
-    private String color;
-    private String body;
-    private String model;
-    private String regNumber;
     private Engine engine;
+    private String color;
+    private String shape;
+    private String model;
+    private int year;
+
+    public Car(Engine engine, String color, String model, int year) {
+        this.engine = engine;
+        this.color = color;
+        this.shape = shape;
+        this.model = model;
+        this.year = year;
+    }
 
     @Override
-    public Object clone() throws CloneNotSupportedException {
-        return new Car();
+    public Car clone() {
+        return new Car(engine.clone(), color, model, year);
     }
 }
 
