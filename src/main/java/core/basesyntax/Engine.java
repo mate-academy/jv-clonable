@@ -7,10 +7,16 @@ public class Engine implements Cloneable {
     private int param4;
     private int param5;
 
-    public Engine() {
+    public Engine(int param1, int param2, int param3, int param4, int param5) {
+        this.param5 = param5;
+        this.param4 = param4;
+        this.param3 = param3;
+        this.param2 = param2;
+        this.param1 = param1;
     }
 
-    public Engine clone() throws CloneNotSupportedException {
-        return (Engine)super.clone();
+    @Override
+    public Engine clone() {
+        return new Engine(param1, param2, param3, param4, param5);
     }
 }
