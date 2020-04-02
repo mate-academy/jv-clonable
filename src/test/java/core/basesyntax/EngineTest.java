@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class EngineTest {
+public class EngineTest implements Cloneable {
     @Test
     public void checkThatEngineClassImplementsCloneable() {
         String cloneableInterface = "java.lang.Cloneable";
