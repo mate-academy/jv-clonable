@@ -8,11 +8,11 @@ public class Car implements Cloneable {
     private Engine engine;
 
     public Car(String brand, String model, String color, double value, Engine engine) {
-        brand = brand;
-        model = model;
-        color = color;
-        value = value;
-        engine = engine;
+        this.brand = brand;
+        this.model = model;
+        this.color = color;
+        this.value = value;
+        this.engine = engine;
     }
 
     @Override

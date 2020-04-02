@@ -10,11 +10,11 @@ public class Engine implements Cloneable {
     public Engine(String name, String typeEngine,
                   double engineCapacity,
                   int horsePowers, int weight) {
-        name = name;
-        typeEngine = typeEngine;
-        engineCapacity = engineCapacity;
-        horsePowers = horsePowers;
-        weight = weight;
+        this.name = name;
+        this.typeEngine = typeEngine;
+        this.engineCapacity = engineCapacity;
+        this.horsePowers = horsePowers;
+        this.weight = weight;
     }
 
     @Override
