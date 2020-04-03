@@ -7,28 +7,16 @@ public class Engine implements Cloneable {
     private int enginePower;
     private int engineTorque;
 
-    public void setEngineType(String engineType) {
+    public Engine(String engineType, int cylindersNumber, String transmissionType, int enginePower, int engineTorque) {
         this.engineType = engineType;
-    }
-
-    public void setCylindersNumber(int cylindersNumber) {
         this.cylindersNumber = cylindersNumber;
-    }
-
-    public void setTransmissionType(String transmissionType) {
         this.transmissionType = transmissionType;
-    }
-
-    public void setEnginePower(int enginePower) {
         this.enginePower = enginePower;
-    }
-
-    public void setEngineTorque(int engineTorque) {
         this.engineTorque = engineTorque;
     }
 
     @Override
-    protected Engine clone() {
-        return new Engine();
+    public Engine clone() {
+        return new Engine(engineType, cylindersNumber, transmissionType, enginePower, engineTorque);
     }
 }

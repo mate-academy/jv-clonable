@@ -7,31 +7,16 @@ public class Car implements Cloneable {
     private int weight;
     private Engine engine;
 
-    public void setModelCar(String modelCar) {
+    public Car(String modelCar, int carSpeed, String carColor, int weight, Engine engine) {
         this.modelCar = modelCar;
-    }
-
-    public void setCarSpeed(int carSpeed) {
         this.carSpeed = carSpeed;
-    }
-
-    public void setCarColor(String carColor) {
         this.carColor = carColor;
-    }
-
-    public void setWeight(int weight) {
         this.weight = weight;
-    }
-
-    public void setEngine(Engine engine) {
         this.engine = engine;
     }
 
     @Override
     public Car clone() {
-        Car newCar = new Car();
-        Engine engineClone = engine.clone();
-        newCar.setEngine(engineClone);
-        return newCar;
+        return new Car(modelCar, carSpeed, carColor, weight, engine.clone());
     }
 }
