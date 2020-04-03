@@ -60,7 +60,7 @@ public class Car implements Cloneable {
 
     @Override
     public Object clone() {
-        return new Car(brand, model, price, weight, colour, engine);
+        return new Car(brand, model, price, weight, colour, new Engine());
     }
 }
 
