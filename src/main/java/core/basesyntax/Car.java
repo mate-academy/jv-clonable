@@ -15,8 +15,7 @@ public class Car implements Cloneable {
         this.numberOfSeats = numberOfSeats;
     }
 
-    @Override
-    public Car clone() throws CloneNotSupportedException {
+    public Car clone() {
         return new Car(model, color, engine, driveUnit, numberOfSeats);
     }
 
