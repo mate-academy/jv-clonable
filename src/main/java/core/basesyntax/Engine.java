@@ -11,12 +11,12 @@ public class Engine implements Cloneable {
     public Engine() {
     }
 
-    public Engine(String type, String state, int price, double capacity, double wight) {
+    public Engine(String type, String state, int price, double capacity, double weight) {
         this.type = type;
         this.state = state;
         this.price = price;
         this.capacity = capacity;
-        this.weight = wight;
+        this.weight = weight;
     }
 
     public String getType() {
@@ -25,11 +25,6 @@ public class Engine implements Cloneable {
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    @Override
-    public Object clone() throws CloneNotSupportedException {
-        return super.clone();
     }
 
     public double getCapacity() {
@@ -62,5 +57,10 @@ public class Engine implements Cloneable {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return new Engine(type, state, price, capacity, weight);
     }
 }

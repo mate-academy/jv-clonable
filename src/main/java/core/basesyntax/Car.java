@@ -7,14 +7,15 @@ public class Car implements Cloneable {
     private int price;
     private int weight;
     private String colour;
-    private Engine engine = new Engine();
+    private Engine engine;
 
-    public Car(String brand, String model, int price, int weight, String colour) {
+    public Car(String brand, String model, int price, int weight, String colour, Engine engine) {
         this.brand = brand;
         this.model = model;
         this.price = price;
         this.weight = weight;
         this.colour = colour;
+        engine = new Engine();
     }
 
     public String getBrand() {
@@ -59,6 +60,7 @@ public class Car implements Cloneable {
 
     @Override
     public Object clone() throws CloneNotSupportedException {
-        return super.clone();
+        return new Car(brand, model, price, weight, colour, engine);
     }
 }
+
