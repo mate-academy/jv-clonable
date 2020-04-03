@@ -33,17 +33,8 @@ public class Engine implements Cloneable {
     }
 
     @Override
-    public Engine clone() throws CloneNotSupportedException {
-        try {
-            return (Engine) super.clone();
-        } catch (CloneNotSupportedException exception) {
-            return new Engine(
-                    this.engineName,
-                    this.engineType,
-                    this.cylindres,
-                    this.power,
-                    this.fuelTankCapacity);
-        }
+    public Engine clone() {
+        return new Engine(engineName, engineType, cylindres, power, fuelTankCapacity);
     }
 
     public String getEngineName() {
