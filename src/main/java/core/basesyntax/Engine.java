@@ -23,30 +23,9 @@ public class Engine implements Cloneable {
         this.serialNumber = serialNumber;
     }
 
-    public int getPower() {
-        return power;
-    }
-
-    public int getTorque() {
-        return torque;
-    }
-
-    public int getDiameter() {
-        return diameter;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public int getSerialNumber() {
-        return serialNumber;
-    }
-
     @Override
     public Engine clone() {
-        return new Engine(this.getPower(), this.getTorque(), this.getDiameter(),
-                this.getModel(), this.serialNumber);
+        return new Engine(power, torque, diameter, model, serialNumber);
     }
 }
 
