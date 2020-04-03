@@ -15,14 +15,6 @@ public class Car implements Cloneable {
         this.engine = engine;
     }
 
-    public Car(Car otherCar) throws CloneNotSupportedException {
-        this(new String(otherCar.getMark()),
-                new String(otherCar.getModel()),
-                new String(otherCar.getTypeOfBody()),
-                otherCar.getMaxSpeed(),
-                new Engine(otherCar.getEngine()));
-    }
-
     public String getMark() {
         return mark;
     }
@@ -52,7 +44,11 @@ public class Car implements Cloneable {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    protected Car clone() throws CloneNotSupportedException {
+        return new Car(mark,
+                model,
+                typeOfBody,
+                maxSpeed,
+                engine.clone());
     }
 }

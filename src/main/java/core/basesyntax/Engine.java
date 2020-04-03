@@ -15,14 +15,6 @@ public class Engine implements Cloneable {
         this.horsepower = horsepower;
     }
 
-    public Engine(Engine otherEngine) {
-        this(new String(otherEngine.getMark()),
-                new String(otherEngine.getModel()),
-                new String(otherEngine.getFuelType()),
-                otherEngine.getVolume(),
-                otherEngine.getHorsepower());
-    }
-
     public String getMark() {
         return mark;
     }
@@ -56,7 +48,11 @@ public class Engine implements Cloneable {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    protected Engine clone() throws CloneNotSupportedException {
+        return new Engine(mark,
+                model,
+                fuelType,
+                volume,
+                horsepower);
     }
 }
