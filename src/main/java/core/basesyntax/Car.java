@@ -20,6 +20,22 @@ public class Car implements Cloneable {
         this.name = name;
     }
 
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setWheels(Wheel wheels) {
+        this.wheels = wheels;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
     @Override
     public String toString() {
         return "Car{" + "name='" + name + '\''
@@ -31,8 +47,7 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() {
-        Car newCar = new Car(name, type, wheels.clone(), engine.clone(), color.clone());
-        return newCar;
+        return new Car(name, type, wheels.clone(), engine.clone(), color.clone());
     }
 }
 
