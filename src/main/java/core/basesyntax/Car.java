@@ -15,7 +15,7 @@ public class Car implements Cloneable {
         this.price = price;
         this.weight = weight;
         this.colour = colour;
-        engine = new Engine();
+        this.engine = engine;
     }
 
     public String getBrand() {
@@ -60,7 +60,7 @@ public class Car implements Cloneable {
 
     @Override
     public Object clone() {
-        return new Car(brand, model, price, weight, colour, new Engine());
+        return new Car(brand, model, price, weight, colour, (Engine)engine.clone());
     }
 }
 
