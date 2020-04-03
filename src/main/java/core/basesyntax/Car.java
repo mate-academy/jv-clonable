@@ -19,7 +19,6 @@ public class Car implements Cloneable {
     }
 
     @Override
-
     public Car clone() {
         return new Car(name, colour, type, maxSpeed, acceleration, engine.clone());
     }
