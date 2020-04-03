@@ -60,7 +60,7 @@ public class Engine implements Cloneable {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    protected Object clone() {
         return new Engine(type, state, price, capacity, weight);
     }
 }
