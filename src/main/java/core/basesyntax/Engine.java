@@ -7,6 +7,14 @@ public class Engine implements Cloneable {
     private String typeFuel;
     private int price;
 
+    public Engine(double capacity, int power, double oil, String typeFuel, int price) {
+        this.capacity = capacity;
+        this.power = power;
+        this.oil = oil;
+        this.typeFuel = typeFuel;
+        this.price = price;
+    }
+
     public double getCapacity() {
         return capacity;
     }
@@ -50,6 +58,6 @@ public class Engine implements Cloneable {
     @Override
     protected Object clone()
             throws CloneNotSupportedException {
-        return new Engine();
+        return new Engine(capacity,power,oil,typeFuel,price);
     }
 }

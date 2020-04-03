@@ -8,6 +8,16 @@ public class Car implements Cloneable {
     private int numberOfSeats;
     private int price;
 
+    public Car(Engine engine, String typeCar, int year, String color,
+               int numberOfSeats, int price) {
+        this.engine = engine;
+        this.typeCar = typeCar;
+        this.year = year;
+        this.color = color;
+        this.numberOfSeats = numberOfSeats;
+        this.price = price;
+    }
+
     public String getTypeCar() {
         return typeCar;
     }
@@ -58,7 +68,7 @@ public class Car implements Cloneable {
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return new Car();
+        return new Car(engine,typeCar,year,color,numberOfSeats,price);
     }
 }
 
