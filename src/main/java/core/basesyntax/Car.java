@@ -5,7 +5,7 @@ public class Car implements Cloneable {
     private String model;
     private int speed;
     private boolean isRunning;
-    private core.basesyntax.Engine engine;
+    private Engine engine;
 
     Car(String color, String model, int speed, boolean isRunning, core.basesyntax.Engine engine) {
         this.color = color;
