@@ -19,6 +19,6 @@ public class Engine implements Cloneable {
 
     @Override
     public Engine clone() {
-        return new Engine(levelOfNoise,numOfCylinders,power,typeOfFuel,typeOfCooling);
+        return new Engine(levelOfNoise, numOfCylinders, power, typeOfFuel, typeOfCooling);
     }
 }
