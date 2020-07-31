@@ -16,6 +16,7 @@ public class Engine implements Cloneable {
         this.capacity = capacity;
     }
 
+    @Override
     public Engine clone() throws CloneNotSupportedException {
         return new Engine(carModel, isUsed, yearOfProduction, fuelType, capacity);
     }

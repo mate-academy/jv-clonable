@@ -17,6 +17,7 @@ public class Car implements Cloneable {
         this.owner = owner;
     }
 
+    @Override
     public Car clone() throws CloneNotSupportedException {
         Car clonedCar = new Car(engine.clone(), speed, color, yearOfProduction, owner);
         return clonedCar;
