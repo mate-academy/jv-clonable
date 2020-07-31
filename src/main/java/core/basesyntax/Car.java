@@ -17,8 +17,8 @@ public class Car implements Cloneable {
         this.parkingLot = parkingLot;
     }
 
+    @Override
     protected Car clone() {
         return new Car(nameOwner, color, brand, numbers, parkingLot, engine.clone());
     }
 }
-

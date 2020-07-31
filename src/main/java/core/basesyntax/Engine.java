@@ -16,6 +16,7 @@ public class Engine implements Cloneable {
         this.yearOfIssue = yearOfIssue;
     }
 
+    @Override
     protected Engine clone() {
         return new Engine(type, powerSystem, environmentStandarts, capacity, yearOfIssue);
     }
