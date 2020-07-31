@@ -7,7 +7,7 @@ public class Engine implements Cloneable {
     private int yearModel;
     private String type;
 
-    private Engine(int power, String modelName, boolean electric, int yearModel, String type) {
+    public Engine(int power, String modelName, boolean electric, int yearModel, String type) {
         this.power = power;
         this.modelName = modelName;
         this.electric = electric;
@@ -15,13 +15,18 @@ public class Engine implements Cloneable {
         this.type = type;
     }
 
+    public Engine(int power, String modelName) {
+        this.power = power;
+        this.modelName = modelName;
+    }
+
     @Override
     public Engine clone() throws CloneNotSupportedException {
-        clone().power = power;
-        clone().modelName = modelName;
-        clone().electric = electric;
-        clone().yearModel = yearModel;
-        clone().type = type;
-        return clone();
+        power = power;
+        modelName = modelName;
+        electric = electric;
+        yearModel = yearModel;
+        type = type;
+        return (Engine) new Engine(power, modelName, electric, yearModel, type);
     }
 }

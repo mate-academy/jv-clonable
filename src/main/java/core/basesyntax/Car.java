@@ -7,8 +7,9 @@ public class Car implements Cloneable {
     private int numberOfDoors;
     private Engine engine;
 
-    public Car(String brand, String version, int numberOfDoors, Engine engine) {
+    public Car(String brand, String model, String version, int numberOfDoors, Engine engine) {
         this.brand = brand;
+        this.model = model;
         this.version = version;
         this.numberOfDoors = numberOfDoors;
         this.engine = engine;
@@ -16,11 +17,11 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        clone().brand = brand;
-        clone().model = model;
-        clone().engine = engine;
-        clone().numberOfDoors = numberOfDoors;
-        clone().version = version;
-        return clone();
+        brand = brand;
+        model = model;
+        version = version;
+        numberOfDoors = numberOfDoors;
+        engine = engine;
+        return new Car(brand, model, version, numberOfDoors, engine);
     }
 }
