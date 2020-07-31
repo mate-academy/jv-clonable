@@ -1,11 +1,11 @@
 package core.basesyntax;
 
 public class Engine implements Cloneable {
-    private final String type;
-    private final int weight;
-    private final int numberOfCylinders;
-    private final boolean works;
-    private final boolean broken;
+    private String type;
+    private int weight;
+    private int numberOfCylinders;
+    private boolean works;
+    private boolean broken;
 
     public Engine(String type, int weight, int numberOfCylinders, boolean works, boolean broken) {
         this.type = type;
@@ -16,7 +16,7 @@ public class Engine implements Cloneable {
     }
 
     @Override
-    public Object clone() {
+    public Engine clone() {
         return new Engine(type, weight, numberOfCylinders, works, broken);
     }
 }

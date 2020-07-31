@@ -1,11 +1,11 @@
 package core.basesyntax;
 
 public class Car implements Cloneable {
-    private final String name;
-    private final String price;
-    private final String color;
-    private final int maxSpeed;
-    private final Engine engine;
+    private String name;
+    private String price;
+    private String color;
+    private int maxSpeed;
+    private Engine engine;
 
     public Car(String name, String price, String color, int maxSpeed, Engine engine) {
         this.name = name;
@@ -16,8 +16,8 @@ public class Car implements Cloneable {
     }
 
     @Override
-    public Object clone() {
-        return new Car(name, price, color, maxSpeed, (Engine) engine.clone());
+    public Car clone() {
+        return new Car(name, price, color, maxSpeed, engine.clone());
     }
 
     @Override
