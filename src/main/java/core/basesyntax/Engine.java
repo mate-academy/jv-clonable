@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Engine implements Cloneable {
-    private static long idCounter = 0;
     private long id;
     private String fuel;
     private int productionYear;
@@ -9,12 +8,13 @@ public class Engine implements Cloneable {
     private double fuelConsumption;
     private int revolutionsPerMinute;
 
-    public Engine(String fuel,
+    public Engine(long id,
+                  String fuel,
                   int productionYear,
                   String company,
                   double fuelConsumption,
                   int revolutionsPerMinute) {
-        this.id = idCounter++;
+        this.id = id;
         this.fuel = fuel;
         this.productionYear = productionYear;
         this.company = company;
@@ -83,6 +83,6 @@ public class Engine implements Cloneable {
 
     @Override
     public Engine clone() throws CloneNotSupportedException {
-        return (Engine) super.clone();
+        return new Engine(id, fuel, productionYear, company, fuelConsumption, revolutionsPerMinute);
     }
 }

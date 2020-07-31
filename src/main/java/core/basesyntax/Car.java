@@ -1,19 +1,22 @@
 package core.basesyntax;
 
 public class Car implements Cloneable {
-    private static long vinCodeCounter = 0;
-    private final long vinCode;
+    private long vinCode;
     private String mark;
     private String model;
     private String typeOfCarcase;
     private Engine engine;
 
-    public Car(String mark, String model, String typeOfCarcase, Engine engine) {
-        vinCode = vinCodeCounter++;
+    public Car(long vinCode, String mark, String model, String typeOfCarcase, Engine engine) {
+        this.vinCode = vinCode;
         this.mark = mark;
         this.model = model;
         this.typeOfCarcase = typeOfCarcase;
         this.engine = engine;
+    }
+
+    public void setVinCode(long vinCode) {
+        this.vinCode = vinCode;
     }
 
     public long getVinCode() {
@@ -65,8 +68,6 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        Car clonedCar = (Car) super.clone();
-        clonedCar.setEngine(this.engine.clone());
-        return clonedCar;
+        return new Car(vinCode, mark, model, typeOfCarcase, engine.clone());
     }
 }
