@@ -18,7 +18,7 @@ public class Engine implements Cloneable {
 
     @Override
     protected Engine clone() throws CloneNotSupportedException {
-        return (Engine) super.clone();
+        return new Engine(power, capacity, powerType, numberOfCylinders, fuelConsumption);
     }
 
     public int getPower() {
