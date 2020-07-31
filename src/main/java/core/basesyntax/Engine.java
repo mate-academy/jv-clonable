@@ -17,14 +17,6 @@ public class Engine implements Cloneable {
         this.torque = torque;
     }
 
-    public Engine(Engine engine) {
-        this.engineCapacity = engine.engineCapacity;
-        this.noiseLevel = engine.noiseLevel;
-        this.serialNumber = engine.serialNumber;
-        this.weight = engine.weight;
-        this.torque = engine.torque;
-    }
-
     @Override
     protected Engine clone() {
         return new Engine(engineCapacity, noiseLevel, serialNumber, weight, torque);
