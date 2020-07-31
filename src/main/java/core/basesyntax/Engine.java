@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Engine implements Cloneable{
+public class Engine implements Cloneable {
     private static long idCounter = 0;
     private long id;
     private String fuel;

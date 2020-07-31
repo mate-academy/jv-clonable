@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Car implements Cloneable{
+public class Car implements Cloneable {
     private static long vinCodeCounter = 0;
     private final long vinCode;
     private String mark;
