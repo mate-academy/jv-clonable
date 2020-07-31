@@ -21,6 +21,9 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        return new Car(brand, mileage, yearMade, isInsured, engine);
+        Car car = null;
+        car = new Car(this.brand, this.mileage, this.yearMade, this.isInsured, this.engine);
+        car.engine = (Engine) this.engine.clone();
+        return car;
     }
 }
