@@ -20,54 +20,6 @@ public class Engine implements Cloneable {
         this.idleAnalysis = idleAnalysis;
     }
 
-    public int getRpm() {
-        return rpm;
-    }
-
-    public void setRpm(int rpm) {
-        this.rpm = rpm;
-    }
-
-    public LocalDate getEngineHours() {
-        return engineHours;
-    }
-
-    public void setEngineHours(LocalDate engineHours) {
-        this.engineHours = engineHours;
-    }
-
-    public int getCoolantTemperature() {
-        return coolantTemperature;
-    }
-
-    public void setCoolantTemperature(int coolantTemperature) {
-        this.coolantTemperature = coolantTemperature;
-    }
-
-    public int getActualTorque() {
-        return actualTorque;
-    }
-
-    public void setActualTorque(int actualTorque) {
-        this.actualTorque = actualTorque;
-    }
-
-    public int getTurboPressure() {
-        return turboPressure;
-    }
-
-    public void setTurboPressure(int turboPressure) {
-        this.turboPressure = turboPressure;
-    }
-
-    public String getIdleAnalysis() {
-        return idleAnalysis;
-    }
-
-    public void setIdleAnalysis(String idleAnalysis) {
-        this.idleAnalysis = idleAnalysis;
-    }
-
     @Override
     public Engine clone() {
         return new Engine(rpm, engineHours, coolantTemperature,
