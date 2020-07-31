@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Car implements Cloneable{
+public class Car implements Cloneable {
 
     private String model;
     private int maxSpeed;
@@ -21,11 +21,12 @@ public class Car implements Cloneable{
     }
 
     public void describe() {
-        System.out.println(model + " " + maxSpeed + " " + amountOfDoors + " " + isTruck + " " + engine);
+        System.out.println(model + " " + maxSpeed + " "
+                + amountOfDoors + " " + isTruck + " " + engine);
     }
 
     @Override
     protected Car clone() throws CloneNotSupportedException {
-        return new Car (model, maxSpeed, amountOfDoors, isTruck, engine.clone());
+        return new Car(model, maxSpeed, amountOfDoors, isTruck, engine.clone());
     }
 }

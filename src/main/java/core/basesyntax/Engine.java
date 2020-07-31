@@ -7,7 +7,7 @@ public class Engine implements Cloneable {
     private int horsePower;
     private int weight;
 
-    Engine (int volume, int numberOfCylinders, int fuelConsumption, int horsePower, int weight) {
+    Engine(int volume, int numberOfCylinders, int fuelConsumption, int horsePower, int weight) {
         this.volume = volume;
         this.numberOfCylinders = numberOfCylinders;
         this.fuelConsumption = fuelConsumption;
@@ -17,6 +17,6 @@ public class Engine implements Cloneable {
 
     @Override
     protected Engine clone() throws CloneNotSupportedException {
-        return new Engine (volume, numberOfCylinders, fuelConsumption, horsePower, weight);
+        return new Engine(volume, numberOfCylinders, fuelConsumption, horsePower, weight);
     }
 }
