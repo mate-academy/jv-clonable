@@ -8,7 +8,7 @@ public class Car implements Cloneable {
     private int passengerCapacity;
     private String gasType;
 
-    public Car(String color, String model, int price, int passengerCapacity, String gasType) {
+    public Car(Engine engine, String color, String model, int price, int passengerCapacity, String gasType) {
         this.color = color;
         this.model = model;
         this.price = price;
@@ -18,6 +18,6 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() {
-        return new Car(color, model, price, passengerCapacity, gasType);
+        return new Car(engine,color, model, price, passengerCapacity, gasType);
     }
 }
