@@ -1,5 +1,31 @@
 package core.basesyntax;
 
-public class Car {
+public class Car implements Cloneable {
+    private String model;
+    private String colour;
+    private String type;
+    private int yearOfManufacture;
+    private int maxSpeed;
+    private Engine engine;
 
+    public Car(String model, String colour, String type, int maxSpeed, int yearOfManufacture) {
+        this.model = model;
+        this.colour = colour;
+        this.type = type;
+        this.maxSpeed = maxSpeed;
+        this.yearOfManufacture = yearOfManufacture;
+    }
+
+    public void gas() {
+        System.out.println("Автомобиль тронулся...");
+    }
+
+    public void brake() {
+        System.out.println("Автомобиль затормозил...");
+    }
+
+    @Override
+    public Car clone() {
+        return new Car(model, colour, type, maxSpeed, yearOfManufacture);
+    }
 }
