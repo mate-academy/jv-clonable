@@ -18,19 +18,8 @@ public class Car implements Cloneable {
         this.engine = engine;
     }
 
-    public Engine getEngine() {
-        return engine;
-    }
-
-    public void setEngine(Engine engine) {
-        this.engine = engine;
-    }
-
     @Override
     public Car clone() throws CloneNotSupportedException {
-        Car newCar = (Car) super.clone();
-        Engine newEngine = this.getEngine().clone();
-        newCar.setEngine(newEngine);
-        return newCar;
+        return new Car(name, color, model, manufactureYear, maxSpeed, engine.clone());
     }
 }
