@@ -65,13 +65,7 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() {
-        Car car;
-        try {
-            car = (Car) super.clone();
-        } catch (CloneNotSupportedException e) {
-            car = new Car(this.getName(), this.getEngine().clone(),
-                    this.getColor(), this.getType(), this.isElectricCar());
-        }
-        return car;
+        return new Car(getName(), getEngine().clone(),
+                getColor(), getType(), isElectricCar());
     }
 }

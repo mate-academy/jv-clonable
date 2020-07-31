@@ -82,11 +82,8 @@ public class Engine implements Cloneable {
 
     @Override
     public Engine clone() {
-        try {
-            return (Engine) super.clone();
-        } catch (CloneNotSupportedException e) {
-            return new Engine(this.getRpm(), this.getEngineHours(), this.getCoolantTemperature(),
-                    this.getActualTorque(), this.getTurboPressure(), this.getIdleAnalysis());
-        }
+        return new Engine(getRpm(), getEngineHours(), getCoolantTemperature(),
+                getActualTorque(), getTurboPressure(), getIdleAnalysis());
     }
 }
+
