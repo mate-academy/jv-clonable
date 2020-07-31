@@ -17,7 +17,7 @@ public class Engine implements Cloneable {
     }
 
     public Engine clone() throws CloneNotSupportedException {
-        return (Engine) super.clone();
+        return new Engine(carModel, isUsed, yearOfProduction, fuelType, capacity);
     }
 
 }
