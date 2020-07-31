@@ -17,8 +17,8 @@ public class Engine implements Cloneable {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    protected Engine clone() throws CloneNotSupportedException {
+        return (Engine) super.clone();
     }
 
     public int getPower() {

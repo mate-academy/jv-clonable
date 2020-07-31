@@ -28,7 +28,7 @@ public class Car implements Cloneable {
     }
 
     public void setColor(String color) {
-        color = color;
+        this.color = color;
     }
 
     public int getYearOfProduction() {
@@ -58,7 +58,7 @@ public class Car implements Cloneable {
     @Override
     public Car clone() throws CloneNotSupportedException {
         Car newCar = (Car) super.clone();
-        newCar.engine = (Engine) engine.clone();
+        newCar.engine = engine.clone();
 
         return newCar;
     }
