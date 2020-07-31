@@ -16,15 +16,8 @@ public class Engine implements Cloneable {
     }
 
     @Override
-    public Object clone() throws CloneNotSupportedException {
-        // var 1
-        //return new Engine(id, weight, model, color, power);
-
-        // var 2
-        // Engine engine = (Engine) super.clone();
-        // return engine;
-
-        // var 3
-        return super.clone();
+    public Engine clone() throws CloneNotSupportedException {
+        Engine engine = (Engine) super.clone();
+        return engine;
     }
 }

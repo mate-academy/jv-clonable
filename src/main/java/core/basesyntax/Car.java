@@ -17,12 +17,8 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        // var 1
-        //return new Car(id, weight, model, colour, engine);
-
-        // var 2
-        Car car = (Car) super.clone();
-        car.engine = (Engine) car.engine.clone();
+        Car car = this.clone();
+        car.engine = car.engine.clone();
         return car;
     }
 }
