@@ -8,7 +8,8 @@ public class Car implements Cloneable {
     private Engine engine;
 
     @Override
-    protected Car clone() throws CloneNotSupportedException {
+    public Car clone() throws CloneNotSupportedException {
+        this.engine = engine.clone();
         return (Car) super.clone();
     }
 

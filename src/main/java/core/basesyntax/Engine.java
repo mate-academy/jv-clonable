@@ -8,8 +8,8 @@ public class Engine implements Cloneable {
     private double enginVolume;
 
     @Override
-    protected Engine clone() {
-        return new Engine();
+    protected Engine clone() throws CloneNotSupportedException {
+        return (Engine) super.clone();
     }
 
     public String getType() {
