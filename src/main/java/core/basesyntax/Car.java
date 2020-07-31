@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Car extends Engine implements Cloneable {
+public class Car implements Cloneable {
 
     private String model;
     private String type;
@@ -9,21 +9,19 @@ public class Car extends Engine implements Cloneable {
     private int price;
     private Engine engine;
 
-    public Car build() {
-        Car car = new Car();
-        car.model = Car.this.model;
-        car.type = Car.this.type;
-        car.countryOfProduction = Car.this.countryOfProduction;
-        car.yearOfProduction = Car.this.yearOfProduction;
-        car.price = Car.this.price;
-        car.engine = Car.this.engine.build();
-        return car;
+    public Car(String model, String type, String countryOfProduction,
+                int yearOfProduction, int price, Engine engine) {
+        this.model = model;
+        this.type = type;
+        this.countryOfProduction = countryOfProduction;
+        this.yearOfProduction = yearOfProduction;
+        this.price = price;
+        this.engine = engine;
     }
 
     @Override
-    public Object clone() {
-        Car car = new Car();
-        car.build();
-        return car;
+    public Car clone() throws CloneNotSupportedException {
+        return new Car(model, type, countryOfProduction,
+        yearOfProduction, price, engine);
     }
 }

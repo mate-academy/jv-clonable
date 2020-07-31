@@ -8,22 +8,17 @@ public class Engine implements Cloneable {
     private int volume;
     private int maxPower;
 
-    public Engine build() {
-
-        Engine engine = new Engine();
-        engine.model = Engine.this.model;
-        engine.driveUnit = Engine.this.driveUnit;
-        engine.transmission = Engine.this.transmission;
-        engine.volume = Engine.this.volume;
-        engine.maxPower = Engine.this.maxPower;
-
-        return engine;
+    public Engine(String model, String driveUnit, String transmission,
+                   int volume, int maxPower) {
+        this.model = model;
+        this.driveUnit = driveUnit;
+        this.transmission = transmission;
+        this.volume = volume;
+        this.maxPower = maxPower;
     }
 
     @Override
-    public Object clone() {
-        Engine engine = new Engine();
-        engine.build();
-        return engine;
+    public Engine clone() throws CloneNotSupportedException {
+        return new Engine(model, driveUnit, transmission, volume, maxPower);
     }
 }
