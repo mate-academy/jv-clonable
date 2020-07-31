@@ -26,4 +26,3 @@ public class Engine implements Cloneable {
                 actualTorque, turboPressure, idleAnalysis);
     }
 }
-
