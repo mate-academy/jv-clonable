@@ -16,6 +16,7 @@ public class Engine implements Cloneable {
         this.weight = weight;
     }
 
+    @Override
     public Engine clone() {
         return new Engine(horsePowers, serialNumber, typeOfFuel, volume, weight);
     }
