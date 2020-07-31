@@ -20,9 +20,7 @@ public class Car implements Cloneable {
     }
 
     public void setName(String name) {
-        if (name != null) {
-            this.name = name;
-        }
+        this.name = name;
     }
 
     public Engine getEngine() {
@@ -30,9 +28,7 @@ public class Car implements Cloneable {
     }
 
     public void setEngine(Engine engine) {
-        if (engine != null) {
-            this.engine = engine;
-        }
+        this.engine = engine;
     }
 
     public String getColor() {
@@ -40,9 +36,7 @@ public class Car implements Cloneable {
     }
 
     public void setColor(String color) {
-        if (color != null) {
-            this.color = color;
-        }
+        this.color = color;
     }
 
     public String getType() {
@@ -50,9 +44,7 @@ public class Car implements Cloneable {
     }
 
     public void setType(String type) {
-        if (type != null) {
-            this.type = type;
-        }
+        this.type = type;
     }
 
     public boolean isElectricCar() {
@@ -65,7 +57,6 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() {
-        return new Car(getName(), getEngine().clone(),
-                getColor(), getType(), isElectricCar());
+        return new Car(name, engine.clone(), color, type, isElectricCar);
     }
 }

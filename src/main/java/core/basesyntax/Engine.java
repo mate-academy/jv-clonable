@@ -25,9 +25,7 @@ public class Engine implements Cloneable {
     }
 
     public void setRpm(int rpm) {
-        if (rpm != 0) {
-            this.rpm = rpm;
-        }
+        this.rpm = rpm;
     }
 
     public LocalDate getEngineHours() {
@@ -35,9 +33,7 @@ public class Engine implements Cloneable {
     }
 
     public void setEngineHours(LocalDate engineHours) {
-        if (engineHours != null) {
-            this.engineHours = engineHours;
-        }
+        this.engineHours = engineHours;
     }
 
     public int getCoolantTemperature() {
@@ -45,9 +41,7 @@ public class Engine implements Cloneable {
     }
 
     public void setCoolantTemperature(int coolantTemperature) {
-        if (coolantTemperature != 0) {
-            this.coolantTemperature = coolantTemperature;
-        }
+        this.coolantTemperature = coolantTemperature;
     }
 
     public int getActualTorque() {
@@ -55,9 +49,7 @@ public class Engine implements Cloneable {
     }
 
     public void setActualTorque(int actualTorque) {
-        if (actualTorque != 0) {
-            this.actualTorque = actualTorque;
-        }
+        this.actualTorque = actualTorque;
     }
 
     public int getTurboPressure() {
@@ -65,9 +57,7 @@ public class Engine implements Cloneable {
     }
 
     public void setTurboPressure(int turboPressure) {
-        if (turboPressure != 0) {
-            this.turboPressure = turboPressure;
-        }
+        this.turboPressure = turboPressure;
     }
 
     public String getIdleAnalysis() {
@@ -75,15 +65,13 @@ public class Engine implements Cloneable {
     }
 
     public void setIdleAnalysis(String idleAnalysis) {
-        if (idleAnalysis != null) {
-            this.idleAnalysis = idleAnalysis;
-        }
+        this.idleAnalysis = idleAnalysis;
     }
 
     @Override
     public Engine clone() {
-        return new Engine(getRpm(), getEngineHours(), getCoolantTemperature(),
-                getActualTorque(), getTurboPressure(), getIdleAnalysis());
+        return new Engine(rpm, engineHours, coolantTemperature,
+                actualTorque, turboPressure, idleAnalysis);
     }
 }
 
