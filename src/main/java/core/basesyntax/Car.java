@@ -15,7 +15,7 @@ public class Car implements Cloneable {
         this.carEngine = carEngine;
     }
 
-    public Car clone(Car car) {
-        return new Car(car.maxSpeed, car.transmission, car.color, car.mark, car.carEngine);
+    public Car clone() {
+        return new Car(maxSpeed, transmission, color, mark, carEngine.clone());
     }
 }

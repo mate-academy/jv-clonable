@@ -16,8 +16,7 @@ public class Engine implements Cloneable {
         this.weight = weight;
     }
 
-    public Engine clone(Engine engine) {
-        return new Engine(engine.horsePowers, engine.serialNumber,
-                engine.typeOfFuel, engine.volume, weight);
+    public Engine clone() {
+        return new Engine(horsePowers, serialNumber, typeOfFuel, volume, weight);
     }
 }
