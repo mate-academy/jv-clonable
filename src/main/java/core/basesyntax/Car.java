@@ -7,10 +7,7 @@ public class Car implements Cloneable {
     private boolean isInsured;
     private Engine engine;
 
-    public Car(String brand,
-               int mileage,
-               int yearMade,
-               boolean isInsured,
+    public Car(String brand, int mileage, int yearMade, boolean isInsured,
                Engine engine) {
         this.brand = brand;
         this.mileage = mileage;
