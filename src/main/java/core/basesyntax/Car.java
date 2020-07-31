@@ -8,12 +8,13 @@ public class Car implements Cloneable {
     private int maxSpeed;
     private Engine engine;
 
-    public Car(String model, String colour, String type, int maxSpeed, int yearOfManufacture) {
+    public Car(String model, String colour, String type, int maxSpeed, int yearOfManufacture, Engine engine) {
         this.model = model;
         this.colour = colour;
         this.type = type;
         this.maxSpeed = maxSpeed;
         this.yearOfManufacture = yearOfManufacture;
+        this.engine = engine;
     }
 
     public void gas() {
@@ -25,7 +26,7 @@ public class Car implements Cloneable {
     }
 
     @Override
-    public Car clone() {
-        return new Car(model, colour, type, maxSpeed, yearOfManufacture);
+    public Car clone() throws CloneNotSupportedException {
+        return new Car(model, colour, type, maxSpeed, yearOfManufacture, engine.clone());
     }
 }
