@@ -14,9 +14,17 @@ public class Engine implements Cloneable {
         this.power = power;
         this.numberOfCylinders = numberOfCylinders;
     }
+    /*
+        На мой взгляд, поскольку объект содержит только примитивы и стринги,
+         более правильной будет такая реализация:
 
+         public Engine clone() throws CloneNotSupportedException {
+            return (Engine) super.clone();
+        }
+        Но она почему то противоречит требованиям (не использовать super.clone())
+    */
     @Override
-    protected Engine clone() {
+    public Engine clone() {
         return new Engine(brand, model, volume, power, numberOfCylinders);
     }
 
