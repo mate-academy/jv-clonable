@@ -9,11 +9,11 @@ public class Engine implements Cloneable {
 
     public Engine(String name, int combustionChambersVolume,
                   int power, int torque, int fuelConsumption) {
-        this.name = name;
-        this.combustionChambersVolume = combustionChambersVolume;
-        this.power = power;
-        this.torque = torque;
-        this.fuelConsumption = fuelConsumption;
+        name = name;
+        combustionChambersVolume = combustionChambersVolume;
+        power = power;
+        torque = torque;
+        fuelConsumption = fuelConsumption;
     }
 
     @Override
