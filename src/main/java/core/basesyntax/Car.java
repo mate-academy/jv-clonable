@@ -9,9 +9,9 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        Car cloneCar = new Car();
-        cloneCar.engine = cloneCar.engine.clone();
-        return cloneCar;
+        Car car = (Car) super.clone();
+        car.engine = car.engine.clone();
+        return car;
     }
 
     public String getColour() {
