@@ -8,11 +8,6 @@ public class Car implements Cloneable {
     private int issueYear;
 
     public Car(String name, Engine engine, String color, int doorCount, int issueYear) {
-        name = name;
-        engine = engine;
-        color = color;
-        doorCount = doorCount;
-        issueYear = issueYear;
     }
 
     @Override
