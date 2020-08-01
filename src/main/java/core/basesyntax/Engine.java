@@ -14,18 +14,15 @@ public class Engine implements Cloneable {
         this.power = power;
         this.numberOfCylinders = numberOfCylinders;
     }
-    /*
-        На мой взгляд, поскольку объект содержит только примитивы и стринги,
-         более правильной будет такая реализация:
 
-         public Engine clone() throws CloneNotSupportedException {
-            return (Engine) super.clone();
-        }
-        Но она почему то противоречит требованиям (не использовать super.clone())
-    */
+    /**
+     * Хотя в задании сказано не использовать super.clone(), поскольку объект
+     * содержит только примитивы и стринги, вполне правильной будет такая реализация
+     * Богдан в слаке сказал, что это требование относится к классу Car.
+     */
     @Override
-    public Engine clone() {
-        return new Engine(brand, model, volume, power, numberOfCylinders);
+    public Engine clone() throws CloneNotSupportedException {
+        return (Engine) super.clone();
     }
 
     public String getBrand() {
