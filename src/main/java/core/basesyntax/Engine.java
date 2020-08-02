@@ -7,11 +7,8 @@ public class Engine implements Cloneable {
     private double maximumPowerOutput;
     private int numberOfCylinder;
 
-    public Engine(String modelName,
-                  String type,
-                  double displacement,
-                  double maximumPowerOutput,
-                  int numberOfCylinder) {
+    public Engine(String modelName, String type, double displacement,
+                  double maximumPowerOutput, int numberOfCylinder) {
         this.modelName = modelName;
         this.type = type;
         this.displacement = displacement;
