@@ -59,7 +59,7 @@ public class Engine implements Cloneable {
         this.kppType = kppType;
     }
 
-    public void startEngine() throws NullPointerException {
+    public void startEngine() {
         System.out.println("Engine started");
     }
 
@@ -80,17 +80,10 @@ public class Engine implements Cloneable {
 
     @Override
     public Object clone() throws CloneNotSupportedException {
-        Engine clonedEngine = null;
-        try {
-            new Engine(this.getCilindersNumber(),
-                    this.getVolumeCilinders(),
-                    this.getWeightEngine(),
-                    this.getEngineType(),
-                    this.getKppType());
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("Error with engie!");
-        }
-        return clonedEngine;
+        return new Engine(this.getCilindersNumber(),
+                this.getVolumeCilinders(),
+                this.getWeightEngine(),
+                this.getEngineType(),
+                this.getKppType());
     }
 }

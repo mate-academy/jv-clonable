@@ -93,13 +93,8 @@ public class Car implements Cloneable {
                 this.getMaxSpeed(),
                 this.getSeats());
         if (engine != null) {
-            try {
-                clonedCar.engine = (Engine) this.engine.clone();
-            } catch (CloneNotSupportedException e) {
-                e.printStackTrace();
-                System.out.println("Error! Engine don't exist");
-                return clonedCar;
-            }
+            clonedCar.engine = (Engine) this.engine.clone();
+            return clonedCar;
         } else {
             System.out.println("Car without engine!");
         }
