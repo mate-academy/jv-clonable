@@ -16,7 +16,12 @@ public class Engine implements Cloneable {
         this.engineType = engineType;
     }
 
-    public Engine clone() {
+    public void setHorsePower(int i) {
+        this.horsePower = i;
+    }
+
+    @Override
+    public Engine clone() throws CloneNotSupportedException {
         return new Engine(numberOfCylinders, displacement, horsePower, torque, engineType);
     }
 }
