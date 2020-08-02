@@ -69,11 +69,19 @@ public class Car implements Cloneable {
     }
 
     public void startEngine() {
-        engine.startEngine();
+        if (engine != null) {
+            engine.startEngine();
+        } else {
+            System.out.println("Engine doesn't exist!");
+        }
     }
 
     public void stopEngine() {
-        engine.stopEngine();
+        if (engine != null) {
+            engine.stopEngine();
+        } else {
+            System.out.println("Engine doesn't exist!");
+        }
     }
 
     @Override
@@ -84,7 +92,17 @@ public class Car implements Cloneable {
                 this.getWeight(),
                 this.getMaxSpeed(),
                 this.getSeats());
-        clonedCar.engine = (Engine) this.engine.clone();
+        if (engine != null) {
+            try {
+                clonedCar.engine = (Engine) this.engine.clone();
+            } catch (CloneNotSupportedException e) {
+                e.printStackTrace();
+                System.out.println("Error! Engine don't exist");
+                return clonedCar;
+            }
+        } else {
+            System.out.println("Car without engine!");
+        }
         return clonedCar;
     }
 

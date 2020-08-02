@@ -5,7 +5,7 @@ public class Main {
 
         //Test
         Car zaz = new Car("zaz", "red", 1800, 200, 5);
-        zaz.setEngine(6, 1800, 2000, "disel", "akpp");
+        //zaz.setEngine(6, 1800, 2000, "disel", "akpp");
         Car clonedZaz = (Car) zaz.clone();
 
         clonedZaz.setName("bmw");
