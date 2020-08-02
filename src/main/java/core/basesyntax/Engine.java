@@ -1,11 +1,11 @@
 package core.basesyntax;
 
 public class Engine implements Cloneable {
-    String manufacturer;
-    String name;
-    int age;
-    int cylinder_number;
-    int weight;
+    private String manufacturer;
+    private String name;
+    private int age;
+    private int cylinder_number;
+    private int weight;
 
     public Engine(String manufacturer, String name, int age, int cylinder_number, int weight) {
         this.manufacturer = manufacturer;
