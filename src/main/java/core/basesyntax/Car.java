@@ -17,11 +17,22 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        brand = brand;
-        model = model;
-        version = version;
-        numberOfDoors = numberOfDoors;
-        engine = engine;
-        return new Car(brand, model, version, numberOfDoors, engine);
+        return (Car) super.clone();
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    public void setNumberOfDoors(int numberOfDoors) {
+        this.numberOfDoors = numberOfDoors;
     }
 }

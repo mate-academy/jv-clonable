@@ -15,18 +15,8 @@ public class Engine implements Cloneable {
         this.type = type;
     }
 
-    public Engine(int power, String modelName) {
-        this.power = power;
-        this.modelName = modelName;
-    }
-
     @Override
     public Engine clone() throws CloneNotSupportedException {
-        power = power;
-        modelName = modelName;
-        electric = electric;
-        yearModel = yearModel;
-        type = type;
-        return (Engine) new Engine(power, modelName, electric, yearModel, type);
+        return (Engine) super.clone();
     }
 }
