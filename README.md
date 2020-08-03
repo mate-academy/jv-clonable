@@ -1,13 +1,15 @@
 # jv-cloneable
 
-Дано класс Car и класс Engine. Определите метод клон так чтобы клонирование было глубоким.
-Добавьте минимум 5 полей в каждый класс (Car and Engine). Не забудьте использовать двигатель в автомобиле.
-Также нужно переопределить метод toString() для машины и мотора.
+We have a Car class and an Engine class. Define the clone method so that the cloning will deep.
+Add at least 5 fields to each class (Car and Engine). Remember to use the engine in your car.
+You also need to override `toString()` method for the car and engine.
 
-Проверьте работу метода `clone ()` в классе `Application`.
-Для этого:
-1. создайте мотор;
-2. создайте машину и присвойте ей мотор;
-3. вызовите метод clone () на только что созданной машине, результат присвойте новой переменной;
-4. измените один из параметров (полей) мотора, который был создан в начале (п.1);
-5. выведите в консоль параметры обеих машин. Сравните, моторы для обеих машин. Если параметры мотора отличаются - задание выполнено правильно.
+Check the `clone ()` method in the `Application` class.
+
+Steps:
+1. create an engine;
+2. create a car and assign an engine to it;
+3. call `clone()` method on the car object, assign the result to a new variable;
+4. change one of the parameters (fields) of the motor, which was created at the beginning (1);
+5. print the parameters of both cars to the console. Compare engines for both cars. 
+If the motor parameters are different, the task is completed correctly.
