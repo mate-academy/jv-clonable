@@ -1,13 +1,5 @@
 package core.basesyntax;
 
-/**
- * Don’t use super.clone().
- * Use constructor to create new objects.
- * Use fields itself instead of getters.
- * Don’t use this. keyword. This is redundant.
- * Don’t create redundant variables.
- */
-
 public class Car implements Cloneable {
     private Engine engine;
     private Color color;
