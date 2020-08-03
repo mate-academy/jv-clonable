@@ -15,11 +15,6 @@ public class Engine implements Cloneable {
         this.numberOfCylinders = numberOfCylinders;
     }
 
-    /**
-     * Хотя в задании сказано не использовать super.clone(), поскольку объект
-     * содержит только примитивы и стринги, вполне правильной будет такая реализация
-     * Богдан в слаке сказал, что это требование относится к классу Car.
-     */
     @Override
     public Engine clone() throws CloneNotSupportedException {
         return (Engine) super.clone();
