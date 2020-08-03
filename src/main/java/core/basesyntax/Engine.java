@@ -77,10 +77,6 @@ public class Engine implements Cloneable {
 
     @Override
     public Engine clone() throws CloneNotSupportedException {
-        return new Engine(getCilindersNumber(),
-                getVolumeCilinders(),
-                getWeightEngine(),
-                getEngineType(),
-                getKppType());
+        return new Engine(cilindersNumber, volumeCilinders, weightEngine, engineType, kppType);
     }
 }

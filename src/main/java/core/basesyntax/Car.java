@@ -86,12 +86,7 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        Car clonedCar = new Car(
-                getName(),
-                getColor(),
-                getWeight(),
-                getMaxSpeed(),
-                getSeats());
+        Car clonedCar = new Car(name, color, weight, maxSpeed, seats);
         if (engine != null) {
             clonedCar.engine = engine.clone();
             return clonedCar;
