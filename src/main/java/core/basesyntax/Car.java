@@ -17,6 +17,11 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() throws CloneNotSupportedException {
+        brand = brand;
+        model = model;
+        version = version;
+        numberOfDoors = numberOfDoors;
+        engine = engine.clone();
         return (Car) super.clone();
     }
 
@@ -34,5 +39,9 @@ public class Car implements Cloneable {
 
     public void setNumberOfDoors(int numberOfDoors) {
         this.numberOfDoors = numberOfDoors;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
     }
 }
