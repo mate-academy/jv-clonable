@@ -42,7 +42,7 @@ public class EngineTest {
     }
 
     @Test
-    public void checkThatMethodCloneHasNotParameters() {
+    public void checkThatMethodCloneHasNoParameters() {
         Method cloneMethod = getCloneMethod();
         int parameterCount = cloneMethod.getParameterCount();
         Assert.assertEquals("You shouldn't use parameters in clone method signature",
