@@ -8,7 +8,7 @@ public class Car implements Cloneable {
     private boolean isnew;
 
     private Car(Engine engine, Color color, double weight, String model, boolean isnew) {
-        this.engine = engine.clone();
+        this.engine = engine;
         this.color = color;
         this.weight = weight;
         this.model = model;
