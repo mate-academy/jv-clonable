@@ -1,24 +1,19 @@
 package core.basesyntax;
 
-import java.util.Objects;
-
 public class Engine implements Cloneable {
     private String markOfEngine;
     private String typeOfEngine;
-    private String typeElectricOrGas;
-    private double fueTank;
+    private String type;
+    private double fuelTank;
     private int maxPower;
 
-    public Engine(String markOfEngine, String typeOfEngine, String typeElectricOrGas,
-                  double fueTank, int maxPower) {
+    public Engine(String markOfEngine, String typeOfEngine, String type,
+                  double fuelTank, int maxPower) {
         this.markOfEngine = markOfEngine;
         this.typeOfEngine = typeOfEngine;
-        this.typeElectricOrGas = typeElectricOrGas;
-        this.fueTank = fueTank;
+        this.type = type;
+        this.fuelTank = fuelTank;
         this.maxPower = maxPower;
-    }
-
-    public Engine() {
     }
 
     public String getMarkOfEngine() {
@@ -37,20 +32,20 @@ public class Engine implements Cloneable {
         this.typeOfEngine = typeOfEngine;
     }
 
-    public String getTypeElectricOrGas() {
-        return typeElectricOrGas;
+    public String getType() {
+        return type;
     }
 
-    public void setTypeElectricOrGas(String typeElectricOrGas) {
-        this.typeElectricOrGas = typeElectricOrGas;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public double getFueTank() {
-        return fueTank;
+    public double getFuelTank() {
+        return fuelTank;
     }
 
-    public void setFueTank(double fueTank) {
-        this.fueTank = fueTank;
+    public void setFuelTank(double fuelTank) {
+        this.fuelTank = fuelTank;
     }
 
     public int getMaxPower() {
@@ -68,22 +63,17 @@ public class Engine implements Cloneable {
                 + '\''
                 + ", power='" + typeOfEngine
                 + '\''
-                + ", typeElectricOrGas='" + typeElectricOrGas
+                + ", typeElectricOrGas='" + type
                 + '\''
                 + ", volume="
-                + fueTank
+                + fuelTank
                 + ", speed="
                 + maxPower
                 + '}';
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(markOfEngine, typeOfEngine, typeElectricOrGas, fueTank, maxPower);
-    }
-
-    @Override
     public Engine clone() throws CloneNotSupportedException {
-        return new Engine(markOfEngine, typeOfEngine, typeElectricOrGas, fueTank, maxPower);
+        return new Engine(markOfEngine, typeOfEngine, type, fuelTank, maxPower);
     }
 }

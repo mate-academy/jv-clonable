@@ -3,17 +3,16 @@ package core.basesyntax;
 public class Car implements Cloneable {
     private String model;
     private int weight;
-    private String dateOfcreate;
-    private String colore;
+    private String dateOfCreate;
+    private String color;
     private String country;
     private Engine engine;
 
-    public Car(String model, int weight, String dateOfcreate, String colore, String country,
-               Engine engine) {
+    public Car(String model, int weight, String dateOfCreate, String color, String country) {
         this.model = model;
         this.weight = weight;
-        this.dateOfcreate = dateOfcreate;
-        this.colore = colore;
+        this.dateOfCreate = dateOfCreate;
+        this.color = color;
         this.country = country;
         this.engine = engine;
     }
@@ -34,20 +33,20 @@ public class Car implements Cloneable {
         this.weight = weight;
     }
 
-    public String getDateOfcreate() {
-        return dateOfcreate;
+    public String getDateOfCreate() {
+        return dateOfCreate;
     }
 
-    public void setDateOfcreate(String dateOfcreate) {
-        this.dateOfcreate = dateOfcreate;
+    public void setDateOfCreate(String dateOfCreate) {
+        this.dateOfCreate = dateOfCreate;
     }
 
-    public String getColore() {
-        return colore;
+    public String getColor() {
+        return color;
     }
 
-    public void setColore(String colore) {
-        this.colore = colore;
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public String getCountry() {
@@ -69,27 +68,16 @@ public class Car implements Cloneable {
     @Override
     public String toString() {
         return "Car{"
-                + "model='"
-                + model
-                + '\''
-                + ", weight="
-                + weight
-                + ", dateOfcreate='"
-                + dateOfcreate
-                + '\''
-                + ", colore='"
-                + colore + '\''
-                + ", country='"
-                + country + '\''
-                + ", engine="
-                + engine
-                + '}';
+                + "model='" + model + '\'' + ", weight=" + weight
+                + ", dateOfcreate='" + dateOfCreate + '\''
+                + ", colore='" + color + '\''
+                + ", country='" + country + '\''
+                + ", engine=" + engine + '}';
     }
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        Engine newEngine = engine.clone();
-        return new Car(model, weight, dateOfcreate, colore, country, newEngine);
+        return new Car(model, weight, dateOfCreate, color, country);
     }
 }
 
