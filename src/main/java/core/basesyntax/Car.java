@@ -8,7 +8,8 @@ public class Car implements Cloneable {
     private String country;
     private Engine engine;
 
-    public Car(String model, int weight, String dateOfCreate, String color, String country) {
+    public Car(String model, int weight, String dateOfCreate, String color, String country,
+               Engine engine) {
         this.model = model;
         this.weight = weight;
         this.dateOfCreate = dateOfCreate;
@@ -77,7 +78,8 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        return new Car(model, weight, dateOfCreate, color, country);
+
+        return new Car(model, weight, dateOfCreate, color, country, engine.clone());
     }
 }
 

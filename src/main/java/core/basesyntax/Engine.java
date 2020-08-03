@@ -59,17 +59,9 @@ public class Engine implements Cloneable {
     @Override
     public String toString() {
         return "Engine{"
-                + "model='" + markOfEngine
-                + '\''
-                + ", power='" + typeOfEngine
-                + '\''
-                + ", typeElectricOrGas='" + type
-                + '\''
-                + ", volume="
-                + fuelTank
-                + ", speed="
-                + maxPower
-                + '}';
+                + "model='" + markOfEngine + '\'' + ", power='" + typeOfEngine + '\''
+                + ", typeElectricOrGas='" + type + '\'' + ", volume=" + fuelTank + ", speed="
+                + maxPower + '}';
     }
 
     @Override
