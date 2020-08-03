@@ -8,7 +8,7 @@ public class Car implements Cloneable {
     private boolean isTruck;
     private Engine engine;
 
-    Car(String model, int maxSpeed, int amountOfDoors, boolean isTruck, Engine engine) {
+    public Car(String model, int maxSpeed, int amountOfDoors, boolean isTruck, Engine engine) {
         this.model = model;
         this.maxSpeed = maxSpeed;
         this.amountOfDoors = amountOfDoors;
