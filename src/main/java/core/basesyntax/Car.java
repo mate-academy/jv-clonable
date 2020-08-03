@@ -9,12 +9,18 @@ public class Car implements Cloneable {
     private int price;
 
     public Car(Engine engine, String model, String color, int age, int weight, int price) {
+        this.engine = engine;
+        this.model = model;
+        this.color = color;
+        this.age = age;
+        this.weight = weight;
+        this.price = price;
+
     }
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        Car car1 = new Car(engine, model, color, age, weight, price);
-        return car1;
+        return new Car(engine.clone(), model, color, age, weight, price);
     }
 }
 
