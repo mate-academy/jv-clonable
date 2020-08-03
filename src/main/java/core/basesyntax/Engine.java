@@ -7,11 +7,8 @@ public class Engine implements Cloneable {
     private String engineType;
     private String kppType;
 
-    public Engine(int cilindersNumber,
-                  int volumeCilinders,
-                  int weightEngine,
-                  String engineType,
-                  String kppType) {
+    public Engine(int cilindersNumber, int volumeCilinders, int weightEngine,
+                  String engineType, String kppType) {
         this.cilindersNumber = cilindersNumber;
         this.volumeCilinders = volumeCilinders;
         this.weightEngine = weightEngine;
@@ -79,11 +76,11 @@ public class Engine implements Cloneable {
     }
 
     @Override
-    public Object clone() throws CloneNotSupportedException {
-        return new Engine(this.getCilindersNumber(),
-                this.getVolumeCilinders(),
-                this.getWeightEngine(),
-                this.getEngineType(),
-                this.getKppType());
+    public Engine clone() throws CloneNotSupportedException {
+        return new Engine(getCilindersNumber(),
+                getVolumeCilinders(),
+                getWeightEngine(),
+                getEngineType(),
+                getKppType());
     }
 }

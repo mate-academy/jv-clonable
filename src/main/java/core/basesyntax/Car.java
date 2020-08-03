@@ -56,11 +56,11 @@ public class Car implements Cloneable {
         this.seats = seats;
     }
 
-    public void setEngine(int cilindersNumber,
-                          int volumeCilinders,
-                          int weightEngine,
-                          String engineType,
-                          String kppType) {
+    public void setEngine(Engine engine) {
+    }
+
+    public void setEngine(int cilindersNumber, int volumeCilinders, int weightEngine,
+                          String engineType, String kppType) {
         this.engine = new Engine(cilindersNumber,
                 volumeCilinders,
                 weightEngine,
@@ -85,15 +85,15 @@ public class Car implements Cloneable {
     }
 
     @Override
-    public Object clone() throws CloneNotSupportedException {
+    public Car clone() throws CloneNotSupportedException {
         Car clonedCar = new Car(
-                this.getName(),
-                this.getColor(),
-                this.getWeight(),
-                this.getMaxSpeed(),
-                this.getSeats());
+                getName(),
+                getColor(),
+                getWeight(),
+                getMaxSpeed(),
+                getSeats());
         if (engine != null) {
-            clonedCar.engine = (Engine) this.engine.clone();
+            clonedCar.engine = engine.clone();
             return clonedCar;
         } else {
             System.out.println("Car without engine!");
