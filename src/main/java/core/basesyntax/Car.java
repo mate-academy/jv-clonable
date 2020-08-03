@@ -7,7 +7,7 @@ public class Car implements Cloneable {
     private String producer;
     private int price;
 
-    Car(Engine engine, int yearOfMade, String model, String producer, int price) {
+    public Car(Engine engine, int yearOfMade, String model, String producer, int price) {
         this.engine = engine;
         this.yearOfMade = yearOfMade;
         this.model = model;
@@ -15,11 +15,11 @@ public class Car implements Cloneable {
         this.price = price;
     }
 
-    Engine getEngine() {
+    public Engine getEngine() {
         return engine;
     }
 
-    void setEngine(Engine engine) {
+    public void setEngine(Engine engine) {
         this.engine = engine;
     }
 
