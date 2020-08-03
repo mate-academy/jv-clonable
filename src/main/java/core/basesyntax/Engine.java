@@ -19,14 +19,7 @@ public class Engine implements Cloneable {
     }
 
     public Engine clone() {
-        Engine engine = new Engine();
-        engine.volume = volume;
-        engine.maxPower = maxPower;
-        engine.energyCapacity = energyCapacity;
-        engine.engineType = engineType;
-        engine.distanceToService = distanceToService;
-        engine.check = check;
-        return engine;
+        return new Engine(volume, maxPower, energyCapacity, distanceToService, check, engineType);
     }
 
 }
