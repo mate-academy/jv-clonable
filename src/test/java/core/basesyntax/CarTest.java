@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class CarTest {
+
     @Test
     public void checkThatCarImplementsCloneable() {
         String cloneableInterface = "java.lang.Cloneable";
@@ -48,10 +49,24 @@ public class CarTest {
 
     @Test
     public void checkThatMethodCloneExists() {
+        getCloneMethod();
+    }
+
+    @Test
+    public void checkThatMethodCloneHasNotParameters() {
+        Method cloneMethod = getCloneMethod();
+        int parameterCount = cloneMethod.getParameterCount();
+        Assert.assertEquals("You shouldn't use parameters in clone method signature",
+                0, parameterCount);
+    }
+
+    private Method getCloneMethod() {
         List<Method> carMethods = Arrays.asList(Car.class.getDeclaredMethods());
-        carMethods.stream()
+        return carMethods.stream()
                 .filter(m -> m.getName().equals("clone"))
+                .filter(clone -> ! clone.toString().contains("Object")) // remove default method
                 .findFirst()
-                .orElseThrow(() -> new RuntimeException("Method clone should be present in the Car.class"));
+                .orElseThrow(() ->
+                        new RuntimeException("Method clone should be present in the Car.class"));
     }
 }
