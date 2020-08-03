@@ -16,8 +16,8 @@ public class Engine implements Cloneable {
         this.engineType = engineType;
     }
 
-    public void setHorsePower(int i) {
-        this.horsePower = i;
+    public void setHorsePower(int horsePower) {
+        this.horsePower = horsePower;
     }
 
     @Override
