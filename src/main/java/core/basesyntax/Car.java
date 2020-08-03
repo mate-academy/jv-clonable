@@ -56,9 +56,6 @@ public class Car implements Cloneable {
         this.seats = seats;
     }
 
-    public void setEngine(Engine engine) {
-    }
-
     public void setEngine(int cilindersNumber, int volumeCilinders, int weightEngine,
                           String engineType, String kppType) {
         this.engine = new Engine(cilindersNumber, volumeCilinders, weightEngine,
