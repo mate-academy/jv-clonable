@@ -8,16 +8,17 @@ public class Car implements Cloneable {
     private int id;
     private boolean isNew;
 
-    public Car(String name, String model, int year, int id, boolean isNew) {
+    public Car(String name, String model, int year, int id, boolean isNew, Engine engine) {
         this.name = name;
         this.model = model;
         this.year = year;
         this.id = id;
         this.isNew = isNew;
+        this.engine = engine;
     }
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        return new Car(name, model, year, id, isNew);
+        return new Car(name, model, year, id, isNew, engine.clone());
     }
 }
