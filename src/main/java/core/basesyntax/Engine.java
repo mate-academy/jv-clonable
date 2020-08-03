@@ -10,10 +10,10 @@ public class Engine implements Cloneable {
 
     public Engine() {
         engineType = EngineType.GASOLIN;
-        volume = 2.2;
-        maxPower = 10;
-        energyCapacity = 1000;
-        distanceToService = 10000;
+        volume = 1.7 + 0.1 * Math.ceil(10 * Math.random());
+        maxPower = 5 + 0.1 * Math.ceil(10 * Math.random());
+        energyCapacity = 1000 + 700 * Math.random();
+        distanceToService = 10000 - 10000 * Math.random();
         check = false;
     }
 
