@@ -18,15 +18,6 @@ public class Engine implements Cloneable {
         this.engineType = engineType;
     }
 
-    public Engine() {
-        engineType = EngineType.GASOLIN;
-        volume = 1.7 + 0.1 * Math.ceil(10 * Math.random());
-        maxPower = 5 + 0.1 * Math.ceil(10 * Math.random());
-        energyCapacity = 1000 + 700 * Math.random();
-        distanceToService = 10000 - 10000 * Math.random();
-        check = false;
-    }
-
     public Engine clone() {
         Engine engine = new Engine();
         engine.volume = volume;

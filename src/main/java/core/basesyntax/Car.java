@@ -15,14 +15,6 @@ public class Car implements Cloneable {
         this.isnew = isnew;
     }
 
-    public Car() {
-        engine = new Engine();
-        color = Color.BLUE;
-        weight = 2500;
-        model = "BMV";
-        isnew = true;
-    }
-
     public Car clone() {
         Car car = new Car();
         car.color = color;
