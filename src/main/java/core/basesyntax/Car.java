@@ -17,12 +17,9 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() throws CloneNotSupportedException {
-        brand = brand;
-        model = model;
-        version = version;
-        numberOfDoors = numberOfDoors;
-        engine = engine.clone();
-        return (Car) super.clone();
+        Car car = (Car) super.clone();
+        car.setEngine(engine.clone());
+        return car;
     }
 
     public void setBrand(String brand) {

@@ -19,4 +19,8 @@ public class Engine implements Cloneable {
     public Engine clone() throws CloneNotSupportedException {
         return (Engine) super.clone();
     }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }
