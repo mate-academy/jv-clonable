@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class EngineTest {
+
     @Test
     public void checkThatEngineClassImplementsCloneable() {
         String cloneableInterface = "java.lang.Cloneable";
@@ -37,10 +38,24 @@ public class EngineTest {
 
     @Test
     public void checkThatMethodCloneExists() {
-        List<Method> carMethods = Arrays.asList(Engine.class.getDeclaredMethods());
-        carMethods.stream()
+        getCloneMethod();
+    }
+
+    @Test
+    public void checkThatMethodCloneHasNoParameters() {
+        Method cloneMethod = getCloneMethod();
+        int parameterCount = cloneMethod.getParameterCount();
+        Assert.assertEquals("You shouldn't use parameters in clone method signature",
+                0, parameterCount);
+    }
+
+    private Method getCloneMethod() {
+        List<Method> engineMethods = Arrays.asList(Car.class.getDeclaredMethods());
+        return engineMethods.stream()
                 .filter(m -> m.getName().equals("clone"))
+                .filter(clone -> clone.toString().equals("Object")) // remove default method
                 .findFirst()
-                .orElseThrow(() -> new RuntimeException("Method clone should be present in the Engine.class"));
+                .orElseThrow(() ->
+                        new RuntimeException("Method clone should be present in the Engine.class"));
     }
 }
