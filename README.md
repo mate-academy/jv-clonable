@@ -13,3 +13,5 @@ Steps:
 4. change one of the parameters (fields) of engine in the original car;
 5. print the parameters of both cars to the console. Compare engines for both cars. 
 If engine parameters differs in original and cloned car, the task is completed correctly, well done!
+
+### [Try to avoid these common mistakes while solving task](https://mate-academy.github.io/jv-program-common-mistakes/java-core/equals-and-hashcode/clone)
