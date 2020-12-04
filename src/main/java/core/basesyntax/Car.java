@@ -28,12 +28,11 @@ public class Car implements Cloneable {
     }
 
     public String toString() {
-        return new StringBuilder("Car: model = ").append(this.model)
-                .append(", color = ").append(this.color)
-                .append(", engine = ").append(this.engine.toString())
-                .append(", owner = ").append(this.owner)
-                .append(", year = ").append(this.yearOfProduction)
-                .toString();
+        return "Car: model = " + this.model
+                + ", color = " + this.color
+                + ", engine = " + this.engine.toString()
+                + ", owner = " + this.owner
+                + ", year = " + this.yearOfProduction;
     }
 
     public void setEngine(Engine engine) {

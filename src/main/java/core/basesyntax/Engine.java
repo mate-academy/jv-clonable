@@ -26,12 +26,11 @@ public class Engine implements Cloneable {
     }
 
     public String toString() {
-        return new StringBuilder("Engine: model = ").append(this.model)
-                .append(", power = ").append(this.power)
-                .append(", serialNumber = ").append(this.serialNumber)
-                .append(", repairCost = ").append(this.repairCost)
-                .append(", yearOfProduction = ").append(this.yearOfProduction)
-                .toString();
+        return "Engine: model = " + this.model
+                + ", power = " + this.power
+                + ", serialNumber = " + this.serialNumber
+                + ", repairCost = " + this.repairCost
+                + ", yearOfProduction = " + this.yearOfProduction;
     }
 
     public int getPower() {
