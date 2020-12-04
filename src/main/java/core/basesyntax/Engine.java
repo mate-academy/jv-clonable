@@ -7,7 +7,6 @@ public class Engine implements Cloneable {
     private String type;
     private int power;
 
-
     public Engine(String name, String company, String origin, String type, int power) {
         this.name = name;
         this.company = company;
