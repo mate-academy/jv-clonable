@@ -53,7 +53,6 @@ public class Car implements Cloneable {
         this.coast = coast;
     }
 
-
     @Override
     public Car clone() {
         Car clonedCar = null;
@@ -68,8 +67,9 @@ public class Car implements Cloneable {
 
     @Override
     public String toString() {
-        return "Car model is " + getModel() +
-                "! It would be cost less " + coast + "$ just for you buddy. "
-                +" Car has " + engine.toString();
+        return "Car model is " + getModel()
+                + "! It would be cost less "
+                + coast + "$ just for you buddy. "
+                + " Car has " + engine.toString();
     }
 }

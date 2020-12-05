@@ -7,7 +7,7 @@ public class Engine implements Cloneable {
     private double volume;
     private double torque;
 
-    Engine(String model, int power){
+    Engine(String model, int power) {
         this.model = model;
         this.power = power;
     }
@@ -53,11 +53,11 @@ public class Engine implements Cloneable {
     }
 
     @Override
-    protected Engine clone()  {
+    protected Engine clone() {
         try {
             return (Engine)super.clone();
         } catch (CloneNotSupportedException e) {
-           throw new RuntimeException("Can't clone engine", e);
+            throw new RuntimeException("Can't clone engine", e);
         }
     }
 
