@@ -66,4 +66,13 @@ public class Car implements Cloneable {
                 ", model='" + model + '\'' +
                 '}';
     }
+
+    @Override
+    public Car clone() {
+        try {
+            return (Car)super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException("Can't clone this car", e);
+        }
+    }
 }

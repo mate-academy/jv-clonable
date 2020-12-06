@@ -71,4 +71,13 @@ public class Engine implements Cloneable {
                 ", isAirBoosted=" + isAirBoosted +
                 '}';
     }
+
+    @Override
+    public Engine clone() {
+        try {
+            return (Engine)super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException("Can't clone the engine", e);
+        }
+    }
 }
