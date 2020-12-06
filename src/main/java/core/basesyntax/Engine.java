@@ -13,7 +13,8 @@ public class Engine implements Cloneable {
         this.model = model;
     }
 
-    public Engine(String name, String model, int volume, int cylindersNumber, boolean isAirBoosted) {
+    public Engine(String name, String model,
+                  int volume, int cylindersNumber, boolean isAirBoosted) {
         this.name = name;
         this.model = model;
         this.volume = volume;
@@ -63,19 +64,18 @@ public class Engine implements Cloneable {
 
     @Override
     public String toString() {
-        return "Engine{" +
-                "name='" + name + '\'' +
-                ", model='" + model + '\'' +
-                ", volume=" + volume +
-                ", cylindersNumber=" + cylindersNumber +
-                ", isAirBoosted=" + isAirBoosted +
-                '}';
+        return "Engine{"
+                + "name='" + name + '\''
+                + ", model='" + model + '\''
+                + ", volume=" + volume
+                + ", cylindersNumber=" + cylindersNumber
+                + ", isAirBoosted=" + isAirBoosted + '}';
     }
 
     @Override
     public Engine clone() {
         try {
-            return (Engine)super.clone();
+            return (Engine) super.clone();
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException("Can't clone the engine", e);
         }

@@ -58,13 +58,12 @@ public class Car implements Cloneable {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "engine=" + engine +
-                ", capacity=" + capacity +
-                ", weight=" + weight +
-                ", name='" + name + '\'' +
-                ", model='" + model + '\'' +
-                '}';
+        return "Car{"
+                + "engine=" + engine
+                + ", capacity=" + capacity
+                + ", weight=" + weight
+                + ", name='" + name + '\''
+                + ", model='" + model + '\'' + '}';
     }
 
     @Override
