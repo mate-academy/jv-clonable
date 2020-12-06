@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Car implements Cloneable{
+public class Car implements Cloneable {
     private Engine engineOfCar;
     private String mark;
     private int maxSpeed;
@@ -44,12 +44,9 @@ public class Car implements Cloneable{
 
     @Override
     public String toString() {
-        return "Car{" +
-                "engineOfCar=" + engineOfCar +
-                ", mark='" + mark + '\'' +
-                ", maxSpeed=" + maxSpeed +
-                ", color='" + color + '\'' +
-                ", weight=" + weight +
-                '}';
+        return "Car{"
+                + "engineOfCar=" + engineOfCar + ", mark='" + mark + '\''
+                + ", maxSpeed=" + maxSpeed + ", color='" + color + '\''
+                + ", weight=" + weight + '}';
     }
 }

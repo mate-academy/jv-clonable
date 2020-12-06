@@ -38,12 +38,9 @@ public class Engine implements Cloneable {
 
     @Override
     public String toString() {
-        return "Engine{" +
-                "volume=" + volume +
-                ", weight=" + weight +
-                ", number=" + number +
-                ", power=" + power +
-                ", manufacturer='" + manufacturer + '\'' +
-                '}';
+        return "Engine{"
+                + "volume=" + volume + ", weight=" + weight + ", number="
+                + number + ", power=" + power + ", manufacturer='"
+                + manufacturer + '\'' + '}';
     }
 }
