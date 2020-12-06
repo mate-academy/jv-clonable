@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Car {
+public class Car implements Cloneable {
 
     private Engine engine;
     private int capacity;
@@ -8,7 +8,7 @@ public class Car {
     private String name;
     private String model;
 
-    public Car(Engine engine, int capacity, int weight, String name, String model) {
+    public Car(String name, String model, Engine engine, int capacity, int weight) {
         this.engine = engine;
         this.capacity = capacity;
         this.weight = weight;
@@ -54,5 +54,16 @@ public class Car {
 
     public void setModel(String model) {
         this.model = model;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "engine=" + engine +
+                ", capacity=" + capacity +
+                ", weight=" + weight +
+                ", name='" + name + '\'' +
+                ", model='" + model + '\'' +
+                '}';
     }
 }
