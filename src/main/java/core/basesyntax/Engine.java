@@ -3,7 +3,7 @@ package core.basesyntax;
 import core.basesyntax.types.EngineManufacturers;
 import core.basesyntax.types.EngineTypes;
 
-public class Engine {
+public class Engine implements Cloneable {
     private EngineTypes engineTypes;
     private int cylinders;
     private double engineDisplacement;
@@ -65,5 +65,21 @@ public class Engine {
                         + ", engine power in horse power: %d hp, engine displacement: %.2f cc."
                 , engineTypes, engineManufacturers, cylinders, power, engineDisplacement);
 
+    }
+
+    @Override
+    public Engine clone() {
+        Engine clone;
+        try {
+            clone = (Engine) super.clone();
+            clone.setCylinders(this.getCylinders());
+            clone.setEngineDisplacement(this.getEngineDisplacement());
+            clone.setEngineManufacturers(this.getEngineManufacturers());
+            clone.setEngineTypes(this.engineTypes);
+            clone.setPower(getPower());
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException("Engine cannot be clone.", e);
+        }
+        return clone;
     }
 }
