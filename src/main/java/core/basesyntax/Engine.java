@@ -4,23 +4,23 @@ import core.basesyntax.types.EngineManufacturers;
 import core.basesyntax.types.EngineTypes;
 
 public class Engine implements Cloneable {
-    private EngineTypes engineTypes;
+    private EngineTypes engineType;
     private int cylinders;
     private double engineDisplacement;
     private int power;
-    private EngineManufacturers engineManufacturers;
+    private EngineManufacturers engineManufacture;
 
-    public Engine(EngineTypes engineTypes, int cylinders, double engineDisplacement
-            , int power, EngineManufacturers engineManufacturers) {
-        this.engineTypes = engineTypes;
+    public Engine(EngineTypes engineType, int cylinders, double engineDisplacement
+            , int power, EngineManufacturers engineManufacture) {
+        this.engineType = engineType;
         this.cylinders = cylinders;
         this.engineDisplacement = engineDisplacement;
         this.power = power;
-        this.engineManufacturers = engineManufacturers;
+        this.engineManufacture = engineManufacture;
     }
 
-    public void setEngineTypes(EngineTypes engineTypes) {
-        this.engineTypes = engineTypes;
+    public void setEngineType(EngineTypes engineType) {
+        this.engineType = engineType;
     }
 
     public void setCylinders(int cylinders) {
@@ -35,12 +35,12 @@ public class Engine implements Cloneable {
         this.power = power;
     }
 
-    public void setEngineManufacturers(EngineManufacturers engineManufacturers) {
-        this.engineManufacturers = engineManufacturers;
+    public void setEngineManufacturers(EngineManufacturers engineManufacture) {
+        this.engineManufacture = engineManufacture;
     }
 
-    public EngineTypes getEngineTypes() {
-        return engineTypes;
+    public EngineTypes getEngineType() {
+        return engineType;
     }
 
     public int getCylinders() {
@@ -55,15 +55,15 @@ public class Engine implements Cloneable {
         return power;
     }
 
-    public EngineManufacturers getEngineManufacturers() {
-        return engineManufacturers;
+    public EngineManufacturers getEngineManufacture() {
+        return engineManufacture;
     }
 
     @Override
     public String toString() {
         return String.format("Engine: %s, manufacture create: %s, count of cylinders: %d"
                         + ", engine power in horse power: %d hp, engine displacement: %.2f cc."
-                , engineTypes, engineManufacturers, cylinders, power, engineDisplacement);
+                , engineType, engineManufacture, cylinders, power, engineDisplacement);
 
     }
 
@@ -74,8 +74,8 @@ public class Engine implements Cloneable {
             clone = (Engine) super.clone();
             clone.setCylinders(this.getCylinders());
             clone.setEngineDisplacement(this.getEngineDisplacement());
-            clone.setEngineManufacturers(this.getEngineManufacturers());
-            clone.setEngineTypes(this.engineTypes);
+            clone.setEngineManufacturers(this.getEngineManufacture());
+            clone.setEngineType(this.engineType);
             clone.setPower(getPower());
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException("Engine cannot be clone.", e);
