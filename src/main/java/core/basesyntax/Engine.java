@@ -25,11 +25,9 @@ public class Engine implements Cloneable {
     }
 
     public String toString() {
-        StringBuilder stringBuilder = new StringBuilder("Engine:\\Vol: ");
-        stringBuilder.append(volume).append("\\Year: ").append(year).append("\\Weight: ")
-                .append(weight).append("\\Made BY: ").append(madeBy)
-                .append("\\Has turbo: ").append(turbo);
-        return stringBuilder.toString();
+        return "Engine:\\Vol: " + volume + "\\Year: " + year
+                + "\\Weight: " + weight + "\\Made BY: "
+                + madeBy + "\\Has turbo: " + turbo;
     }
 
     public void setVolume(double volume) {

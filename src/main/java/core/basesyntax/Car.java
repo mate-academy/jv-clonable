@@ -27,11 +27,9 @@ public class Car implements Cloneable {
     }
 
     public String toString() {
-        StringBuilder stringBuilder = new StringBuilder("Model: ");
-        stringBuilder.append(model).append("\nYear: ").append(year).append("\n")
-                .append(engine.toString()).append("\nColor: ").append(color)
-                .append("\nMax Speed: ").append(maxSpeed);
-        return stringBuilder.toString();
+        return "Model: " + model + "\nYear: " + year
+                + "\n" + engine.toString() + "\nColor: " + color
+                + "\nMax Speed: " + maxSpeed;
     }
 
     public void setModel(String model) {
