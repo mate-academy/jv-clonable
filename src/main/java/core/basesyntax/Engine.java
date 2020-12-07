@@ -10,8 +10,8 @@ public class Engine implements Cloneable {
     private int power;
     private EngineManufacturers engineManufacture;
 
-    public Engine(EngineTypes engineType, int cylinders, double engineDisplacement
-            , int power, EngineManufacturers engineManufacture) {
+    public Engine(EngineTypes engineType, int cylinders, double engineDisplacement,
+                  int power, EngineManufacturers engineManufacture) {
         this.engineType = engineType;
         this.cylinders = cylinders;
         this.engineDisplacement = engineDisplacement;
@@ -62,8 +62,8 @@ public class Engine implements Cloneable {
     @Override
     public String toString() {
         return String.format("Engine: %s, manufacture create: %s, count of cylinders: %d"
-                        + ", engine power in horse power: %d hp, engine displacement: %.2f cc."
-                , engineType, engineManufacture, cylinders, power, engineDisplacement);
+                        + ", engine power in horse power: %d hp, engine displacement: %.2f cc.",
+                engineType, engineManufacture, cylinders, power, engineDisplacement);
 
     }
 

@@ -10,7 +10,8 @@ public class Car implements Cloneable {
     private int yearCreate;
     private String color;
 
-    public Car(Engine engine, CarBodyStyles bodyStyle, CarBrand brand, int yearCreate, String color) {
+    public Car(Engine engine, CarBodyStyles bodyStyle, CarBrand brand,
+               int yearCreate, String color) {
         this.engine = engine;
         this.bodyStyle = bodyStyle;
         this.brand = brand;
@@ -60,8 +61,8 @@ public class Car implements Cloneable {
 
     @Override
     public String toString() {
-        return String.format("Car: %s, body: %s, was create: %d year, color: %s, %s"
-                , brand, bodyStyle, yearCreate, color, engine);
+        return String.format("Car: %s, body: %s, was create: %d year, color: %s, %s",
+                brand, bodyStyle, yearCreate, color, engine);
 
     }
 
