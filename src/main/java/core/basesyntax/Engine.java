@@ -3,9 +3,9 @@ package core.basesyntax;
 public class Engine implements Cloneable {
     private String model;
     private int horsePower;
-    private double field3;
-    private boolean field4;
-    private byte field5;
+    private double oilConsumption;
+    private boolean available;
+    private byte quantityOfWires;
 
     public String getModel() {
         return model;
@@ -23,28 +23,28 @@ public class Engine implements Cloneable {
         this.horsePower = horsePower;
     }
 
-    public double getField3() {
-        return field3;
+    public double getOilConsumption() {
+        return oilConsumption;
     }
 
-    public void setField3(double field3) {
-        this.field3 = field3;
+    public void setOilConsumption(double oilConsumption) {
+        this.oilConsumption = oilConsumption;
     }
 
-    public boolean isField4() {
-        return field4;
+    public boolean isAvailable() {
+        return available;
     }
 
-    public void setField4(boolean field4) {
-        this.field4 = field4;
+    public void setAvailable(boolean available) {
+        this.available = available;
     }
 
-    public byte getField5() {
-        return field5;
+    public byte getQuantityOfWires() {
+        return quantityOfWires;
     }
 
-    public void setField5(byte field5) {
-        this.field5 = field5;
+    public void setQuantityOfWires(byte quantityOfWires) {
+        this.quantityOfWires = quantityOfWires;
     }
 
     @Override
@@ -60,7 +60,7 @@ public class Engine implements Cloneable {
     @Override
     public String toString() {
         return "Engine{" + " model=" + model + ", horsePower=" + horsePower
-                + ", engineField3=" + field3 + ", engineField4="
-                + field4 + ", engineField5=" + field5 + "}";
+                + ", engineField3=" + oilConsumption + ", engineField4="
+                + available + ", engineField5=" + quantityOfWires + "}";
     }
 }

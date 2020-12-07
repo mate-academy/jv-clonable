@@ -3,9 +3,9 @@ package core.basesyntax;
 public class Car implements Cloneable {
     private Engine engine;
     private String model;
-    private int field3;
-    private double field4;
-    private boolean field5;
+    private int height;
+    private double length;
+    private boolean available;
 
     public Engine getEngine() {
         return engine;
@@ -23,28 +23,28 @@ public class Car implements Cloneable {
         this.model = model;
     }
 
-    public int getField3() {
-        return field3;
+    public int getHeight() {
+        return height;
     }
 
-    public void setField3(int field3) {
-        this.field3 = field3;
+    public void setHeight(int height) {
+        this.height = height;
     }
 
-    public double getField4() {
-        return field4;
+    public double getLength() {
+        return length;
     }
 
-    public void setField4(double field4) {
-        this.field4 = field4;
+    public void setLength(double length) {
+        this.length = length;
     }
 
-    public boolean isField5() {
-        return field5;
+    public boolean isAvailable() {
+        return available;
     }
 
-    public void setField5(boolean field5) {
-        this.field5 = field5;
+    public void setAvailable(boolean available) {
+        this.available = available;
     }
 
     @Override
@@ -60,8 +60,8 @@ public class Car implements Cloneable {
 
     @Override
     public String toString() {
-        return "Car{" + "\033[31m\nengine = " + engine + "\n\033[32mcarModel=" + model
-                + ", carField3=" + field3 + ", carField4=" + field4
-                + ", carField5=" + field5 + "}\033[0m";
+        return "Car{" + " engine = " + engine + ", carModel=" + model
+                + ", carField3=" + height + ", carField4=" + length
+                + ", carField5=" + available + "}";
     }
 }
