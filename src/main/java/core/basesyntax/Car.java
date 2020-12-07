@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Car implements Cloneable {
-
     private Engine engine;
     private String name;
     private String color;
