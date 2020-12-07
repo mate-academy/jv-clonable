@@ -19,7 +19,7 @@ public class Application {
         Car clonedCar = car.clone();
         System.out.println(car);
         System.out.println(clonedCar);
-        engine.setHorsepower(500);
+        engine.setHorsepower(700);
         System.out.println(car);
         System.out.println(clonedCar);
     }
