@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Engine extends Car implements Cloneable {
+public class Engine implements Cloneable {
     private String typeEngine;
     private String stroke;
     private int diameterCylinder;
