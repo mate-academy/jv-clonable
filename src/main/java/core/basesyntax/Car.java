@@ -64,7 +64,7 @@ public class Car implements Cloneable {
     }
 
     @Override
-    protected Car clone() {
+    public Car clone() {
         try {
             return (Car) super.clone();
         } catch (CloneNotSupportedException e) {
