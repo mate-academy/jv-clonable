@@ -16,7 +16,7 @@ public class Application {
         firstCar.setColor("Red");
         firstCar.setEngine(mitsubishi);
         Car carClone = firstCar.clone();
-        firstCar.getEngine().setPower(160);
+        firstCar.getEngine().setPower(190);
         System.out.println(firstCar.toString());
         System.out.println(carClone.toString());
 
