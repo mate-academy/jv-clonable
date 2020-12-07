@@ -60,7 +60,7 @@ public class Engine implements Cloneable {
     @Override
     public String toString() {
         return "Engine{" + " model=" + model + ", horsePower=" + horsePower
-                + ", engineField3=" + oilConsumption + ", engineField4="
-                + isAvailable + ", engineField5=" + quantityOfWires + "}";
+                + ", oilConsumption=" + oilConsumption + ", isAvailable="
+                + isAvailable + ", quantityOfWires=" + quantityOfWires + "}";
     }
 }
