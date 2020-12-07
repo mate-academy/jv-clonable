@@ -5,7 +5,7 @@ public class Car implements Cloneable {
     private String model;
     private int height;
     private double length;
-    private boolean available;
+    private boolean isAvailable;
 
     public Engine getEngine() {
         return engine;
@@ -40,11 +40,11 @@ public class Car implements Cloneable {
     }
 
     public boolean isAvailable() {
-        return available;
+        return isAvailable;
     }
 
     public void setAvailable(boolean available) {
-        this.available = available;
+        this.isAvailable = available;
     }
 
     @Override
@@ -62,6 +62,6 @@ public class Car implements Cloneable {
     public String toString() {
         return "Car{" + " engine = " + engine + ", carModel=" + model
                 + ", carField3=" + height + ", carField4=" + length
-                + ", carField5=" + available + "}";
+                + ", carField5=" + isAvailable + "}";
     }
 }

@@ -4,7 +4,7 @@ public class Engine implements Cloneable {
     private String model;
     private int horsePower;
     private double oilConsumption;
-    private boolean available;
+    private boolean isAvailable;
     private byte quantityOfWires;
 
     public String getModel() {
@@ -32,11 +32,11 @@ public class Engine implements Cloneable {
     }
 
     public boolean isAvailable() {
-        return available;
+        return isAvailable;
     }
 
     public void setAvailable(boolean available) {
-        this.available = available;
+        this.isAvailable = available;
     }
 
     public byte getQuantityOfWires() {
@@ -61,6 +61,6 @@ public class Engine implements Cloneable {
     public String toString() {
         return "Engine{" + " model=" + model + ", horsePower=" + horsePower
                 + ", engineField3=" + oilConsumption + ", engineField4="
-                + available + ", engineField5=" + quantityOfWires + "}";
+                + isAvailable + ", engineField5=" + quantityOfWires + "}";
     }
 }
