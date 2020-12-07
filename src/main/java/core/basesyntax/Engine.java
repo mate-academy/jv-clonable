@@ -19,6 +19,26 @@ public class Engine {
         this.engineManufacturers = engineManufacturers;
     }
 
+    public void setEngineTypes(EngineTypes engineTypes) {
+        this.engineTypes = engineTypes;
+    }
+
+    public void setCylinders(int cylinders) {
+        this.cylinders = cylinders;
+    }
+
+    public void setEngineDisplacement(double engineDisplacement) {
+        this.engineDisplacement = engineDisplacement;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
+
+    public void setEngineManufacturers(EngineManufacturers engineManufacturers) {
+        this.engineManufacturers = engineManufacturers;
+    }
+
     public EngineTypes getEngineTypes() {
         return engineTypes;
     }
@@ -39,5 +59,11 @@ public class Engine {
         return engineManufacturers;
     }
 
+    @Override
+    public String toString() {
+        return String.format("Engine: %s, manufacture create: %s, count of cylinders: %d"
+                        + ", engine power in horse power: %d hp, engine displacement: %.2f cc."
+                , engineTypes, engineManufacturers, cylinders, power, engineDisplacement);
 
+    }
 }
