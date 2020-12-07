@@ -7,6 +7,14 @@ public class Engine implements Cloneable {
     private String typeOfFuel;
     private int numberOfStroke;
 
+    public Engine(String model, int power, int efficiency, String typeOfFuel, int numberOfStroke) {
+        this.model = model;
+        this.power = power;
+        this.efficiency = efficiency;
+        this.typeOfFuel = typeOfFuel;
+        this.numberOfStroke = numberOfStroke;
+    }
+
     public String getModel() {
         return model;
     }

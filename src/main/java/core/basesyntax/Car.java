@@ -8,6 +8,14 @@ public class Car implements Cloneable {
     private String manufacturer;
     private Engine engine;
 
+    public Car(String model, String color, int year, int maxSpeed, String manufacturer) {
+        this.model = model;
+        this.color = color;
+        this.year = year;
+        this.maxSpeed = maxSpeed;
+        this.manufacturer = manufacturer;
+    }
+
     public Engine getEngine() {
         return engine;
     }
@@ -71,11 +79,6 @@ public class Car implements Cloneable {
         try {
             Car clonedCar = (Car) super.clone();
             clonedCar.setEngine(engine.clone());
-            clonedCar.setColor(color);
-            clonedCar.setManufacturer(manufacturer);
-            clonedCar.setMaxSpeed(maxSpeed);
-            clonedCar.setYear(year);
-            clonedCar.setModel(model);
             return clonedCar;
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException("Can't create Car clone", e);
