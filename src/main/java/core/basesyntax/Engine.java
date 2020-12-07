@@ -1,15 +1,15 @@
 package core.basesyntax;
 
 public class Engine implements Cloneable {
-    private boolean turbocharged;
+    private boolean isTurboCharged;
     private double engineCapacity;
     private int horsePower;
     private String engineConfiguration;
     private int valueCylinder;
 
-    public Engine(boolean turbocharged, double engineCapacity, int horsePower,
+    public Engine(boolean isTurboCharged, double engineCapacity, int horsePower,
                   String engineConfiguration, int valueCylinder) {
-        this.turbocharged = turbocharged;
+        this.isTurboCharged = isTurboCharged;
         this.engineCapacity = engineCapacity;
         this.horsePower = horsePower;
         this.engineConfiguration = engineConfiguration;
@@ -17,7 +17,7 @@ public class Engine implements Cloneable {
     }
 
     public boolean isTurbocharged() {
-        return turbocharged;
+        return isTurboCharged;
     }
 
     public double getEngineCapacity() {
@@ -36,8 +36,8 @@ public class Engine implements Cloneable {
         return valueCylinder;
     }
 
-    public void setTurbocharged(boolean turbocharged) {
-        this.turbocharged = turbocharged;
+    public void setTurbocharged(boolean isTurboCharged) {
+        this.isTurboCharged = isTurboCharged;
     }
 
     public void setEngineCapacity(double engineCapacity) {
@@ -59,7 +59,7 @@ public class Engine implements Cloneable {
     @Override
     public String toString() {
         return "Engine{"
-                + "turbocharged=" + turbocharged
+                + "turbocharged=" + isTurboCharged
                 + ", engineCapacity=" + engineCapacity
                 + ", horsePower=" + horsePower
                 + ", engineConfiguration='" + engineConfiguration + '\''
@@ -76,5 +76,3 @@ public class Engine implements Cloneable {
         }
     }
 }
-
-
