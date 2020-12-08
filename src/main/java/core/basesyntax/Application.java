@@ -13,6 +13,7 @@ public class Application {
         Car carClone = car.clone();
 
         carClone.setYearCreate(2012);
+        carClone.getEngine().setCylinders(8);
 
         System.out.println(car);
         System.out.println(carClone);
