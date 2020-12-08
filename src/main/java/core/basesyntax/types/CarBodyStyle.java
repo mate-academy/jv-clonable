@@ -1,5 +1,5 @@
 package core.basesyntax.types;
 
-public enum CarBodyStyles {
+public enum CarBodyStyle {
     BUGGY, CABRIOLET, HATCHBACK, LIMOUSINE, MINIVAN
 }

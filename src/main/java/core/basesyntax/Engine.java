@@ -1,16 +1,16 @@
 package core.basesyntax;
 
 import core.basesyntax.types.EngineManufacturers;
-import core.basesyntax.types.EngineTypes;
+import core.basesyntax.types.EngineType;
 
 public class Engine implements Cloneable {
-    private EngineTypes engineType;
+    private EngineType engineType;
     private int cylinders;
     private double engineDisplacement;
     private int power;
     private EngineManufacturers engineManufacture;
 
-    public Engine(EngineTypes engineType, int cylinders, double engineDisplacement,
+    public Engine(EngineType engineType, int cylinders, double engineDisplacement,
                   int power, EngineManufacturers engineManufacture) {
         this.engineType = engineType;
         this.cylinders = cylinders;
@@ -19,7 +19,7 @@ public class Engine implements Cloneable {
         this.engineManufacture = engineManufacture;
     }
 
-    public void setEngineType(EngineTypes engineType) {
+    public void setEngineType(EngineType engineType) {
         this.engineType = engineType;
     }
 
@@ -39,7 +39,7 @@ public class Engine implements Cloneable {
         this.engineManufacture = engineManufacture;
     }
 
-    public EngineTypes getEngineType() {
+    public EngineType getEngineType() {
         return engineType;
     }
 

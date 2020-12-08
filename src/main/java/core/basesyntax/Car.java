@@ -1,16 +1,16 @@
 package core.basesyntax;
 
-import core.basesyntax.types.CarBodyStyles;
+import core.basesyntax.types.CarBodyStyle;
 import core.basesyntax.types.CarBrand;
 
 public class Car implements Cloneable {
     private Engine engine;
-    private CarBodyStyles bodyStyle;
+    private CarBodyStyle bodyStyle;
     private CarBrand brand;
     private int yearCreate;
     private String color;
 
-    public Car(Engine engine, CarBodyStyles bodyStyle, CarBrand brand,
+    public Car(Engine engine, CarBodyStyle bodyStyle, CarBrand brand,
                int yearCreate, String color) {
         this.engine = engine;
         this.bodyStyle = bodyStyle;
@@ -27,11 +27,11 @@ public class Car implements Cloneable {
         this.engine = engine;
     }
 
-    public CarBodyStyles getBodyStyle() {
+    public CarBodyStyle getBodyStyle() {
         return bodyStyle;
     }
 
-    public void setBodyStyle(CarBodyStyles bodyStyle) {
+    public void setBodyStyle(CarBodyStyle bodyStyle) {
         this.bodyStyle = bodyStyle;
     }
 
