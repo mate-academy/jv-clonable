@@ -1,5 +1,5 @@
 package core.basesyntax.types;
 
 public enum EngineTypes {
-    Electric, Hybrid, Gasoline, Diesel
+    ELECTRIC, HYBRID, GASOLINE, DIESEL
 }

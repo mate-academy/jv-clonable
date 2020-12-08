@@ -1,5 +1,5 @@
 package core.basesyntax.types;
 
 public enum CarBrand {
-    Volkswagen, Mazda, Skoda, MercedesBenz, Honda, BMW
+    VOLKSWAGEN, MAZDA, SKODA, MERCEDESBENZ, HONDA, BMW
 }
