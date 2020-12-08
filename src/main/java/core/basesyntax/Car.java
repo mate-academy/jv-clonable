@@ -65,10 +65,8 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() {
-        try {
-            return (Car) super.clone();
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Can't clone the object", e);
-        }
+            Engine clonedEngine = engine.clone();
+            return new Car.CarBuilder().setPrice(price).setYear(year)
+                    .setEngine(clonedEngine).setModel(model).setColor(color).build();
     }
 }
