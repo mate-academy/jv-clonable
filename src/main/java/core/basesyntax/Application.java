@@ -16,7 +16,6 @@ public class Application {
         car.setColor("Black");
         car.setWeight(2000);
 
-
         Car carClone = car.clone();
         car.getEngineOfCar().setManufacturer("Munich Motoren Werke");
         System.out.println(car.getEngineOfCar().equals(carClone.getEngineOfCar()));

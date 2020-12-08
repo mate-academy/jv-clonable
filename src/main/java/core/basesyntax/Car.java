@@ -47,7 +47,6 @@ public class Car implements Cloneable {
         this.weight = weight;
     }
 
-
     @Override
     protected Car clone() {
         try {
