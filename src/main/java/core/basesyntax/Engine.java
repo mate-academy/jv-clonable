@@ -72,13 +72,8 @@ public class Engine implements Cloneable {
         Engine clone;
         try {
             clone = (Engine) super.clone();
-            clone.setCylinders(this.getCylinders());
-            clone.setEngineDisplacement(this.getEngineDisplacement());
-            clone.setEngineManufacturers(this.getEngineManufacture());
-            clone.setEngineType(this.engineType);
-            clone.setPower(getPower());
         } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Engine cannot be clone.", e);
+            throw new RuntimeException("Can't clone engine", e);
         }
         return clone;
     }
