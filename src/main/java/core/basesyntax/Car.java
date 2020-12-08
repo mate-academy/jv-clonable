@@ -68,7 +68,7 @@ public class Car implements Cloneable {
 
     @Override
     public String toString() {
-        return "Model: " + this.model + ", color: " + this.color + ", year: "
-                + this.year + ", price: " + this.price + " " + this.engine.toString();
+        return "Model: " + model + ", color: " + color + ", year: "
+                + year + ", price: " + price + " " + engine.toString();
     }
 }

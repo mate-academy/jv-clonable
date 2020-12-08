@@ -67,9 +67,9 @@ public class Engine implements Cloneable {
 
     @Override
     public String toString() {
-        return "Number of cylinders: " + this.numberOfCylinders + ", power: "
-                + this.power + ", maximum revolutions per minute: "
-                + this.maxRevolutionsPerMinute + ", fuel consumption: "
-                + this.fuelConsumption + ", torque: " + this.torque;
+        return "Number of cylinders: " + numberOfCylinders + ", power: "
+                + power + ", maximum revolutions per minute: "
+                + maxRevolutionsPerMinute + ", fuel consumption: "
+                + fuelConsumption + ", torque: " + torque;
     }
 }
