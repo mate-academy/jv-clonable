@@ -52,7 +52,23 @@ public class Car implements Cloneable {
         this.maxSpeed = maxSpeed;
     }
 
+    public String getModel() {
+        return model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
     public Engine getEngine() {
         return engine;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public int getMaxSpeed() {
+        return maxSpeed;
     }
 }

@@ -5,14 +5,14 @@ public class Engine implements Cloneable {
     private int year;
     private int weight;
     private String madeBy;
-    private boolean turbo;
+    private boolean isTurbo;
 
-    public Engine(double volume, int year, int weight, String madeBy, boolean turbo) {
+    public Engine(double volume, int year, int weight, String madeBy, boolean isTurbo) {
         this.volume = volume;
         this.year = year;
-        this. weight = weight;
+        this.weight = weight;
         this.madeBy = madeBy;
-        this.turbo = turbo;
+        this.isTurbo = isTurbo;
     }
 
     @Override
@@ -27,7 +27,7 @@ public class Engine implements Cloneable {
     public String toString() {
         return "Engine:\\Vol: " + volume + "\\Year: " + year
                 + "\\Weight: " + weight + "\\Made BY: "
-                + madeBy + "\\Has turbo: " + turbo;
+                + madeBy + "\\Has turbo: " + isTurbo;
     }
 
     public void setVolume(double volume) {
@@ -46,7 +46,27 @@ public class Engine implements Cloneable {
         this.madeBy = madeBy;
     }
 
-    public void setTurbo(boolean turbo) {
-        this.turbo = turbo;
+    public void setTurbo(boolean isTurbo) {
+        this.isTurbo = isTurbo;
+    }
+
+    public double getVolume() {
+        return volume;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public String getMadeBy() {
+        return madeBy;
+    }
+
+    public boolean isTurbo() {
+        return isTurbo;
     }
 }
