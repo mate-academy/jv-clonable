@@ -20,6 +20,46 @@ public class Engine implements Cloneable {
         this.energySource = energySource;
     }
 
+    public Model getModel() {
+        return model;
+    }
+
+    public void setModel(Model model) {
+        this.model = model;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public int getPower() {
+        return power;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
+
+    public Size getSize() {
+        return size;
+    }
+
+    public void setSize(Size size) {
+        this.size = size;
+    }
+
+    public EnergySource getEnergySource() {
+        return energySource;
+    }
+
+    public void setEnergySource(EnergySource energySource) {
+        this.energySource = energySource;
+    }
+
     @Override
     public Engine clone() {
         try {
