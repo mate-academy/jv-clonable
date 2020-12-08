@@ -16,11 +16,11 @@ public class Application {
         car.setYearMade(2015);
         car.setName("AUDI");
 
-        System.out.println(car);
-        System.out.println(engine);
-
         Car clonedCar = car.clone();
-        clonedCar.getEngine().setCapacity(4);
+        clonedCar.getEngine().setCapacity(2);
+
+        System.out.println(engine);
+        System.out.println(car);
         System.out.println(clonedCar);
     }
 }

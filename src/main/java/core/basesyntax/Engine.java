@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Engine implements Cloneable {
-    private int number;
+    private int serialNumber;
     private String type;
     private int capacity;
     private String size;
@@ -10,7 +10,7 @@ public class Engine implements Cloneable {
     @Override
     public String toString() {
         return "Engine{"
-                + "number=" + number
+                + "number=" + serialNumber
                 + ", type='" + type + '\''
                 + ", capacity=" + capacity
                 + ", size='" + size + '\''
@@ -28,11 +28,11 @@ public class Engine implements Cloneable {
     }
 
     public int getNumber() {
-        return number;
+        return serialNumber;
     }
 
     public void setNumber(int number) {
-        this.number = number;
+        this.serialNumber = number;
     }
 
     public String getType() {
@@ -47,8 +47,9 @@ public class Engine implements Cloneable {
         return capacity;
     }
 
-    public void setCapacity(int capacity) {
+    public Engine setCapacity(int capacity) {
         this.capacity = capacity;
+        return null;
     }
 
     public String getSize() {

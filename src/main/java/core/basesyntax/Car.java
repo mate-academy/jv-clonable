@@ -24,7 +24,7 @@ public class Car implements Cloneable {
     public Car clone() {
         try {
             Car clonedCar = (Car) super.clone();
-            clonedCar.setEngine(engine);
+            clonedCar.setEngine(engine.clone());
             return clonedCar;
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException("Can't create Car Clone", e);
