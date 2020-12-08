@@ -60,7 +60,7 @@ public class Car implements Cloneable {
         try {
             Car clonedCar = (Car) super.clone();
             clonedCar.setEngine(engine.clone());
-            return (Car) super.clone();
+            return clonedCar;
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException("Can't create Car clone", e);
         }
