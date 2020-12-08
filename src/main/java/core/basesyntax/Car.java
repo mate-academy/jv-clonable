@@ -58,6 +58,26 @@ public class Car implements Cloneable {
             return this;
         }
 
+        public String getColor() {
+            return color;
+        }
+
+        public String getModel() {
+            return model;
+        }
+
+        public Engine getEngine() {
+            return engine;
+        }
+
+        public int getYear() {
+            return year;
+        }
+
+        public double getPrice() {
+            return price;
+        }
+
         public Car build() {
             return new Car(this);
         }

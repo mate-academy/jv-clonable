@@ -77,6 +77,26 @@ public class Engine implements Cloneable {
             return this;
         }
 
+        public String getModel() {
+            return model;
+        }
+
+        public int getHorsepower() {
+            return horsepower;
+        }
+
+        public int getVolume() {
+            return volume;
+        }
+
+        public int getTorque() {
+            return torque;
+        }
+
+        public String getFuelType() {
+            return fuelType;
+        }
+
         public Engine build() {
             return new Engine(this);
         }
