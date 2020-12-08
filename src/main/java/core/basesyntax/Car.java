@@ -85,8 +85,8 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() {
-            Engine clonedEngine = engine.clone();
-            return new Car.CarBuilder().setPrice(price).setYear(year)
-                    .setEngine(clonedEngine).setModel(model).setColor(color).build();
+        Engine clonedEngine = engine.clone();
+        return new Car.CarBuilder().setPrice(price).setYear(year)
+                .setEngine(clonedEngine).setModel(model).setColor(color).build();
     }
 }
