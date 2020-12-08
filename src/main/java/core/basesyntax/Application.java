@@ -2,14 +2,19 @@ package core.basesyntax;
 
 public class Application {
     public static void main(String[] args) {
-        Car audi = new Car();
-        audi.setName("Audi98");
-        audi.setColor("Black");
-        audi.setYear(1998);
-        audi.getEngine().setNumberCylinder(4);
+        Car audi = new Car("Audi", "Red", "jeep", 2015, 550);
+        Engine engine = new Engine("Gasoline", 80, 5, 5, 666);
+        audi.setEngine(engine);
 
         Car carClone = audi.clone();
 
-        audi.getEngine().setNumberCylinder(6);
+        System.out.println(audi.getEngine().toString());
+        System.out.println(carClone.getEngine().toString());
+
+        audi.getEngine().setEfficiency(20);
+        audi.getEngine().setTypeEngine("Diesel");
+
+        System.out.println(audi.getEngine().toString());
+        System.out.println(carClone.getEngine().toString());
     }
 }

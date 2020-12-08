@@ -6,10 +6,18 @@ public class Car implements Cloneable {
     private String type;
     private int year;
     private int horsePower;
-    private Engine engine = new Engine();
+    private Engine engine;
+
+    public Car(String name, String color, String type, int year, int horsePower) {
+        this.name = name;
+        this.color = color;
+        this.type = type;
+        this.year = year;
+        this.horsePower = horsePower;
+    }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -17,7 +25,7 @@ public class Car implements Cloneable {
     }
 
     public String getColor() {
-        return color;
+        return this.color;
     }
 
     public void setColor(String color) {
@@ -25,7 +33,7 @@ public class Car implements Cloneable {
     }
 
     public String getType() {
-        return type;
+        return this.type;
     }
 
     public void setType(String type) {
@@ -33,7 +41,7 @@ public class Car implements Cloneable {
     }
 
     public int getYear() {
-        return year;
+        return this.year;
     }
 
     public void setYear(int year) {
@@ -41,7 +49,7 @@ public class Car implements Cloneable {
     }
 
     public int getHorsePower() {
-        return horsePower;
+        return this.horsePower;
     }
 
     public void setHorsePower(int horsePower) {
@@ -58,11 +66,9 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() {
-        try {
-            return (Car) super.clone();
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Can't create Car clone", e);
-        }
+        Car carClone = new Car(this.name, this.color, this.type, this.year, this.horsePower);
+        carClone.engine = engine.clone();
+        return carClone;
     }
 
     @Override
