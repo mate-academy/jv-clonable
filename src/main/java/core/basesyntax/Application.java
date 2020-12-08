@@ -22,5 +22,9 @@ public class Application {
         engine.setHorsepower(700);
         System.out.println(car);
         System.out.println(clonedCar);
+        Engine engine1 = car.getEngine();
+        Engine engine2 = clonedCar.getEngine();
+        System.out.println(engine1);
+        System.out.println(engine2);
     }
 }

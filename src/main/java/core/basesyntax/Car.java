@@ -26,6 +26,26 @@ public class Car implements Cloneable {
                 + '}';
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     public static class CarBuilder {
         private String color;
         private String model;
@@ -56,26 +76,6 @@ public class Car implements Cloneable {
         public CarBuilder setPrice(double price) {
             this.price = price;
             return this;
-        }
-
-        public String getColor() {
-            return color;
-        }
-
-        public String getModel() {
-            return model;
-        }
-
-        public Engine getEngine() {
-            return engine;
-        }
-
-        public int getYear() {
-            return year;
-        }
-
-        public double getPrice() {
-            return price;
         }
 
         public Car build() {

@@ -45,6 +45,26 @@ public class Engine implements Cloneable {
                 + ", fuelType='" + fuelType + '\'' + '}';
     }
 
+    public String getModel() {
+        return model;
+    }
+
+    public int getHorsepower() {
+        return horsepower;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public int getTorque() {
+        return torque;
+    }
+
+    public String getFuelType() {
+        return fuelType;
+    }
+
     public static class EngineBuilder {
         private String model;
         private int horsepower;
@@ -75,26 +95,6 @@ public class Engine implements Cloneable {
         public EngineBuilder setFuelType(String fuelType) {
             this.fuelType = fuelType;
             return this;
-        }
-
-        public String getModel() {
-            return model;
-        }
-
-        public int getHorsepower() {
-            return horsepower;
-        }
-
-        public int getVolume() {
-            return volume;
-        }
-
-        public int getTorque() {
-            return torque;
-        }
-
-        public String getFuelType() {
-            return fuelType;
         }
 
         public Engine build() {
