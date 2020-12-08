@@ -11,7 +11,7 @@ public class Application {
 
         Car car = new Car();
         car.setEngineOfCar(engine);
-        car.setMark("BMW");
+        car.setManufacturer("BMW");
         car.setMaxSpeed(250);
         car.setColor("Black");
         car.setWeight(2000);

@@ -2,13 +2,13 @@ package core.basesyntax;
 
 public class Car implements Cloneable {
     private Engine engineOfCar;
-    private String mark;
+    private String manufacturer;
     private int maxSpeed;
     private String color;
     private int weight;
 
-    public String getMark() {
-        return mark;
+    public String getManufacturer() {
+        return manufacturer;
     }
 
     public int getMaxSpeed() {
@@ -31,8 +31,8 @@ public class Car implements Cloneable {
         this.engineOfCar = engineOfCar;
     }
 
-    public void setMark(String mark) {
-        this.mark = mark;
+    public void setManufacturer(String mark) {
+        this.manufacturer = manufacturer;
     }
 
     public void setMaxSpeed(int maxSpeed) {
@@ -61,7 +61,7 @@ public class Car implements Cloneable {
     @Override
     public String toString() {
         return "Car{"
-                + "engineOfCar=" + engineOfCar + ", mark='" + mark + '\''
+                + "engineOfCar=" + engineOfCar + ", Manufacturer='" + manufacturer + '\''
                 + ", maxSpeed=" + maxSpeed + ", color='" + color + '\''
                 + ", weight=" + weight + '}';
     }
