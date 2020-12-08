@@ -7,6 +7,22 @@ public class Car implements Cloneable {
     private String color;
     private int weight;
 
+    public String getMark() {
+        return mark;
+    }
+
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
     public Engine getEngineOfCar() {
         return engineOfCar;
     }
@@ -30,6 +46,7 @@ public class Car implements Cloneable {
     public void setWeight(int weight) {
         this.weight = weight;
     }
+
 
     @Override
     protected Car clone() {

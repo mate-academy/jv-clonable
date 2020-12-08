@@ -5,7 +5,7 @@ public class Application {
         Engine engine = new Engine();
         engine.setVolume(2.0);
         engine.setWeight(500);
-        engine.setNumber(1999199);
+        engine.setSerialNumber(1999199);
         engine.setPower(250);
         engine.setManufacturer("Bayerische Motoren Werke");
 
@@ -16,8 +16,9 @@ public class Application {
         car.setColor("Black");
         car.setWeight(2000);
 
-        Car carClone = (Car) car.clone();
-        carClone.getEngineOfCar().setManufacturer("Munich Motoren Werke");
-        System.out.println(car.equals(carClone));
+
+        Car carClone = car.clone();
+        car.getEngineOfCar().setManufacturer("Munich Motoren Werke");
+        System.out.println(car.getEngineOfCar().equals(carClone.getEngineOfCar()));
     }
 }
