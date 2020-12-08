@@ -18,6 +18,6 @@ public class Application {
 
         Car carClone = car.clone();
         car.getEngineOfCar().setManufacturer("Munich Motoren Werke");
-        System.out.println(car.getEngineOfCar().equals(carClone.getEngineOfCar()));
+        System.out.println(car + System.lineSeparator() + carClone);
     }
 }
