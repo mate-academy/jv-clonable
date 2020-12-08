@@ -24,6 +24,47 @@ public class Engine implements Cloneable {
         this.model = model;
     }
 
+    public int getHorsePower() {
+        return horsePower;
+    }
+
+    public void setHorsePower(int horsePower) {
+        this.horsePower = horsePower;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public double getFuelConsumption() {
+        return fuelConsumption;
+    }
+
+    public void setFuelConsumption(double fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
+
+    public double getSafetyRating() {
+        return safetyRating;
+    }
+
+    public void setSafetyRating(double safetyRating) {
+        this.safetyRating = safetyRating;
+    }
+
+    @Override
+    public String toString() {
+        return "Model:" + model + "\n"
+                + "Horse Power:" + horsePower + "\n"
+                + "Weight:" + weight + "\n"
+                + "Fuel Consumption:" + fuelConsumption + "\n"
+                + "Safety Rating:" + safetyRating + "\n";
+    }
+
     @Override
     protected Engine clone() {
         try {
@@ -31,10 +72,5 @@ public class Engine implements Cloneable {
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException("Can't create Engine clone", e);
         }
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
     }
 }
