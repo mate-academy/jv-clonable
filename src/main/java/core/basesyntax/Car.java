@@ -8,7 +8,7 @@ public class Car implements Cloneable {
     private int doorAmount;
     private Engine engine;
 
-    public Car(CarBuilder carBuilder) {
+    private Car(CarBuilder carBuilder) {
         this.model = carBuilder.model;
         this.year = carBuilder.year;
         this.color = carBuilder.color;

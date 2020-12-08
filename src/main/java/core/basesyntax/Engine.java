@@ -7,7 +7,7 @@ public class Engine implements Cloneable {
     private String typeFuel;
     private int engineCapacity;
 
-    public Engine(EngineBuilder engineBuilder) {
+    private Engine(EngineBuilder engineBuilder) {
         this.name = engineBuilder.name;
         this.horsePower = engineBuilder.horsePower;
         this.cylinderAmount = engineBuilder.cylinderAmount;
