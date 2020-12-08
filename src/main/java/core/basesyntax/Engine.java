@@ -7,48 +7,48 @@ public class Engine implements Cloneable {
     private boolean systemIgnition;
     private boolean systemStarting;
 
-    protected boolean isSystemCooling() {
+    public boolean isSystemCooling() {
         return systemCooling;
     }
 
-    protected void setSystemCooling(boolean systemCooling) {
+    public void setSystemCooling(boolean systemCooling) {
         this.systemCooling = systemCooling;
     }
 
-    protected boolean isSystemLubrication() {
+    public boolean isSystemLubrication() {
         return systemLubrication;
     }
 
-    protected void setSystemLubrication(boolean systemLubrication) {
+    public void setSystemLubrication(boolean systemLubrication) {
         this.systemLubrication = systemLubrication;
     }
 
-    protected boolean isSystemSupply() {
+    public boolean isSystemSupply() {
         return systemSupply;
     }
 
-    protected void setSystemSupply(boolean systemSupply) {
+    public void setSystemSupply(boolean systemSupply) {
         this.systemSupply = systemSupply;
     }
 
-    protected boolean isSystemIgnition() {
+    public boolean isSystemIgnition() {
         return systemIgnition;
     }
 
-    protected void setSystemIgnition(boolean systemIgnition) {
+    public void setSystemIgnition(boolean systemIgnition) {
         this.systemIgnition = systemIgnition;
     }
 
-    protected boolean isSystemStarting() {
+    public boolean isSystemStarting() {
         return systemStarting;
     }
 
-    protected void setSystemStarting(boolean systemStarting) {
+    public void setSystemStarting(boolean systemStarting) {
         this.systemStarting = systemStarting;
     }
 
     @Override
-    protected Engine clone() {
+    public Engine clone() {
         try {
             return (Engine) super.clone();
         } catch (CloneNotSupportedException e) {

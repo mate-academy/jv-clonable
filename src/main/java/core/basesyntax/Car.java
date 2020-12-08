@@ -7,48 +7,48 @@ public class Car implements Cloneable {
     private int countWheels;
     private Engine engine;
 
-    protected String getModel() {
+    public String getModel() {
         return model;
     }
 
-    protected void setModel(String model) {
+    public void setModel(String model) {
         this.model = model;
     }
 
-    protected String getColor() {
+    public String getColor() {
         return color;
     }
 
-    protected void setColor(String color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
-    protected int getCountDoors() {
+    public int getCountDoors() {
         return countDoors;
     }
 
-    protected void setCountDoors(int countDoors) {
+    public void setCountDoors(int countDoors) {
         this.countDoors = countDoors;
     }
 
-    protected int getCountWheels() {
+    public int getCountWheels() {
         return countWheels;
     }
 
-    protected void setCountWheels(int countWheels) {
+    public void setCountWheels(int countWheels) {
         this.countWheels = countWheels;
     }
 
-    protected Engine getEngine() {
+    public Engine getEngine() {
         return engine;
     }
 
-    protected void setEngine(Engine engine) {
+    public void setEngine(Engine engine) {
         this.engine = engine;
     }
 
     @Override
-    protected Car clone() {
+    public Car clone() {
         try {
             Car clonedCar = (Car) super.clone();
             clonedCar.setEngine(engine.clone());

@@ -19,6 +19,5 @@ public class Application {
         car.getEngine().setSystemSupply(false);
         System.out.println(car);
         System.out.println(carClone);
-        System.out.println(car.equals(carClone));
     }
 }
