@@ -10,8 +10,8 @@ public class Application {
         Engine engine = new Engine(Model.HONDA, Color.GRAY, 15, Size.MEDIUM, EnergySource.DIESEL);
         Car car = new Car(Model.HONDA, Color.BLUE, 150, Size.MEDIUM, engine);
         Car clonedCar = car.clone();
-        System.out.println(car.equals(clonedCar));
-        clonedCar.setEngine(new Engine(Model.ACURA, Color.RED, 20, Size.SMALL, EnergySource.GAS));
-        System.out.println(car.equals(clonedCar));
+        car.getEngine().setColor(Color.GREEN);
+        System.out.println(car.toString());
+        System.out.println(clonedCar.toString());
     }
 }

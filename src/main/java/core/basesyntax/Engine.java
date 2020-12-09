@@ -20,6 +20,16 @@ public class Engine implements Cloneable {
         this.energySource = energySource;
     }
 
+    @Override
+    public String toString() {
+        return "Engine{"
+                + "model=" + model
+                + ", color=" + color
+                + ", power=" + power
+                + ", size=" + size
+                + ", energySource=" + energySource + '}';
+    }
+
     public Model getModel() {
         return model;
     }

@@ -19,6 +19,16 @@ public class Car implements Cloneable {
         this.engine = engine;
     }
 
+    @Override
+    public String toString() {
+        return "Car{"
+                + "model=" + model
+                + ", color=" + color
+                + ", speed=" + speed
+                + ", size=" + size
+                + ", engine=" + engine + '}';
+    }
+
     public Engine getEngine() {
         return engine;
     }
