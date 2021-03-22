@@ -5,7 +5,7 @@ public class Engine implements Cloneable {
     private String model;
     private boolean wasRepaired;
     private int turbineCount;
-    private String whoDevelop;
+    private String manufacturer;
 
     public int getPower() {
         return power;
@@ -40,11 +40,11 @@ public class Engine implements Cloneable {
     }
 
     public String getWhoDevelop() {
-        return whoDevelop;
+        return manufacturer;
     }
 
     public void setWhoDevelop(String whoDevelop) {
-        this.whoDevelop = whoDevelop;
+        this.manufacturer = whoDevelop;
     }
 
     @Override
@@ -62,7 +62,7 @@ public class Engine implements Cloneable {
                 + "power='" + power + '\''
                 + "model='" + model + '\''
                 + "turbineCount='" + turbineCount + '\''
-                + "whoDevelop='" + whoDevelop + '\''
+                + "whoDevelop='" + manufacturer + '\''
                 + "wasRepaired='" + wasRepaired + '\''
                 + "}";
     }

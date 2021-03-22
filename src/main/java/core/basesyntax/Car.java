@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Car extends Engine implements Cloneable {
+public class Car implements Cloneable {
     private String color;
     private String model;
     private String owner;
@@ -49,9 +49,13 @@ public class Car extends Engine implements Cloneable {
 
     @Override
     public Car clone() {
-        Car clonedCar = (Car) super.clone();
-        clonedCar.setEngine(engine.clone());
-        return clonedCar;
+        try {
+            Car clonedCar = (Car) super.clone();
+            clonedCar.setEngine(engine.clone());
+            return clonedCar;
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException("Can't clone Car class", e);
+        }
     }
 
     @Override
