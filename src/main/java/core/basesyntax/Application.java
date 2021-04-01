@@ -6,7 +6,6 @@ public class Application {
                 800, 10, 8);
         Car bugattiVeron = new Car("Veron", "Bugatti",
                 2015, 400, modelVEight);
-
         Car veronClone = bugattiVeron.clone();
         modelVEight.setType("super car");
         bugattiVeron.setMaximumSpeed(405);
