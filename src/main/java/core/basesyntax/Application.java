@@ -1,8 +1,16 @@
 package core.basesyntax;
 
+import java.math.BigDecimal;
+
 public class Application {
     public static void main(String[] args) {
-        // test your code here ...
-
+        Engine engine = new Engine("diesel", 3.0,
+                "opposed", 6, 320);
+        Car car = new Car("Opel", "Vectra",
+                "Sedan", "Black", 2000, engine, new BigDecimal(3200));
+        Car carClone = car.clone();
+        car.getEngine().setFuelType("petrol");
+        System.out.println(car);
+        System.out.println(carClone);
     }
 }
