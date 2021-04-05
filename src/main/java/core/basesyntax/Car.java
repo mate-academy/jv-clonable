@@ -19,6 +19,42 @@ public class Car implements Cloneable {
         return engine;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public int getRegistrationPlate() {
+        return registrationPlate;
+    }
+
+    public int getDoorsCount() {
+        return doorsCount;
+    }
+
+    public boolean isWorks() {
+        return works;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setRegistrationPlate(int registrationPlate) {
+        this.registrationPlate = registrationPlate;
+    }
+
+    public void setDoorsCount(int doorsCount) {
+        this.doorsCount = doorsCount;
+    }
+
+    public void setWorks(boolean works) {
+        this.works = works;
+    }
+
     @Override
     public Car clone() {
         try {
@@ -26,7 +62,7 @@ public class Car implements Cloneable {
             clonedCar.engine = engine.clone();
             return clonedCar;
         } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("No clones here!", e);
+            throw new RuntimeException("Can't clone car object", e);
         }
     }
 

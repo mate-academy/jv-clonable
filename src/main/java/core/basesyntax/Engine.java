@@ -15,6 +15,42 @@ public class Engine implements Cloneable {
         this.eats = eats;
     }
 
+    public boolean isWorks() {
+        return works;
+    }
+
+    public int getCylinderCount() {
+        return cylinderCount;
+    }
+
+    public int getHorsepower() {
+        return horsepower;
+    }
+
+    public boolean isDirty() {
+        return isDirty;
+    }
+
+    public String getEats() {
+        return eats;
+    }
+
+    public void setWorks(boolean works) {
+        this.works = works;
+    }
+
+    public void setCylinderCount(int cylinderCount) {
+        this.cylinderCount = cylinderCount;
+    }
+
+    public void setHorsepower(int horsepower) {
+        this.horsepower = horsepower;
+    }
+
+    public void setDirty(boolean dirty) {
+        isDirty = dirty;
+    }
+
     public void setEats(String eats) {
         this.eats = eats;
     }
@@ -23,10 +59,9 @@ public class Engine implements Cloneable {
     public Engine clone() {
         try {
             Engine clonedEngine = (Engine) super.clone();
-            clonedEngine.setEats(eats);
             return clonedEngine;
         } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("No clones here!", e);
+            throw new RuntimeException("Can't clone engine object", e);
         }
     }
 
