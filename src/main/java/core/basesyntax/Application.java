@@ -10,7 +10,12 @@ public class Application {
         engine.setBore(87);
         engine.setStroke(110);
 
-        Car car = new Car("Audi", "red", 200, 4, 5);
+        Car car = new Car();
+        car.setModel("Audi");
+        car.setColor("red");
+        car.setSpeed(200);
+        car.setNumberOfPassengers(4);
+        car.setNumberOfDoors(5);
         car.setEngine(engine);
 
         System.out.println(car);
