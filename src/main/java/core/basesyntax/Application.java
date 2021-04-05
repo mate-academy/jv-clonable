@@ -16,10 +16,10 @@ public class Application {
         audiEtronGT.setMaximumSpeed(240);
         audiEtronGT.setNumber("ZH445789");
 
-        Car audiRSEtronGT = audiEtronGT.clone();
-        audiRSEtronGT.setNumber("AH2885AK");
+        Car audiRsEtronGT = audiEtronGT.clone();
+        audiRsEtronGT.setNumber("AH2885AK");
         System.out.println(audiEtronGT);
-        System.out.println(audiRSEtronGT);
+        System.out.println(audiRsEtronGT);
 
     }
 }
