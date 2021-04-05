@@ -50,18 +50,12 @@ public class Engine implements Cloneable {
     @Override
     public String toString() {
         return "Engine{"
-                +
-                "kindMotor='" + kindMotor + '\''
-                +
-                ", typeOfFuel='" + typeOfFuel + '\''
-                +
-                ", color='" + color + '\''
-                +
-                ", numberOfKeys=" + numberOfKeys
-                +
-                ", numberOfCylinders=" + numberOfCylinders
-                +
-                '}';
+                + "kindMotor='" + kindMotor + '\''
+                + ", typeOfFuel='" + typeOfFuel + '\''
+                + ", color='" + color + '\''
+                + ", numberOfKeys=" + numberOfKeys
+                + ", numberOfCylinders=" + numberOfCylinders
+                + '}';
     }
 
     @Override
