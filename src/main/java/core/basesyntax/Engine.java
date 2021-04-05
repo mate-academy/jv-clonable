@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-
 public class Engine implements Cloneable {
     private String model;
     private int cylindersNumber;
@@ -15,7 +14,6 @@ public class Engine implements Cloneable {
         this.price = price;
         this.isLoud = isLoud;
     }
-
 
     public String getModel() {
         return model;
@@ -68,12 +66,10 @@ public class Engine implements Cloneable {
 
     @Override
     public String toString() {
-        return " {" +
-                "model = " + model +
-                ", cylindersNumber = " + cylindersNumber +
-                ", horsePower = " + horsePower +
-                ", price = " + price +
-                ", isLoud = " + isLoud +
-                '}';
+        return " {" + "model = " + model
+                + ", cylindersNumber = " + cylindersNumber
+                + ", horsePower = " + horsePower
+                + ", price = " + price
+                + ", isLoud = " + isLoud + '}';
     }
 }
