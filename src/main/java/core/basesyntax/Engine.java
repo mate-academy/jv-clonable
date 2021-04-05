@@ -1,19 +1,24 @@
 package core.basesyntax;
 
 public class Engine implements Cloneable {
+    private static final int DEFAULT_ENGINE_CAPACITY = 1452;
+    private static final int DEFAULT_MAXIMUM_POWER = 68;
+    private static final String DEFAULT_USED_FUEL = "Gasoline";
+    private static final double DEFAULT_FUEL_CONSUMPTION = 7.8;
+    private static final int DEFAULT_NUMBER_OF_VALVES = 2;
+
     private int engineCapacity;
     private int maximumPower;
     private String usedFuel;
     private double fuelConsumption;
     private int numberOfValves;
 
-    public Engine(int engineCapacity, int maximumPower, String usedFuel,
-                  double fuelConsumption, int numberOfValves) {
-        this.engineCapacity = engineCapacity;
-        this.maximumPower = maximumPower;
-        this.usedFuel = usedFuel;
-        this.fuelConsumption = fuelConsumption;
-        this.numberOfValves = numberOfValves;
+    public Engine() {
+        this.engineCapacity = DEFAULT_ENGINE_CAPACITY;
+        this.maximumPower = DEFAULT_MAXIMUM_POWER;
+        this.usedFuel = DEFAULT_USED_FUEL;
+        this.fuelConsumption = DEFAULT_FUEL_CONSUMPTION;
+        this.numberOfValves = DEFAULT_NUMBER_OF_VALVES;
     }
 
     public int getEngineCapacity() {

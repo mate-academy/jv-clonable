@@ -5,11 +5,6 @@ public class Car implements Cloneable {
     private static final String DEFAULT_COLOR = "Blue";
     private static final double DEFAULT_WEIGHT = 7.8;
     private static final double DEFAULT_MAXIMUM_SPEED = 120;
-    private static final int DEFAULT_ENGINE_CAPACITY = 1452;
-    private static final int DEFAULT_MAXIMUM_POWER = 68;
-    private static final String DEFAULT_USED_FUEL = "Gasoline";
-    private static final double DEFAULT_FUEL_CONSUMPTION = 7.8;
-    private static final int DEFAULT_NUMBER_OF_VALVES = 2;
 
     private String model;
     private String color;
@@ -22,8 +17,7 @@ public class Car implements Cloneable {
         this.color = DEFAULT_COLOR;
         this.weight = DEFAULT_WEIGHT;
         this.maximumSpeed = DEFAULT_MAXIMUM_SPEED;
-        this.engine = new Engine(DEFAULT_ENGINE_CAPACITY, DEFAULT_MAXIMUM_POWER,
-                DEFAULT_USED_FUEL, DEFAULT_FUEL_CONSUMPTION, DEFAULT_NUMBER_OF_VALVES);
+        this.engine = new Engine();
     }
 
     public String getModel() {
