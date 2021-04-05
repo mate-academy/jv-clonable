@@ -57,9 +57,9 @@ public class Car implements Cloneable {
 
     @Override
     public String toString() {
-        return this + " {" +
-                "model = '" + model + '\'' +
-                ", color = '" + color + '\'' +
+        return " {" +
+                "model = " + model +
+                ", color = " + color +
                 ", year = " + year +
                 ", engine = " + engine +
                 ", wasInTheCarsMovie = " + wasInTheCarsMovie +

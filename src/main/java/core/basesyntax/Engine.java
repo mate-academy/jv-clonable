@@ -53,7 +53,7 @@ public class Engine implements Cloneable {
         return isLoud;
     }
 
-    public void setIsLoud(boolean isLoud) {
+    public void getIsLoud(boolean isLoud) {
         this.isLoud = isLoud;
     }
 
@@ -68,9 +68,9 @@ public class Engine implements Cloneable {
 
     @Override
     public String toString() {
-        return this + " {" +
+        return " {" +
                 "model = " + model +
-                ", cylindersNumber = '" + cylindersNumber +
+                ", cylindersNumber = " + cylindersNumber +
                 ", horsePower = " + horsePower +
                 ", price = " + price +
                 ", isLoud = " + isLoud +
