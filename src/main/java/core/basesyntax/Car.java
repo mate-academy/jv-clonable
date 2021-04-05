@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Car {
+public class Car implements Cloneable {
     private int ageModel;
     private int price;
     private String color;
@@ -49,12 +49,29 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "ageModel=" + ageModel +
-                ", price=" + price +
-                ", color='" + color + '\'' +
-                ", model='" + model + '\'' +
-                ", engine=" + engine +
+        return "Car{"
+                +
+                "ageModel=" + ageModel
+                +
+                ", price=" + price
+                +
+                ", color='" + color + '\''
+                +
+                ", model='" + model + '\''
+                +
+                ", engine=" + engine
+                +
                 '}';
+    }
+
+    @Override
+    public Car clone() {
+        try {
+            Car cloneCar = (Car) super.clone();
+            cloneCar.setEngine(engine.clone());
+            return cloneCar;
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException("Can't do clone", e);
+        }
     }
 }
