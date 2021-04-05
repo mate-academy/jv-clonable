@@ -33,17 +33,11 @@ public class Car implements Cloneable {
 
     @Override
     public String toString() {
-        return "Car{" + "doors="
-                + doors
-                + ", wheels="
-                + wheels
-                + ", name='"
-                + name + '\''
-                + ", model='"
-                + model + '\''
-                + ", engine="
-                + engine
-                + '}';
+        return "Car{" + "doors=" + doors
+                + ", wheels=" + wheels
+                + ", name='" + name + '\''
+                + ", model='" + model + '\''
+                + ", engine=" + engine + '}';
     }
 
     @Override
@@ -53,7 +47,7 @@ public class Car implements Cloneable {
             clonedCar.setEngine(engine.clone());
             return clonedCar;
         } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Can't create user clone" + e);
+            throw new RuntimeException("Can't create user clone", e);
         }
     }
 }

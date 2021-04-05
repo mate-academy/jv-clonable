@@ -30,17 +30,9 @@ public class Engine implements Cloneable {
     @Override
     public String toString() {
         return "Engine{"
-                + "engineVolume="
-                + engineVolume
-                + ", isDiesel="
-                + isDiesel
-                + ", isRotary="
-                + isRotary
-                + ", numberOfCylinders="
-                + numberOfCylinders
-                + ", yearProduce="
-                + yearProduce
-                + '}';
+                + "engineVolume=" + engineVolume + ", isDiesel=" + isDiesel
+                + ", isRotary=" + isRotary + ", numberOfCylinders=" + numberOfCylinders
+                + ", yearProduce=" + yearProduce + '}';
     }
 
     @Override
@@ -48,7 +40,7 @@ public class Engine implements Cloneable {
         try {
             return (Engine) super.clone();
         } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Can't clone name " + e);
+            throw new RuntimeException("Can't clone name ", e);
         }
     }
 }
