@@ -19,24 +19,14 @@ public class Car implements Cloneable {
         return engine;
     }
 
-    public void setEngine(Engine engine) {
-        this.engine = engine;
-    }
-
     @Override
     public Car clone() {
-        try {
-            Car clonedCar = (Car) super.clone();
-            clonedCar.setEngine(engine.clone());
-            return clonedCar;
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Can't clone Car!", e);
-        }
+        return new Car(model, number, engine.clone(), color, gasolineVolume);
     }
 
     @Override
     public String toString() {
-        return "Car{model='" + model + '\'' + ", number=" + number
+        return "Car{ model='" + model + '\'' + ", number=" + number
                 + ", engine=" + engine + ", color='" + color + '\''
                 + ", gasolineVolume=" + gasolineVolume + '}';
     }
