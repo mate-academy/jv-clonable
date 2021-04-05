@@ -16,6 +16,14 @@ public class Engine implements Cloneable {
         this.horsePower = horsePower;
     }
 
+    public Engine(Engine originalEngine) {
+        this.fuelType = originalEngine.getFuelType();
+        this.engineVolume = originalEngine.getEngineVolume();
+        this.cylindersConfiguration = originalEngine.getCylindersConfiguration();
+        this.cylindersQuantity = originalEngine.getCylindersQuantity();
+        this.horsePower = originalEngine.getHorsePower();
+    }
+
     public String getFuelType() {
         return fuelType;
     }
@@ -67,10 +75,6 @@ public class Engine implements Cloneable {
 
     @Override
     protected Engine clone() {
-        try {
-            return (Engine) super.clone();
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Can't create engine clone", e);
-        }
+        return new Engine(this);
     }
 }

@@ -22,6 +22,16 @@ public class Car implements Cloneable {
         this.price = price;
     }
 
+    public Car(Car originalCar) {
+        this.brand = originalCar.getBrand();
+        this.model = originalCar.getModel();
+        this.type = originalCar.getType();
+        this.color = originalCar.getColor();
+        this.issueYear = originalCar.getIssueYear();
+        this.engine = new Engine(originalCar.getEngine());
+        this.price = originalCar.getPrice();
+    }
+
     public String getBrand() {
         return brand;
     }
@@ -91,12 +101,6 @@ public class Car implements Cloneable {
 
     @Override
     protected Car clone() {
-        try {
-            Car clonedCar = (Car) super.clone();
-            clonedCar.setEngine(engine.clone());
-            return clonedCar;
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Can't create car clone", e);
-        }
+        return new Car(this);
     }
 }
