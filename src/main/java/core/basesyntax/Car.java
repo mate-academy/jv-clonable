@@ -61,12 +61,12 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() {
-        try {
-            Car clonedCar = (Car) super.clone();
-            clonedCar.setEngine(engine.clone());
-            return clonedCar;
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Cannot ctrate car clone", e);
-        }
+        Car clonedCar = new Car();
+        clonedCar.setNumber(this.number);
+        clonedCar.setMaximumSpeed(this.maximumSpeed);
+        clonedCar.setModel(this.model);
+        clonedCar.setBrand(this.brand);
+        clonedCar.setEngine(engine.clone());
+        return clonedCar;
     }
 }
