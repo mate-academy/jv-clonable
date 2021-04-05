@@ -7,6 +7,14 @@ public class Car implements Cloneable {
     private boolean isTruck;
     private Engine engine;
 
+    public Car(String model, String color, int year, boolean isTruck, Engine engine) {
+        this.model = model;
+        this.color = color;
+        this.year = year;
+        this.isTruck = isTruck;
+        this.engine = engine;
+    }
+
     public String getModel() {
         return model;
     }
@@ -54,22 +62,12 @@ public class Car implements Cloneable {
                 + ", color = '" + color + "'"
                 + ", year = '" + year + "'"
                 + ", is Truck = '" + isTruck + "'"
-                + ", engine =" + engine
+                + ", engine = " + engine
                 + "}";
     }
 
     @Override
     public Car clone() {
-        try {
-            Car clonedCar = (Car) super.clone();
-            clonedCar.setModel(model);
-            clonedCar.setColor(color);
-            clonedCar.setYear(year);
-            clonedCar.setIsTruck(isTruck);
-            clonedCar.setEngine(engine.clone());
-            return clonedCar;
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Can't create Car copy", e);
-        }
+        return new Car(model, color, year, isTruck, engine.clone());
     }
 }

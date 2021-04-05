@@ -7,6 +7,18 @@ public class Engine implements Cloneable {
     private int torque;
     private double engineVolume;
 
+    public Engine(String type,
+                  String cylindersLocation,
+                  int horsePower,
+                  int torque,
+                  double engineVolume) {
+        this.type = type;
+        this.cylindersLocation = cylindersLocation;
+        this.horsePower = horsePower;
+        this.torque = torque;
+        this.engineVolume = engineVolume;
+    }
+
     public String getType() {
         return type;
     }
@@ -59,16 +71,6 @@ public class Engine implements Cloneable {
 
     @Override
     public Engine clone() {
-        try {
-            Engine clonedEngine = (Engine) super.clone();
-            clonedEngine.setType(type);
-            clonedEngine.setCylindersLocation(cylindersLocation);
-            clonedEngine.setHorsePower(horsePower);
-            clonedEngine.setTorque(torque);
-            clonedEngine.setEngineVolume(engineVolume);
-            return clonedEngine;
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Can't create Engine copy", e);
-        }
+        return new Engine(type, cylindersLocation, horsePower, torque, engineVolume);
     }
 }
