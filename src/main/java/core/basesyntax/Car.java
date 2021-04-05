@@ -16,28 +16,6 @@ public class Car implements Cloneable {
         this.passengersAmount = passengersAmount;
     }
 
-    @Override
-    public String toString() {
-        return "Car{" + "engine=" + engine
-                + ", manufacturer='" + manufacturer + '\''
-                + ", model='" + model + '\''
-                + ", type='" + type + '\''
-                + ", passengersAmount=" + passengersAmount + '}';
-    }
-
-    @Override
-    public Car clone() {
-        Car car;
-        try {
-            car = (Car) super.clone();
-        } catch (CloneNotSupportedException e) {
-            car = new Car(this.engine, this.manufacturer, this.model, this.type,
-                    this.passengersAmount);
-        }
-        car.engine = (Engine) this.engine.clone();
-        return car;
-    }
-
     public Engine getEngine() {
         return engine;
     }
@@ -56,5 +34,26 @@ public class Car implements Cloneable {
 
     public int getPassengersAmount() {
         return passengersAmount;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" + "engine=" + engine
+                + ", manufacturer='" + manufacturer + '\''
+                + ", model='" + model + '\''
+                + ", type='" + type + '\''
+                + ", passengersAmount=" + passengersAmount + '}';
+    }
+
+    @Override
+    public Car clone() {
+        try {
+            Car car = (Car) super.clone();
+            car.engine = this.engine.clone();
+            return car;
+        } catch (CloneNotSupportedException e) {
+            return new Car(this.engine, this.manufacturer, this.model, this.type,
+                    this.passengersAmount);
+        }
     }
 }

@@ -16,25 +16,6 @@ public class Engine implements Cloneable {
         this.fuel = fuel;
     }
 
-    @Override
-    public String toString() {
-        return "Engine{" + "model='" + model + '\''
-                + ", cylinderNumber=" + cylinderNumber
-                + ", displacement=" + displacement
-                + ", maximumPower=" + maximumPower
-                + ", fuel='" + fuel + '\'' + '}';
-    }
-
-    @Override
-    public Engine clone() {
-        try {
-            return (Engine) super.clone();
-        } catch (CloneNotSupportedException e) {
-            return new Engine(this.model, this.cylinderNumber, this.displacement, this.maximumPower,
-                    this.fuel);
-        }
-    }
-
     public String getModel() {
         return model;
     }
@@ -73,5 +54,24 @@ public class Engine implements Cloneable {
 
     public void setFuel(String fuel) {
         this.fuel = fuel;
+    }
+
+    @Override
+    public String toString() {
+        return "Engine{" + "model='" + model + '\''
+                + ", cylinderNumber=" + cylinderNumber
+                + ", displacement=" + displacement
+                + ", maximumPower=" + maximumPower
+                + ", fuel='" + fuel + '\'' + '}';
+    }
+
+    @Override
+    public Engine clone() {
+        try {
+            return (Engine) super.clone();
+        } catch (CloneNotSupportedException e) {
+            return new Engine(this.model, this.cylinderNumber, this.displacement, this.maximumPower,
+                    this.fuel);
+        }
     }
 }
