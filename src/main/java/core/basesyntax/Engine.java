@@ -62,11 +62,7 @@ public class Engine implements Cloneable {
 
     @Override
     public Engine clone() {
-        try {
-            return (Engine) super.clone();
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Can't clone an Engine", e);
-        }
+        return new Engine(name, capacity, output, torque, weight);
     }
 
     @Override

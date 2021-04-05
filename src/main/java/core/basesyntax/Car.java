@@ -62,13 +62,7 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() {
-        try {
-            Car clonedCar = (Car) super.clone();
-            clonedCar.setEngine(engine.clone());
-            return clonedCar;
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Can't clone a Car", e);
-        }
+        return new Car(producer, model, engine.clone(), color, year);
     }
 
     @Override
