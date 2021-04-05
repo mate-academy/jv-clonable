@@ -7,24 +7,17 @@ public class Engine implements Cloneable {
     private int transmissionCount;
     private int power;
 
+    public Engine(String type, int cylinderAmount,
+                  float displacement, int transmissionCount, int power) {
+        this.type = type;
+        this.cylinderAmount = cylinderAmount;
+        this.displacement = displacement;
+        this.transmissionCount = transmissionCount;
+        this.power = power;
+    }
+
     public void setType(String type) {
         this.type = type;
-    }
-
-    public void setCylinderAmount(int cylinderAmount) {
-        this.cylinderAmount = cylinderAmount;
-    }
-
-    public void setDisplacement(float displacement) {
-        this.displacement = displacement;
-    }
-
-    public void setTransmissionCount(int transmissionCount) {
-        this.transmissionCount = transmissionCount;
-    }
-
-    public void setPower(int power) {
-        this.power = power;
     }
 
     @Override

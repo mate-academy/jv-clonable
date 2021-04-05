@@ -7,24 +7,17 @@ public class Car implements Cloneable {
     private boolean isAirbag;
     private Engine engine;
 
-    public void setManufacturer(String manufacturer) {
+    public Car(String manufacturer, String model,
+               String carClass, boolean isAirbag, Engine engine) {
         this.manufacturer = manufacturer;
-    }
-
-    public void setModel(String model) {
         this.model = model;
-    }
-
-    public void setCarClass(String carClass) {
         this.carClass = carClass;
-    }
-
-    public void setAirbag(boolean airbag) {
-        isAirbag = airbag;
-    }
-
-    public void setEngine(Engine engine) {
+        this.isAirbag = isAirbag;
         this.engine = engine;
+    }
+
+    public Engine getEngine() {
+        return engine;
     }
 
     @Override
