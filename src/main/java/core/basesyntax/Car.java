@@ -7,6 +7,14 @@ public class Car implements Cloneable {
     private int horsePowers;
     private Engine engine;
 
+    public Car(String model, String color, int year, int horsePowers, Engine engine) {
+        this.model = model;
+        this.color = color;
+        this.year = year;
+        this.engine = engine;
+        this.horsePowers = horsePowers;
+    }
+
     public Engine getEngine() {
         return engine;
     }
@@ -49,13 +57,9 @@ public class Car implements Cloneable {
 
     @Override
     public Car clone() {
-        try {
-            Car cloneCar = (Car) super.clone();
-            cloneCar.setEngine(engine.clone());
-            return cloneCar;
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Can't create user clone", e);
-        }
+        Car cloneCar = new Car(model, color, year, horsePowers, engine);
+        cloneCar.setEngine(engine.clone());
+        return cloneCar;
     }
 
     @Override

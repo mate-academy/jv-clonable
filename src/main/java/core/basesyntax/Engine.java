@@ -7,6 +7,15 @@ public class Engine implements Cloneable {
     private String material;
     private int graduationYear;
 
+    public Engine(int cylinderDiameter, int power, int fuelConsumption,
+                  String material, int graduationYear) {
+        this.cylinderDiameter = cylinderDiameter;
+        this.power = power;
+        this.fuelConsumption = fuelConsumption;
+        this.material = material;
+        this.graduationYear = graduationYear;
+    }
+
     public int getCylinderDiameter() {
         return cylinderDiameter;
     }
@@ -49,11 +58,9 @@ public class Engine implements Cloneable {
 
     @Override
     public Engine clone() {
-        try {
-            return (Engine) super.clone();
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Can't clone engine", e);
-        }
+        Engine cloneEngine = new Engine(cylinderDiameter, power, fuelConsumption,
+                material, graduationYear);
+        return cloneEngine;
     }
 
     @Override
