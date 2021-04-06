@@ -9,10 +9,8 @@ public class Application {
         Car carClone = car.clone();
 
         car.getEngine().setManufacturer("bmw");
-        car.getEngine().setSpeed(540);
 
-        System.out.println(car.toString());
         System.out.println(carClone.toString());
-
+        System.out.println(car.toString());
     }
 }
