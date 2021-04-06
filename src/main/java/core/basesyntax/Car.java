@@ -15,25 +15,6 @@ public class Car implements Cloneable {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "Car{"
-                + "engine='"
-                + engine
-                + '\''
-                + ", countOfWheels="
-                + countOfWheels
-                + ", model="
-                + model
-                + ", color='"
-                + color
-                + '\''
-                + ", name='"
-                + name
-                + '\''
-                + '}';
-    }
-
     public Engine getEngine() {
         return engine;
     }
@@ -75,12 +56,22 @@ public class Car implements Cloneable {
     }
 
     @Override
+    public String toString() {
+        return "Car{"
+                + "engine='" + engine + '\''
+                + ", countOfWheels=" + countOfWheels
+                + ", model=" + model
+                + ", color='" + color + '\''
+                + ", name='" + name + '\''
+                + '}';
+    }
+
+    @Override
     public Car clone() {
         try {
             Car clonedCar = (Car) super.clone();
             clonedCar.setEngine(engine.clone());
             return clonedCar;
-
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException("Can't create Car clone object", e);
         }

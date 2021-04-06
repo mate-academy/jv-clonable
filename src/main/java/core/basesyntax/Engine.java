@@ -16,25 +16,6 @@ public class Engine implements Cloneable {
         this.torque = torque;
     }
 
-    @Override
-    public String toString() {
-        return "Engine{"
-                + "horsePower="
-                + horsePower
-                + ", color='"
-                + color
-                + '\''
-                + ", typeOfEngine='"
-                + typeOfEngine
-                + '\''
-                + ", stateOfEngine='"
-                + stateOfEngine
-                + '\''
-                + ", torque="
-                + torque
-                + '}';
-    }
-
     public void setHorsePower(int horsePower) {
         this.horsePower = horsePower;
     }
@@ -53,6 +34,17 @@ public class Engine implements Cloneable {
 
     public void setTorque(int torque) {
         this.torque = torque;
+    }
+
+    @Override
+    public String toString() {
+        return "Engine{"
+                + "horsePower=" + horsePower
+                + ", color='" + color + '\''
+                + ", typeOfEngine='" + typeOfEngine + '\''
+                + ", stateOfEngine='" + stateOfEngine + '\''
+                + ", torque=" + torque
+                + '}';
     }
 
     @Override
