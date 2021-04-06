@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Engine implements Cloneable{
+public class Engine implements Cloneable {
     private int power;
     private int weight;
     private String name;
@@ -34,7 +34,7 @@ public class Engine implements Cloneable{
 
     @Override
     public String toString() {
-        return  " power = " + power
+        return " power = " + power
                 + ", cylindersNumber = " + cylinders
                 + ", weight = " + weight
                 + ", name = " + name

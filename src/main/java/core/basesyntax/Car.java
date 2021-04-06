@@ -36,7 +36,7 @@ public class Car implements Cloneable {
 
     @Override
     public String toString() {
-        return  " name = " + name
+        return " name = " + name
                 + ", length = " + length
                 + ", weight = " + weight
                 + ", height = " + height
