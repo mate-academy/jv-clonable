@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Engine implements Cloneable{
+public class Engine implements Cloneable {
     private String model;
     private String fuel;
     private String row;
@@ -67,12 +67,12 @@ public class Engine implements Cloneable{
 
     @Override
     public String toString() {
-        return "Engine{" +
-                "model='" + model + '\'' +
-                ", fuel='" + fuel + '\'' +
-                ", row='" + row + '\'' +
-                ", volume=" + volume +
-                ", power=" + power +
-                '}';
+        return "Engine{"
+                + "model='" + model + '\''
+                + ", fuel='" + fuel + '\''
+                + ", row='" + row + '\''
+                + ", volume=" + volume
+                + ", power=" + power
+                + '}';
     }
 }
