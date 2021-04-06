@@ -55,7 +55,6 @@ public class Car implements Cloneable {
         this.engine = engine;
     }
 
-
     @Override
     public String toString() {
         return "Color: " + color + ", name: " + name
@@ -73,7 +72,4 @@ public class Car implements Cloneable {
             throw new RuntimeException("Can't clone this car object", e);
         }
     }
-
-
-
 }
