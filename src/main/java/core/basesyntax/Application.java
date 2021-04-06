@@ -10,7 +10,6 @@ public class Application {
 
         Car cloneCar = car.clone();
         engine.setEnginePower(7400);
-
         System.out.println(car);
         System.out.println(cloneCar);
     }
