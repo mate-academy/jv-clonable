@@ -39,4 +39,40 @@ public class Engine implements Cloneable {
             throw new RuntimeException("Can't clone Engine", e);
         }
     }
+
+    public String getEngineName() {
+        return engineName;
+    }
+
+    public void setEngineName(String engineName) {
+        this.engineName = engineName;
+    }
+
+    public String getEngineBrand() {
+        return engineBrand;
+    }
+
+    public int getEngineNumber() {
+        return engineNumber;
+    }
+
+    public void setEngineNumber(int engineNumber) {
+        this.engineNumber = engineNumber;
+    }
+
+    public double getVolume() {
+        return volume;
+    }
+
+    public void setVolume(double volume) {
+        this.volume = volume;
+    }
+
+    public double getFuelConsumption() {
+        return fuelConsumption;
+    }
+
+    public void setFuelConsumption(double fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
 }

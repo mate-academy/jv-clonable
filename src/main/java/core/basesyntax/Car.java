@@ -42,11 +42,51 @@ public class Car implements Cloneable {
         }
     }
 
-    private void setCarEngine(Engine carEngine) {
+    public void setCarEngine(Engine carEngine) {
         this.carEngine = carEngine;
+    }
+
+    public Engine getCarEngine() {
+        return carEngine;
+    }
+
+    public String getCarBrand() {
+        return carBrand;
+    }
+
+    public void setCarBrand(String carBrand) {
+        this.carBrand = carBrand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public int getYearOfCarProduction() {
+        return yearOfCarProduction;
     }
 
     public void setYearOfCarProduction(int yearOfCarProduction) {
         this.yearOfCarProduction = yearOfCarProduction;
+    }
+
+    public int getFuelCapacity() {
+        return fuelCapacity;
+    }
+
+    public void setFuelCapacity(int fuelCapacity) {
+        this.fuelCapacity = fuelCapacity;
     }
 }
