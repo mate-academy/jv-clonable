@@ -18,6 +18,14 @@ public class Car implements Cloneable {
         this.inStock = inStock;
     }
 
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
     public String getColor() {
         return color;
     }
@@ -71,17 +79,11 @@ public class Car implements Cloneable {
     @Override
     public Car clone() {
         try {
-            return (Car) super.clone();
+            Car clonedCar = (Car) super.clone();
+            clonedCar.setEngine(engine.clone());
+            return clonedCar;
         } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Cant clone the Car");
+            throw new RuntimeException("Cant clone the Car", e);
         }
-    }
-
-    public Engine getEngine() {
-        return engine;
-    }
-
-    public void setEngine(Engine engine) {
-        this.engine = engine;
     }
 }

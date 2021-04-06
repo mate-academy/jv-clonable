@@ -7,7 +7,7 @@ class Engine implements Cloneable {
     private int year;
     private boolean inStock;
 
-    public Engine(int power, String manufacturer,int price, int year, boolean inStock) {
+    public Engine(int power, String manufacturer, int price, int year, boolean inStock) {
         this.power = power;
         this.manufacturer = manufacturer;
         this.price = price;
@@ -56,9 +56,9 @@ class Engine implements Cloneable {
     }
 
     @Override
-    public Car clone() {
+    public Engine clone() {
         try {
-            return (Car) super.clone();
+            return (Engine) super.clone();
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException("Cant clone the Car");
         }
