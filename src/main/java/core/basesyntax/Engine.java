@@ -58,7 +58,7 @@ public class Engine implements Cloneable {
     @Override
     public String toString() {
         return "------------------" + System.lineSeparator()
-                + " > Engine"  + System.lineSeparator()
+                + " > Engine" + System.lineSeparator()
                 + "------------------" + System.lineSeparator()
                 + "Model : " + model + System.lineSeparator()
                 + "Country : " + country + System.lineSeparator()

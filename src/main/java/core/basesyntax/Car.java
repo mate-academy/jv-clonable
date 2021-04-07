@@ -8,8 +8,8 @@ public class Car implements Cloneable {
     private int year;
     private Engine engineModel;
 
-
-    public Car(String owner, String countryRegistration, String model, String country, int year, Engine engineModel) {
+    public Car(String owner, String countryRegistration,
+               String model, String country, int year, Engine engineModel) {
         this.owner = owner;
         this.countryRegistration = countryRegistration;
         this.model = model;
@@ -17,7 +17,6 @@ public class Car implements Cloneable {
         this.year = year;
         this.engineModel = engineModel;
     }
-
 
     public void setOwner(String owner) {
         this.owner = owner;
@@ -70,7 +69,7 @@ public class Car implements Cloneable {
     @Override
     public String toString() {
         return "==================" + System.lineSeparator()
-                + " CAR LICENSE"  + System.lineSeparator()
+                + " CAR LICENSE" + System.lineSeparator()
                 + "==================" + System.lineSeparator()
                 + "OWNER : " + owner + System.lineSeparator()
                 + "REGISTRATION : " + countryRegistration + System.lineSeparator()
