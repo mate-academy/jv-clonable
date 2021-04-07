@@ -66,6 +66,11 @@ public class Engine implements Cloneable {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Engine{" + "manufacturer='" + manufacturer + '\''
+                + ", model='" + model + '\''
+                + ", power=" + power
+                + ", age=" + age
+                + ", price=" + price
+                + '}';
     }
 }
