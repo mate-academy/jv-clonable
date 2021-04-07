@@ -1,8 +1,6 @@
 package core.basesyntax;
 
 public class Engine implements Cloneable {
-    private static final String LINE_BREAKER = "\n";
-    private static final String DOT = ".";
     private String typeOfEngine;
     private int performancePower;
     private int serialNumber;
@@ -60,11 +58,11 @@ public class Engine implements Cloneable {
 
     @Override
     public String toString() {
-        return "  Car's type of engine is " + typeOfEngine + DOT + LINE_BREAKER
-                + "  Performance power - " + performancePower + " hp " + DOT + LINE_BREAKER
-                + "  Serial number is № " + serialNumber + DOT + LINE_BREAKER
-                + "  Cylinders number: " + cylindersNumber + DOT + LINE_BREAKER
-                + "  Sound level is " + soundLevel + " decibels" + DOT + LINE_BREAKER;
+        return "  Car's type of engine is " + typeOfEngine + "." + "\n"
+                + "  Performance power - " + performancePower + " hp " + "." + "\n"
+                + "  Serial number is № " + serialNumber + "." + "\n"
+                + "  Cylinders number: " + cylindersNumber + "." + "\n"
+                + "  Sound level is " + soundLevel + " decibels" + "." + "\n";
 
     }
 
@@ -73,7 +71,7 @@ public class Engine implements Cloneable {
         try {
             return (Engine) super.clone();
         } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Can't create Car clone...", e);
+            throw new RuntimeException("Can't create Engine clone...", e);
         }
     }
 }

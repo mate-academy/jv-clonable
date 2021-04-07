@@ -1,8 +1,6 @@
 package core.basesyntax;
 
 public class Car implements Cloneable {
-    private static final String LINE_BREAKER = "\n";
-    private static final String DOT = ".";
     private String typeOfCar;
     private String color;
     private int maximumSpeed;
@@ -59,11 +57,11 @@ public class Car implements Cloneable {
     }
 
     public String toString() {
-        return " Car's type is " + typeOfCar + DOT + LINE_BREAKER
-                + " Color - " + color + DOT + LINE_BREAKER
-                + " Maximum speed " + maximumSpeed + DOT + LINE_BREAKER
-                + " The condition of the car is new: " + conditionNew + DOT + LINE_BREAKER
-                + LINE_BREAKER + " Engine: " + LINE_BREAKER + LINE_BREAKER + engine;
+        return " Car's type is " + typeOfCar + "." + "\n"
+                + " Color - " + color + "." + "\n"
+                + " Maximum speed " + maximumSpeed + "." + "\n"
+                + " The condition of the car is new: " + conditionNew + "." + "\n"
+                + "\n" + " Engine: " + "\n" + "\n" + engine;
     }
 
     public Car clone() {
