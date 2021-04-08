@@ -17,6 +17,8 @@ public class Engine implements Cloneable {
     }
 
     public Engine(int capacity, String type) {
+        this.capacity = capacity;
+        this.type = type;
     }
 
     public static class EngineBuilder {

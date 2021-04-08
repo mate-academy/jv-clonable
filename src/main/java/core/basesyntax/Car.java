@@ -2,6 +2,7 @@ package core.basesyntax;
 
 public class Car implements Cloneable {
     private String model;
+    private Engine clone;
     private String color;
     private int age;
     private int maxSpeed;
@@ -17,6 +18,8 @@ public class Car implements Cloneable {
     }
 
     public Car(String model, Engine clone) {
+        this.model = model;
+        this.clone = clone;
     }
 
     public static class CarBuilder {
@@ -71,5 +74,3 @@ public class Car implements Cloneable {
         return "Car{ model='" + model + '\'' + ", engine=" + engine + '}';
     }
 }
-
-
