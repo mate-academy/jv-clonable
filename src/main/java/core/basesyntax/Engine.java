@@ -3,8 +3,19 @@ package core.basesyntax;
 import java.util.Date;
 
 public class Engine implements Cloneable {
+    private String id;
     private String model;
+    private String type;
+    private int price;
     private Date manufactureDate;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getModel() {
         return model;
@@ -12,6 +23,22 @@ public class Engine implements Cloneable {
 
     public void setModel(String model) {
         this.model = model;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public Date getManufactureDate() {
@@ -33,9 +60,8 @@ public class Engine implements Cloneable {
 
     @Override
     public String toString() {
-        return "Engine{" +
-                "model='" + model + '\'' +
-                ", manufactureDate=" + manufactureDate +
-                '}';
+        return "Engine{"
+                + "id='" + id + '\'' + ", model='" + model + '\'' + ", type='" + type + '\''
+                + ", price=" + price + ", manufactureDate=" + manufactureDate + '}';
     }
 }

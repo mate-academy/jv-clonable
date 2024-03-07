@@ -7,10 +7,13 @@ public class Application {
         Engine engine = new Engine();
         engine.setModel("V12");
         engine.setManufactureDate(new Date());
+
         Car car = new Car();
         car.setEngine(engine);
+
         Car carClone = car.clone();
         carClone.getEngine().setModel("V8");
+
         System.out.println(car);
         System.out.println(carClone);
     }
