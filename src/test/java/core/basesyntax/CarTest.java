@@ -64,7 +64,7 @@ public class CarTest {
         List<Method> carMethods = Arrays.asList(Car.class.getDeclaredMethods());
         return carMethods.stream()
                 .filter(m -> m.getName().equals("clone"))
-                .filter(clone -> ! clone.toString().contains("Object")) // remove default method
+                .filter(clone -> !clone.toString().contains("Object")) // remove default method
                 .findFirst()
                 .orElseThrow(() ->
                         new RuntimeException("Method clone should be present in the Car.class"));
